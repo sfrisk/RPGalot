@@ -55,10 +55,10 @@ function Character(){
 		//Barbarian
 		new klass(
 			12, //Hit Die
-			['Climb','Craft','Handle Animal','Intimidate','Jump','Listen','Ride','Survival','Swim'],
-			['Lawful Good','Lawful Neutral','Lawful Evil'],
-			[4,4],
-			[2,0,0]),
+			['Climb','Craft','Handle Animal','Intimidate','Jump','Listen','Ride','Survival','Swim'], //class skillz
+			['Lawful Good','Lawful Neutral','Lawful Evil'], //alignments you can't be
+			[4,4], //skill point calculation
+			[2,0,0]), //save calculations
 		
 		//Bard
 		new klass(
