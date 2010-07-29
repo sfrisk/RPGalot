@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  group_id: 1
+  game_master_id: 1
+  max_characters: 1
+  min_characters: 1
+  open: false
+
+two:
+  title: MyString
+  description: MyText
+  group_id: 1
+  game_master_id: 1
+  max_characters: 1
+  min_characters: 1
+  open: false

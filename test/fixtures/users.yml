@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  bio: MyString
+  looking_for_group: false
+  prefered_race: MyString
+  prefered_class: MyString
+  gender: MyString
+  eye_color: MyString
+  hair_color: MyString
+  alignment: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  bio: MyString
+  looking_for_group: false
+  prefered_race: MyString
+  prefered_class: MyString
+  gender: MyString
+  eye_color: MyString
+  hair_color: MyString
+  alignment: MyString

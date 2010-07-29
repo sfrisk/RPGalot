@@ -1,0 +1,8 @@
+<h1>Editing game</h1>
+
+<% semantic_form_for(@game) do |f| %>
+  <%= render 'form', :f => f %>
+<% end %>
+
+<%= link_to 'Show', @game %> |
+<%= link_to 'Back', games_path %>

@@ -1,0 +1,36 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'New Group', new_group_path %></span>
+	<h2>Groups</h2>
+</div>
+
+<% @groups.each do |group| %>
+	<div class="list">
+	<table>
+		<tr>
+			<td class="description">
+				<img src="/images/group.gif" alt"group photo" width="50px" />
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td class="description"> Title:</td>
+						<td><strong><%= link_to h(group.title), group %></strong></td>
+					</tr>
+					<tr>
+						<td class="description">Founder:</td>
+						<td><%=link_to h(group.created_by.name), group.created_by%></td>
+					</tr>
+					<tr>
+						<td class="description">Members:</td>
+						<td><%=h group.memberships.count %> members</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</div>
+<% end %>
+
+
+<br />
+

@@ -1,0 +1,133 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'Edit', edit_character_path(@character) %> </span>
+	<h2>Character Sheet</h2>
+	<p>Mini blurb here</p>
+</div>
+
+<div id="sheet">
+	
+	<table width="100%">
+		<tr>
+			<td>	
+				<% if @character.gender == "Female"%>
+					<img src="/images/profile_female.png" alt"group photo" width="120px" />
+				<% else %>
+					<img src="/images/profile_male.png" alt"group photo" width="120px" />
+				<% end %>
+			</td>
+			
+			<td>
+				<table class="stats">
+					<tr>
+						<td>
+						<%=h @character.name %>
+						</td>
+							<td></td>
+						<td>
+							<%=link_to h(@character.user.name), @character.user %>
+						</td>
+							<td></td>
+						<td>
+							<%=link_to h(@character.campaign.title), @character.campaign %>
+						</td>
+					</tr>
+					<tr>
+						<td class="character_label">CHARACTER'S NAME</td>
+						<td width="10"></td>
+						<td class="character_label">PLAYER'S NAME</td>
+						<td width="10"></td>
+						<td class="character_label">CAMPAIGN</td>
+					</tr>
+				</table>
+
+				<table class="stats">
+					<tr>
+						<td><%=h @character.race %></td>
+						<td width="10"></td>
+						<td><%=h @character.klass %></td>
+						<td width="10"></td>
+						<td><%=h @character.level %></td>
+						<td width="10"></td>
+						<td><%=h @character.deity %></td>
+						<td width="10"></td>
+						<td><%=h @character.alignment %></td>
+					</tr>
+					<tr>
+						<td class="character_label">RACE</td>
+						<td width="10"></td>
+						<td class="character_label">CLASS</td>
+						<td width="10"></td>
+						<td class="character_label">LEVEL</td>
+						<td width="10"></td>
+						<td class="character_label">DEITY</td>
+						<td width="10"></td>
+						<td class="character_label">ALIGNMENT</td>
+					</tr>
+				</table>
+				<table class="stats">
+					<tr>
+						<td><%=h @character.age %></td>
+						<td width="10"></td>
+						<td><%=h @character.gender %></td>
+						<td width="10"></td>
+					  <td><%=h @character.height %> inches</td>
+						<td width="10"></td>
+					  <td><%=h @character.weight %> .lbs</td>
+						<td width="10"></td>
+					  <td><%=h @character.eyes %></td>
+						<td width="10"></td>
+					  <td><%=h @character.hair %></td>
+					</tr>
+					<tr>
+						<td class="character_label">AGE</td>
+						<td width="10"></td>
+						<td class="character_label">GENDER</td>
+						<td width="10"></td>
+						<td class="character_label">HEIGHT</td>
+						<td width="10"></td>
+						<td class="character_label">WEIGHT</td>
+						<td width="10"></td>
+						<td class="character_label">EYES</td>
+						<td width="10"></td>
+						<td class="character_label">HAIR</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+		<table>
+			<tr>
+				<td><strong>STR<br /><span class="details">STRENGTH</span></strong></td>
+				<td><%=h @character.STR %></td>
+				<td>modifier</td>
+			</tr>
+			<tr>
+				<td><strong>DEX<br /><span class="details">DEXTERITY</span></strong></td>
+				<td><%=h @character.DEX %></td>
+				<td>modifier</td>
+			</tr>
+			<tr>
+				<td><strong>STR<br /><span class="details">STRENGTH</span></strong></td>
+				<td><%=h @character.CON %></td>
+				<td>modifier</td>
+			</tr>
+			<tr>
+				<td><strong>INT<br /><span class="details">INTELLIGENCE</span></strong></td>
+				<td><%=h @character.INT %></td>
+				<td>modifier</td>
+			</tr>
+			<tr>
+				<td><strong>WIS<br /><span class="details">WISDOM</span></strong></td>
+				<td><%=h @character.WIS %></td>
+				<td>modifier</td>
+			</tr>
+			<tr>
+				<td><strong>CHA<br /><span class="details">CHARISMA</span></strong></td>
+				<td><%=h @character.CHA %></td>
+				<td>modifier</td>
+			</tr>
+		</table>
+
+
+</div>

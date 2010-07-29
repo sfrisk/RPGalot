@@ -1,0 +1,43 @@
+<div id="sheet_header">
+	<span class="right"> <%= link_to 'Edit', edit_campaign_path(@campaign) %> </span>
+	<h2> <%=h @campaign.title %></h2>
+	<p>Group: <%= link_to h(@campaign.group.title), @campaign.group %></p>
+</div>
+
+<div id="sheet">
+
+<div class="section right">
+	<h3>Characters</h3>
+	<p class="profile_list">For <%=h @campaign.min_characters %> - <%=h @campaign.max_characters %> characters<br />
+		<%= link_to 'New Character', new_character_path %></p>
+	
+<% @campaign.characters.map do |character| %>
+<div class="profile_list">
+	<table>
+		<tr>
+			<td class="description">
+				<% if character.gender == "Female"%>
+					<img src="/images/profile_female.png" alt"group photo" width="50px" />
+				<% else %>
+					<img src="/images/profile_male.png" alt"group photo" width="50px" />
+				<% end %>
+			</td>
+			<td>
+				<%= link_to h(character.name), character %><br />
+				<strong>Class:</strong> Confidential
+				<strong>Level:</strong> 1 <br/>
+				<strong>Player:</strong> <%=link_to h(character.user.name), character.user %>
+			</td>
+		</tr>
+	</table>
+</div>
+<% end %>
+</div>
+
+<div class="section">
+<p>
+  <h3>Description:</h3>
+  <p class="profile_list"><%=h @campaign.description %></p>
+</p>
+</div>
+</div>

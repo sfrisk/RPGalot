@@ -1,0 +1,15 @@
+<% f.inputs do %>
+
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :group_id, :as => :select, :collection => Group.all %>
+  <%= f.input :game_master_id, :as => :select, :collection => User.all %>
+  <%= f.input :max_characters %>
+  <%= f.input :min_characters %>
+  <%= f.input :open %>
+
+	<% f.buttons do %>
+	  <%= f.commit_button %>
+	<% end %>
+	
+<% end %>

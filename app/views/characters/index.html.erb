@@ -1,0 +1,37 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'New Character', new_character_path %></span>
+	<h2>Characters</h2>
+</div>
+
+<% @characters.each do |character| %>
+	<div class="list">
+	<table>
+		<tr>
+			<td class="description">
+				<% if character.gender == "Female"%>
+					<img src="/images/profile_female.png" alt"group photo" width="50px" />
+				<% else %>
+					<img src="/images/profile_male.png" alt"group photo" width="50px" />
+				<% end %>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td class="description"> Name:</td>
+						<td><strong><%= link_to h(character.name), character %></strong></td>
+					</tr>
+					<tr>
+						<td class="description"> Campaign: </td>
+						<td><%= link_to h(character.campaign.title), character.campaign %></td>
+					</tr>
+					<tr>
+						<td class="description"> Player: </td>
+						<td><%= link_to h(character.user.name), character.user %></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</div>
+
+<% end %>

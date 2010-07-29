@@ -1,0 +1,14 @@
+<% f.inputs do %>
+
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :invite_only %>
+	<%= f.input :created_by_id, :as => :select, :collection => User.all %>
+	<%= f.input :user_ids, :as => :check_boxes, :collection => User.all, :label => 'Members'  %>
+
+
+	<% f.buttons do %>
+	  <%= f.commit_button %>
+	<% end %>
+	
+<% end %>

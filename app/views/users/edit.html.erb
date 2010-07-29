@@ -1,0 +1,8 @@
+<h1>Editing user</h1>
+
+<% semantic_form_for(@user) do |f| %>
+	<%= render 'form', :f => f %>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Destroy User', @group, :confirm => 'Are you sure?', :method => :delete %>

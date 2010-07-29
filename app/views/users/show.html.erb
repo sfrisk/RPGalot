@@ -1,0 +1,146 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'Edit', edit_user_path(@user) %></span>
+	<h2>Player Sheet</h2>
+	<p>Suitable for players wanting to game </p>
+</div>
+
+<div id="sheet">
+	
+<div id="avatar">
+	<% if @user.gender == "Female"%>
+		<img src="/images/profile_female.png" alt"group photo" width="100px" />
+	<% else %>
+		<img src="/images/profile_male.png" alt"group photo" width="100px" />
+	<% end %>
+</div>
+
+<table>
+	<tr>
+		<td>
+		<%=h @user.name %>
+		</td>		
+	</tr>
+	<tr>
+		<td class="character_label">PLAYER'S NAME</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td>
+			<% unless @user.prefered_class.empty? %>
+		  	<%=h @user.prefered_class %>
+			<% else %>
+				<%=h @user.confidential %>
+			<% end %>
+		</td>
+		<td>
+			<% unless @user.prefered_race.empty? %>
+		  	<%=h @user.prefered_race %>
+			<% else %>
+				<%=h @user.confidential %>
+			<% end %>
+		</td>
+		<td>
+			<% unless @user.gender.empty? %>
+		  	<%=h @user.gender %>
+			<% else %>
+				<%=h @user.confidential %>
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td class="character_label">CLASS</td>
+		<td class="character_label">RACE</td>
+		<td class="character_label">GENDER</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td>
+			<% unless @user.alignment.empty? %>
+		  	<%=h @user.alignment %>
+			<% else %>
+				<%=h @user.confidential %>
+			<% end %>
+		</td>
+		<td>
+			<% unless @user.hair_color.empty? %>
+		  	<%=h @user.hair_color %>
+			<% else %>
+				<%=h @user.confidential %>
+			<% end %>
+		</td>
+		<td>
+			<% unless @user.eye_color.empty? %>
+		  	<%=h @user.eye_color %>
+			<% else %>
+				<%=h @user.confidential %>
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td class="character_label">ALIGNMENT</td>
+		<td class="character_label">HAIR COLOR</td>
+		<td class="character_label">EYE COLOR</td>
+	</tr>
+</table>
+
+<div class="section right">
+	<h3>Characters</h3>
+<% @user.characters.map do |character| %>
+<div class="profile_list">
+	<table>
+		<tr>
+			<td class="description">
+				<% if character.gender == "Female"%>
+					<img src="/images/profile_female.png" alt"group photo" width="50px" />
+				<% else %>
+					<img src="/images/profile_male.png" alt"group photo" width="50px" />
+				<% end %>
+			</td>
+			<td>
+				<%= link_to h(character.name), character %><br />
+				<strong>Class:</strong> <%=h character.klass %>
+				<strong>Level:</strong> 1 <br/>
+				<strong>Campaign:</strong> <%=link_to h(character.campaign.title), character.campaign %>
+			</td>
+		</tr>
+	</table>
+</div>
+<% end %>
+</div>
+
+<div class="section">
+<h3>Groups</h3>
+	<% @user.groups.map do |group| %>
+		<div class="profile_list">
+		<table>
+			<tr>
+				<td class="description">
+					<img src="/images/group.gif" alt"group photo" width="50px" />
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td class="description"> Title:</td>
+							<td><strong><%= link_to h(group.title), group %></strong></td>
+						</tr>
+						<tr>
+							<td class="description">Founder:</td>
+							<td><%=link_to h(group.created_by.name), group.created_by%></td>
+						</tr>
+						<tr>
+							<td class="description">Members:</td>
+							<td><%=h group.memberships.count %> members</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		</div>
+	<% end %>
+</div>
+
+</div>

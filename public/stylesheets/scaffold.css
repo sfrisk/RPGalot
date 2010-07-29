@@ -1,0 +1,155 @@
+html, body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+	color: black;
+  line-height: 18px;
+	background: #FFFFFF;
+	margin: 0;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #290418; }
+a:visited { color: #290418; }
+
+
+.list {
+	padding: 5px;
+	margin: 5px auto;
+	width: 450px;
+	border: 1px solid #AAAAAA;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	background: #EEEEEE;
+}
+
+.description{
+	width: 60px;
+}
+
+#avatar{
+	float: left;
+	margin: 5px;
+	border: 2px solid;
+}
+
+#sheet{
+	padding: 10px;
+}
+
+#sheet h3{
+	padding: 5px;
+	margin: 5px auto;
+	width: 300px;
+	border: 1px solid #AAAAAA;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	background: #EEEEEE;
+}
+
+#top_nav {
+	margin: 0;
+}
+
+#top_nav li{
+	display:inline-block;
+	margin: 0 20px;
+}
+
+
+#sheet_header{
+	background: black;
+	color: white;
+	padding: 5px;
+	margin-bottom: 20px;
+	
+}
+
+#sheet_header h2{
+	background: black;
+	margin: 0;
+}
+
+#sheet_header p{
+	font-size: 8pt;
+}
+
+#sheet_header a{
+	color: #eeeeee;
+}
+
+#header {
+	background: #EEEEEE;
+	margin: 0px;
+	width: 100%;
+	
+}
+
+#content {
+	width: 800px;
+	border: 2px solid #aaaaaa;
+  margin: 5px auto;
+	min-height: 400px;
+}
+
+.profile_list{
+	padding: 5px;
+	margin: 5px auto;
+	width: 300px;
+	border: 1px solid #AAAAAA;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	background: #EEEEEE;
+}
+
+
+.character_label {
+	font-size: 7px;
+	border-top: 2pt solid;
+	margin-left: 10pt;	
+	line-height: 7px;
+	
+}
+
+.section {
+	border: 1px solid #aaaaaa;
+	background: #DDDDDD;
+	margin-top: 20px;
+	width: 375px;
+}
+
+.right {
+	float: right;
+}
+
+.details {
+	font-size: 7px;
+	line-height: 7px;
+}
+
+.stats {
+	width: 100%;
+}
+
+.edit_stats{
+	width: 45%;
+	border: 2px solid black;
+	line-height: 2em;
+	padding: 10px;
+}
+
+.edit_stats label{
+	font-weight:bold;
+}
+
+.ability_stuff{
+	float:right;
+	margin-right: 130px;
+}

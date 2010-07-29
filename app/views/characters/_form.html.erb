@@ -1,0 +1,112 @@
+<% f.inputs do %>
+
+<% if f.object.new_record? %>
+	<%= f.input :user_id, :as => :select, :collection => User.all %>
+  <%= f.input :campaign_id, :as => :select, :collection => Campaign.all %>
+<% end %>
+
+
+	<div class="edit_stats right">
+		<p>Raw Score + Misc =  Total |  Mod</p>
+			
+			<div class="ability_stuff">
+			+ <input disabled="disabled" type="text" id="MISC_STR" value="0" size="2">
+			= <input disabled="disabled" type="text" id="TOTAL_STR" value="0" size="2">
+			<input disabled="disabled" type="text" id="MOD_STR" value="0" size="2">
+			<span id="ERROR_STR"></span>
+			</div>	
+		<%= f.input :STR, :label => 'STR',  :input_html => { :size => 2 } %>
+
+		<div class="ability_stuff">
+		+ <input disabled="disabled" type="text" id="MISC_DEX" value="0" size="2">
+		= <input disabled="disabled" type="text" id="TOTAL_DEX" value="0" size="2">
+		<input disabled="disabled" type="text" id="MOD_DEX" value="0" size="2">
+		<span id="ERROR_DEX"></span>
+		</div>
+		<%= f.input :DEX, :label => 'DEX',  :input_html => { :size => 2 } %>
+	
+		<div class="ability_stuff">
+		+ <input disabled="disabled" type="text" id="MISC_CON" value="0" size="2">
+		= <input disabled="disabled" type="text" id="TOTAL_CON" value="0" size="2">
+		<input disabled="disabled" type="text" id="MOD_CON" value="0" size="2">
+		<span id="ERROR_CON"></span>
+		</div>
+		<%= f.input :CON, :label => 'CON', :input_html => { :size => 2 }  %>
+
+
+		<div class="ability_stuff">
+		+ <input disabled="disabled" type="text" id="MISC_INT" value="0" size="2">
+		= <input disabled="disabled" type="text" id="TOTAL_INT" value="0" size="2">
+		<input disabled="disabled" type="text" id="MOD_INT" value="0" size="2">
+		<span id="ERROR_INT"></span>
+		</div>
+		<%= f.input :INT, :label => 'INT', :input_html => { :size => 2 }  %>
+
+		<div class="ability_stuff">
+		+ <input disabled="disabled" type="text" id="MISC_WIS" value="0" size="2">
+		= <input disabled="disabled" type="text" id="TOTAL_WIS" value="0" size="2">
+		<input disabled="disabled" type="text" id="MOD_WIS" value="0" size="2">	
+		<span id="ERROR_WIS"></span>
+		</div>
+		<%= f.input :WIS, :label => 'WIS', :input_html => { :size => 2 }  %>
+
+		<div class="ability_stuff">
+		+ <input disabled="disabled" type="text" id="MISC_CHA" value="0" size="2">
+		= <input disabled="disabled" type="text" id="TOTAL_CHA" value="0" size="2">
+		<input disabled="disabled" type="text" id="MOD_CHA" value="0" size="2">
+		<span id="ERROR_CHA"></span>
+		</div>
+		<%= f.input :CHA, :label => 'CHA', :input_html => { :size => 2 }  %>
+		
+	</div>
+
+
+	<div class="edit_stats">
+
+	<%= f.input :name, :input_html => { :size => 20 }, :label => 'Name'  %>
+  
+	<%= f.input :level, :input_html => { :size => 3 } %>
+	<%= f.input :klass, :as => :select, :collection => Character::Klasses, :label => 'Class' %>
+	
+	<%= f.input :age, :input_html => { :size => 3 } %>
+	<%= f.input :race, :as => :select, :collection => Character::Races %>
+	
+	
+	<%= f.input :gender, :as => :radio, :collection => Character::Genders %>
+	
+	<%= f.input :alignment, :as => :select, :collection => Character::Alignments %>
+	
+	<%= f.input :deity, :as => :select, :collection => Character::Deities %>
+	</div>
+
+
+
+	<div class="edit_stats">
+		<p>Saves | Total = ABILITY + MISC + BASE
+		<p>Fortitude (CON)
+			<input disabled="disabled" type="text" id="FORT_TOTAL" value="0" size="2">
+			=<input disabled="disabled" type="text" id="FORT_ABILITY" value="0" size="2">
+			+<input disabled="disabled" type="text" id="FORT_MISC" value="0" size="2">
+			+<input disabled="disabled" type="text" id="FORT_BASE" value="0" size="2"></p>
+		<p>Reflex (DEX)
+				<input disabled="disabled" type="text" id="REFLEX_TOTAL" value="0" size="2">
+				=<input disabled="disabled" type="text" id="REFLEX_ABILITY" value="0" size="2">
+				+<input disabled="disabled" type="text" id="REFLEX_MISC" value="0" size="2">
+				+<input disabled="disabled" type="text" id="REFLEX_BASE" value="0" size="2"></p>
+		<p>Will (WIS)
+				<input disabled="disabled" type="text" id="WILL_TOTAL" value="0" size="2">
+				=<input disabled="disabled" type="text" id="WILL_ABILITY" value="0" size="2">
+				+<input disabled="disabled" type="text" id="WILL_MISC" value="0" size="2">
+				+<input disabled="disabled" type="text" id="WILL_BASE" value="0" size="2"></p>
+	</div>
+
+	<div class="edit_stats">
+		<p>Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></p>
+		<div id="skillz"> </div>
+	</div>
+
+	<% f.buttons do %>
+	  <%= f.commit_button %>
+	<% end %>
+
+	<% end %>

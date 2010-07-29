@@ -1,0 +1,19 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'New Game', new_game_path %></span>
+	<h2>Supported Games</h2>
+</div>
+
+<% @games.each do |game| %>
+	<div class="list">
+	<table>
+		<tr>
+			<td class="description">
+				<img src="/images/group.gif" alt"group photo" width="50px" />
+			</td>
+			<td>
+				<a href="<%=h game.url %>"><%=h game.title %></a>
+			</td>
+		</tr>
+	</table>
+	</div>
+<% end %>

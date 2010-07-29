@@ -1,0 +1,68 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'Edit', edit_group_path(@group) %> </span>
+	<h2> <%=h @group.title %></h2>
+</div>
+
+<div id="sheet">
+
+	<div id="avatar">
+			<img src="/images/group.gif" alt"group photo" width="100px" />
+	</div>
+
+
+<p>
+	<b>Founder:</b>
+	<%=link_to h(@group.created_by.name), @group.created_by%>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @group.description %>
+</p>
+
+<p>
+	<% if @group.invite_only == true %>
+	<em>Invite Only</em>
+	<% else %>
+	<em>Open Group</em>
+	<% end %>
+</p>
+
+<div class="section right">
+	<h3>Campaigns</h3>
+		<%  @group.created_campaigns.map do |created_campaigns| %>
+			<div class="profile_list">
+				<%= link_to h(created_campaigns.title), created_campaigns%>
+			</div>
+		<% end %>
+</div>
+
+<div class="section">
+	<h3>Members</h3>
+<% @group.users.map do |user| %>
+	<div class="profile_list">
+	<table>
+		<tr>
+			<td class="description">
+				<% if user.gender == "Female"%>
+					<img src="/images/profile_female.png" alt"group photo" width="50px" />
+				<% else %>
+					<img src="/images/profile_male.png" alt"group photo" width="50px" />
+				<% end %>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td class="description"> Name:</td>
+						<td><strong><%= link_to h(user.name), user %></strong></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</div>
+<% end %>
+</div>
+
+
+</div>

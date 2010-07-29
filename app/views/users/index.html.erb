@@ -1,0 +1,40 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'New User', new_user_path %></span>
+	<h2>Users</h2>
+</div>
+
+
+<% @users.each do |user| %>
+	<div class="list">
+	<table>
+		<tr>
+			<td class="description">
+				<% if user.gender == "Female"%>
+					<img src="/images/profile_female.png" alt"group photo" width="50px" />
+				<% else %>
+					<img src="/images/profile_male.png" alt"group photo" width="50px" />
+				<% end %>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td class="description"> Name:</td>
+						<td><strong><%= link_to h(user.name), user %></strong></td>
+					</tr>
+					<tr>
+						<td class="description"> Groups: </td>
+						<td><%= 
+							user.groups.map do |group|
+								link_to h(group.title), group
+							end.join(', ')
+						%></td>
+					<tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</div>
+
+<% end %>
+
+

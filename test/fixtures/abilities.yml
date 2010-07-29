@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  game_id: 1
+  title: MyString
+  short_title: MyString
+  score: 1
+  modifier: 1
+
+two:
+  game_id: 1
+  title: MyString
+  short_title: MyString
+  score: 1
+  modifier: 1

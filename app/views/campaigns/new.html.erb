@@ -1,0 +1,7 @@
+<h1>New campaign</h1>
+
+<% semantic_form_for(@campaign) do |f| %>
+  <%= render 'form', :f => f %>
+<% end %>
+
+<%= link_to 'Back', campaigns_path %>

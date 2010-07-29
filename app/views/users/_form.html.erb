@@ -1,0 +1,23 @@
+<% f.inputs do %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+
+
+<% unless f.object.new_record? %>
+	
+	  <%= f.input :bio %>
+	  <%= f.input :looking_for_group %>
+	  <%= f.input :prefered_race %>
+	  <%= f.input :prefered_class %>
+	  <%= f.input :gender, :as => :select, :collection => User::Genders %>
+	  <%= f.input :eye_color %>
+	  <%= f.input :hair_color %>
+	  <%= f.input :alignment, :as => :select, :collection => User::Alignments %>
+		<%= f.input :group_ids, :as => :check_boxes, :collection => Group.all, :label => 'Groups'  %>
+	
+<% end %>
+
+<% f.buttons do %>
+  <%= f.commit_button %>
+<% end %>
+<% end %>
