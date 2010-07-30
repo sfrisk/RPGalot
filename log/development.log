@@ -18457,3 +18457,1328 @@ Rendering template within layouts/application
 Rendering characters/edit
 Rendered characters/_form (115.8ms)
 Completed in 143ms (View: 130, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-29 23:11:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (0.5ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (16.8ms)
+Completed in 37ms (View: 27, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100714223725)
+Migrating to CreateGroups (20100714233230)
+Migrating to CreateMemberships (20100715001007)
+Migrating to CreateCampaigns (20100716002404)
+Migrating to CreateCharacters (20100716020334)
+Migrating to CreateGames (20100716232908)
+Migrating to AddingToCharacters (20100720205707)
+Migrating to CharacterUserModifications (20100720223747)
+Migrating to NameChange (20100723200353)
+Migrating to AddCharacterSkillz (20100729195049)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "characters" ADD "skill_appraise" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_balance" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "characters" ADD "skill_bluff" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_climb" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_concentration" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_craft" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_decipher_script" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_diplomacy" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_disable_device" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_disguise" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_escape_artist" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_forgery" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_gather_information" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_handle_animal" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "characters" ADD "skill_heal" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_hide" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_intimidate" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_jump" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_knowledge_arcana" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_knowledge_architecture" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_knowledge_dungeoneering" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_knowledge_geography" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "characters" ADD "skill_knowledge_history" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_knowledge_local" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_knowledge_nature" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_knowledge_nobility" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_knowledge_religion" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_knowledge_planes" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_listen" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_move_silently" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_open_lock" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_perform" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_profession" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_ride" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_search" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_sense_motive" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_sleight_of_hand" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_speak_language" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "characters" ADD "skill_spellcraft" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_spot" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "characters" ADD "skill_survival" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_swim" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "characters" ADD "skill_tumble" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "characters" ADD "skill_use_magic_device" integer DEFAULT 0 NOT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "characters" ADD "skill_use_rope" integer DEFAULT 0 NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100729195049')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("campaigns")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("characters")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("games")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("groups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("memberships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 16:58:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.4ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (45.1ms)
+Completed in 119ms (View: 85, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:13:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (140.5ms)
+Completed in 174ms (View: 159, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:14:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (66.6ms)
+Completed in 102ms (View: 86, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:14:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.4ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (65.8ms)
+Completed in 100ms (View: 85, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:21:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (70.4ms)
+Completed in 105ms (View: 90, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:24:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.4ms)
+Completed in 93ms (View: 76, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:25:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (149.0ms)
+Completed in 183ms (View: 169, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:33:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (71.3ms)
+Completed in 106ms (View: 91, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:34:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (149.9ms)
+Completed in 184ms (View: 169, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:35:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (70.5ms)
+Completed in 105ms (View: 90, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:35:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (71.5ms)
+Completed in 105ms (View: 91, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:35:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (73.1ms)
+Completed in 110ms (View: 95, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:36:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (71.6ms)
+Completed in 106ms (View: 91, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:38:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (74.5ms)
+Completed in 110ms (View: 95, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:41:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (73.6ms)
+Completed in 107ms (View: 93, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:57:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (76.0ms)
+Completed in 188ms (View: 173, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:58:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (73.6ms)
+Completed in 111ms (View: 93, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:58:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (149.9ms)
+Completed in 184ms (View: 169, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 17:59:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.4ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (73.8ms)
+Completed in 109ms (View: 93, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:00:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (154.1ms)
+Completed in 189ms (View: 174, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:00:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+ERROR: compiling _run_erb_app47views47characters47_form46html46erb_locals_f_form_object RAISED compile error
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:107: syntax error, unexpected ':', expecting '}'
+...size => 2, :disabled => true :fload => right }  ).to_s); @ou...
+                              ^
+Function body:           def _run_erb_app47views47characters47_form46html46erb_locals_f_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];f = local_assigns[:f];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  f.inputs do ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ if f.object.new_record? ; @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :user_id, :as => :select, :collection => User.all ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.input :campaign_id, :as => :select, :collection => Campaign.all ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats right\">\n"
+@output_buffer.concat "\t\t<p>Raw Score + Misc =  Total |  Mod</p>\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t<span id=\"ERROR_STR\"></span>\n"
+@output_buffer.concat "\t\t\t</div>\t\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :STR, :label => 'STR',  :input_html => { :size => 2 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_DEX\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :DEX, :label => 'DEX',  :input_html => { :size => 2 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_CON\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :CON, :label => 'CON', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_INT\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :INT, :label => 'INT', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_WIS\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_WIS\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_WIS\" value=\"0\" size=\"2\">\t\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_WIS\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :WIS, :label => 'WIS', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_CHA\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :CHA, :label => 'CHA', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :name, :input_html => { :size => 20 }, :label => 'Name'  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :level, :input_html => { :size => 3 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :klass, :as => :select, :collection => Character::Klasses, :label => 'Class' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :age, :input_html => { :size => 3 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :race, :as => :select, :collection => Character::Races ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :gender, :as => :radio, :collection => Character::Genders ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :alignment, :as => :select, :collection => Character::Alignments ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :deity, :as => :select, :collection => Character::Deities ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats\">\n"
+@output_buffer.concat "\t\t<p>Saves | Total = ABILITY + MISC + BASE\n"
+@output_buffer.concat "\t\t<p>Fortitude (CON)\n"
+@output_buffer.concat "\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"FORT_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"FORT_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"FORT_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"FORT_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<p>Reflex (DEX)\n"
+@output_buffer.concat "\t\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<p>Will (WIS)\n"
+@output_buffer.concat "\t\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"WILL_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"WILL_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"WILL_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"WILL_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<p>Available Skill Points: <input disabled=\"disabled\" type=\"text\" id=\"skillz\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<div id=\"skillz\">\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_appraise, :label => 'Appraise', :input_html => { :size => 2, :disabled => true :fload => right }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_balance\" value=\"+\" /><input type=\"button\" id=\"minus_balance\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_balance, :label => 'Balance', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_bluff\" value=\"+\" /><input type=\"button\" id=\"minus_bluff\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_bluff, :label => 'Bluff', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_climb\" value=\"+\" /><input type=\"button\" id=\"minus_climb\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_climb, :label => 'Climb', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_concentration\" value=\"+\" /><input type=\"button\" id=\"minus_concentration\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_concentration, :label => 'Concentration', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_craft\" value=\"+\" /><input type=\"button\" id=\"minus_craft\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_craft, :label => 'Craft', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_decipher_script\" value=\"+\" /><input type=\"button\" id=\"minus_decipher_script\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_decipher_script, :label => 'Decipher Script', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_diplomacy\" value=\"+\" /><input type=\"button\" id=\"minus_diplomacy\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_diplomacy, :label => 'Diplomacy', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_disable_device\" value=\"+\" /><input type=\"button\" id=\"minus_disable_device\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_disable_device, :label => 'Disable Device', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_disguise\" value=\"+\" /><input type=\"button\" id=\"minus_disguise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_disguise, :label => 'Disguise', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_escape_artist\" value=\"+\" /><input type=\"button\" id=\"minus_escape_artist\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_escape_artist, :label => 'Escape Artist', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_forgery\" value=\"+\" /><input type=\"button\" id=\"minus_forgery\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_forgery, :label => 'Forgery', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_gather_information\" value=\"+\" /><input type=\"button\" id=\"minus_gather_information\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_gather_information, :label => 'Gather Information', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_handle_animal\" value=\"+\" /><input type=\"button\" id=\"minus_handle_animal\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_handle_animal, :label => 'Handle Animal', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_heal\" value=\"+\" /><input type=\"button\" id=\"minus_heal\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_heal, :label => 'Heal', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_hide\" value=\"+\" /><input type=\"button\" id=\"minus_hide\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_hide, :label => 'Hide', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_intimidate\" value=\"+\" /><input type=\"button\" id=\"minus_intimidate\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_intimidate, :label => 'Intimidate', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_jump\" value=\"+\" /><input type=\"button\" id=\"minus_jump\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_jump, :label => 'Jump', :input_html => { :size => 2, :disabled => true }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_arcana\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_arcana\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_arcana, :label => 'Knowledge (arcana)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_architecture\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_architecture\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_architecture, :label => 'Knowledge (architecture and engineering)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_dungeoneering\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_dungeoneering\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_dungeoneering, :label => 'Knowledge (dungeoneering)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_geography\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_geography\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_geography, :label => 'Knowledge (geography)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_history\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_history\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_history, :label => 'Knowledge (history)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_local\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_local\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_local, :label => 'Knowledge (local)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_nature, :label => 'Knowledge (nature)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_nobility, :label => 'Knowledge (nobility and royalty)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_religion, :label => 'Knowledge (religion)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_planes, :label => 'Knowledge (planes)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_listen, :label => 'Listen', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_move_silently, :label => 'Move Silently', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_open_lock, :label => 'Open Lock', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_perform, :label => 'Perform', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_profession, :label => 'Profession', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_ride, :label => 'Ride', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_search, :label => 'Search', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_sense_motive, :label => 'Sense Motive', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_sleight_of_hand, :label => 'Sleight of Hand', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_speak_language, :label => 'Speak Language', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_spellcraft, :label => 'Spellcraft', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_spot, :label => 'Spot', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_survival, :label => 'Survival', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_swim, :label => 'Swim', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_tumble, :label => 'Tumble', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_use_magic_device, :label => 'Use Magic Device', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_use_rope, :label => 'Use Rope', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t";  f.buttons do ; @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( f.commit_button ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t";  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:209:in `compile!'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:276:in `render'
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/edit.html.erb:10:in `_run_erb_app47views47characters47edit46html46erb'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/helpers/form_helper.rb:499:in `fields_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/helpers/form_helper.rb:282:in `form_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1741:in `semantic_form_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1719:in `with_custom_field_error_proc'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1740:in `semantic_form_for'
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/edit.html.erb:9:in `_run_erb_app47views47characters47edit46html46erb'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:107: syntax error, unexpected ':', expecting '}'
+...size => 2, :disabled => true :fload => right }  ).to_s); @ou...
+                              ^) on line #107 of app/views/characters/_form.html.erb:
+104: 		<p>Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></p>
+105: 		<div id="skillz">
+106: 			<p class="right"><input type="button" id="add_appraise" value="+" /><input type="button" id="minus_appraise" value="-" /></p>
+107: 			<%= f.input :skill_appraise, :label => 'Appraise', :input_html => { :size => 2, :disabled => true :fload => right }  %>
+108: 			<p class="right"><input type="button" id="add_balance" value="+" /><input type="button" id="minus_balance" value="-" /></p>
+109: 			<%= f.input :skill_balance, :label => 'Balance', :input_html => { :size => 2, :disabled => true  }  %>
+110: 			<p class="right"><input type="button" id="add_bluff" value="+" /><input type="button" id="minus_bluff" value="-" /></p>
+
+    app/views/characters/_form.html.erb:209:in `compile!'
+    app/views/characters/edit.html.erb:10
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1741:in `semantic_form_for'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1719:in `with_custom_field_error_proc'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1740:in `semantic_form_for'
+    app/views/characters/edit.html.erb:9
+
+Rendered rescues/_trace (55.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:00:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+ERROR: compiling _run_erb_app47views47characters47_form46html46erb_locals_f_form_object RAISED compile error
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:107: syntax error, unexpected ':', expecting '}'
+...size => 2, :disabled => true :fload => right }  ).to_s); @ou...
+                              ^
+Function body:           def _run_erb_app47views47characters47_form46html46erb_locals_f_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];f = local_assigns[:f];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  f.inputs do ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ if f.object.new_record? ; @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :user_id, :as => :select, :collection => User.all ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.input :campaign_id, :as => :select, :collection => Campaign.all ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats right\">\n"
+@output_buffer.concat "\t\t<p>Raw Score + Misc =  Total |  Mod</p>\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t<span id=\"ERROR_STR\"></span>\n"
+@output_buffer.concat "\t\t\t</div>\t\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :STR, :label => 'STR',  :input_html => { :size => 2 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_DEX\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :DEX, :label => 'DEX',  :input_html => { :size => 2 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_CON\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :CON, :label => 'CON', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_INT\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :INT, :label => 'INT', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_WIS\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_WIS\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_WIS\" value=\"0\" size=\"2\">\t\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_WIS\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :WIS, :label => 'WIS', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_CHA\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :CHA, :label => 'CHA', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :name, :input_html => { :size => 20 }, :label => 'Name'  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :level, :input_html => { :size => 3 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :klass, :as => :select, :collection => Character::Klasses, :label => 'Class' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :age, :input_html => { :size => 3 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :race, :as => :select, :collection => Character::Races ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :gender, :as => :radio, :collection => Character::Genders ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :alignment, :as => :select, :collection => Character::Alignments ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :deity, :as => :select, :collection => Character::Deities ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats\">\n"
+@output_buffer.concat "\t\t<p>Saves | Total = ABILITY + MISC + BASE\n"
+@output_buffer.concat "\t\t<p>Fortitude (CON)\n"
+@output_buffer.concat "\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"FORT_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"FORT_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"FORT_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"FORT_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<p>Reflex (DEX)\n"
+@output_buffer.concat "\t\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<p>Will (WIS)\n"
+@output_buffer.concat "\t\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"WILL_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"WILL_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"WILL_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"WILL_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<p>Available Skill Points: <input disabled=\"disabled\" type=\"text\" id=\"skillz\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<div id=\"skillz\">\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_appraise, :label => 'Appraise', :input_html => { :size => 2, :disabled => true :fload => right }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_balance\" value=\"+\" /><input type=\"button\" id=\"minus_balance\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_balance, :label => 'Balance', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_bluff\" value=\"+\" /><input type=\"button\" id=\"minus_bluff\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_bluff, :label => 'Bluff', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_climb\" value=\"+\" /><input type=\"button\" id=\"minus_climb\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_climb, :label => 'Climb', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_concentration\" value=\"+\" /><input type=\"button\" id=\"minus_concentration\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_concentration, :label => 'Concentration', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_craft\" value=\"+\" /><input type=\"button\" id=\"minus_craft\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_craft, :label => 'Craft', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_decipher_script\" value=\"+\" /><input type=\"button\" id=\"minus_decipher_script\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_decipher_script, :label => 'Decipher Script', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_diplomacy\" value=\"+\" /><input type=\"button\" id=\"minus_diplomacy\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_diplomacy, :label => 'Diplomacy', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_disable_device\" value=\"+\" /><input type=\"button\" id=\"minus_disable_device\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_disable_device, :label => 'Disable Device', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_disguise\" value=\"+\" /><input type=\"button\" id=\"minus_disguise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_disguise, :label => 'Disguise', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_escape_artist\" value=\"+\" /><input type=\"button\" id=\"minus_escape_artist\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_escape_artist, :label => 'Escape Artist', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_forgery\" value=\"+\" /><input type=\"button\" id=\"minus_forgery\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_forgery, :label => 'Forgery', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_gather_information\" value=\"+\" /><input type=\"button\" id=\"minus_gather_information\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_gather_information, :label => 'Gather Information', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_handle_animal\" value=\"+\" /><input type=\"button\" id=\"minus_handle_animal\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_handle_animal, :label => 'Handle Animal', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_heal\" value=\"+\" /><input type=\"button\" id=\"minus_heal\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_heal, :label => 'Heal', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_hide\" value=\"+\" /><input type=\"button\" id=\"minus_hide\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_hide, :label => 'Hide', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_intimidate\" value=\"+\" /><input type=\"button\" id=\"minus_intimidate\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_intimidate, :label => 'Intimidate', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_jump\" value=\"+\" /><input type=\"button\" id=\"minus_jump\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_jump, :label => 'Jump', :input_html => { :size => 2, :disabled => true }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_arcana\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_arcana\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_arcana, :label => 'Knowledge (arcana)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_architecture\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_architecture\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_architecture, :label => 'Knowledge (architecture and engineering)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_dungeoneering\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_dungeoneering\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_dungeoneering, :label => 'Knowledge (dungeoneering)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_geography\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_geography\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_geography, :label => 'Knowledge (geography)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_history\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_history\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_history, :label => 'Knowledge (history)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_local\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_local\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_local, :label => 'Knowledge (local)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_nature, :label => 'Knowledge (nature)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_nobility, :label => 'Knowledge (nobility and royalty)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_religion, :label => 'Knowledge (religion)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_planes, :label => 'Knowledge (planes)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_listen, :label => 'Listen', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_move_silently, :label => 'Move Silently', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_open_lock, :label => 'Open Lock', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_perform, :label => 'Perform', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_profession, :label => 'Profession', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_ride, :label => 'Ride', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_search, :label => 'Search', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_sense_motive, :label => 'Sense Motive', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_sleight_of_hand, :label => 'Sleight of Hand', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_speak_language, :label => 'Speak Language', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_spellcraft, :label => 'Spellcraft', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_spot, :label => 'Spot', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_survival, :label => 'Survival', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_swim, :label => 'Swim', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_tumble, :label => 'Tumble', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_use_magic_device, :label => 'Use Magic Device', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_use_rope, :label => 'Use Rope', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t";  f.buttons do ; @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( f.commit_button ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t";  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:209:in `compile!'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:276:in `render'
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/edit.html.erb:10:in `_run_erb_app47views47characters47edit46html46erb'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/helpers/form_helper.rb:499:in `fields_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/helpers/form_helper.rb:282:in `form_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1741:in `semantic_form_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1719:in `with_custom_field_error_proc'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1740:in `semantic_form_for'
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/edit.html.erb:9:in `_run_erb_app47views47characters47edit46html46erb'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:107: syntax error, unexpected ':', expecting '}'
+...size => 2, :disabled => true :fload => right }  ).to_s); @ou...
+                              ^) on line #107 of app/views/characters/_form.html.erb:
+104: 		<p>Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></p>
+105: 		<div id="skillz">
+106: 			<p class="right"><input type="button" id="add_appraise" value="+" /><input type="button" id="minus_appraise" value="-" /></p>
+107: 			<%= f.input :skill_appraise, :label => 'Appraise', :input_html => { :size => 2, :disabled => true :fload => right }  %>
+108: 			<p class="right"><input type="button" id="add_balance" value="+" /><input type="button" id="minus_balance" value="-" /></p>
+109: 			<%= f.input :skill_balance, :label => 'Balance', :input_html => { :size => 2, :disabled => true  }  %>
+110: 			<p class="right"><input type="button" id="add_bluff" value="+" /><input type="button" id="minus_bluff" value="-" /></p>
+
+    app/views/characters/_form.html.erb:209:in `compile!'
+    app/views/characters/edit.html.erb:10
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1741:in `semantic_form_for'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1719:in `with_custom_field_error_proc'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1740:in `semantic_form_for'
+    app/views/characters/edit.html.erb:9
+
+Rendered rescues/_trace (55.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:00:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+ERROR: compiling _run_erb_app47views47characters47_form46html46erb_locals_f_form_object RAISED compile error
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:107: syntax error, unexpected ':', expecting '}'
+...size => 2, :disabled => true :float => right }  ).to_s); @ou...
+                              ^
+Function body:           def _run_erb_app47views47characters47_form46html46erb_locals_f_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];f = local_assigns[:f];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  f.inputs do ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ if f.object.new_record? ; @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :user_id, :as => :select, :collection => User.all ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.input :campaign_id, :as => :select, :collection => Campaign.all ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats right\">\n"
+@output_buffer.concat "\t\t<p>Raw Score + Misc =  Total |  Mod</p>\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_STR\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t<span id=\"ERROR_STR\"></span>\n"
+@output_buffer.concat "\t\t\t</div>\t\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :STR, :label => 'STR',  :input_html => { :size => 2 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_DEX\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_DEX\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :DEX, :label => 'DEX',  :input_html => { :size => 2 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_CON\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_CON\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :CON, :label => 'CON', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_INT\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_INT\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :INT, :label => 'INT', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_WIS\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_WIS\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_WIS\" value=\"0\" size=\"2\">\t\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_WIS\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :WIS, :label => 'WIS', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"ability_stuff\">\n"
+@output_buffer.concat "\t\t+ <input disabled=\"disabled\" type=\"text\" id=\"MISC_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t= <input disabled=\"disabled\" type=\"text\" id=\"TOTAL_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<input disabled=\"disabled\" type=\"text\" id=\"MOD_CHA\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t<span id=\"ERROR_CHA\"></span>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( f.input :CHA, :label => 'CHA', :input_html => { :size => 2 }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :name, :input_html => { :size => 20 }, :label => 'Name'  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :level, :input_html => { :size => 3 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :klass, :as => :select, :collection => Character::Klasses, :label => 'Class' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :age, :input_html => { :size => 3 } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :race, :as => :select, :collection => Character::Races ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :gender, :as => :radio, :collection => Character::Genders ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :alignment, :as => :select, :collection => Character::Alignments ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.input :deity, :as => :select, :collection => Character::Deities ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div class=\"edit_stats\">\n"
+@output_buffer.concat "\t\t<p>Saves | Total = ABILITY + MISC + BASE\n"
+@output_buffer.concat "\t\t<p>Fortitude (CON)\n"
+@output_buffer.concat "\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"FORT_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"FORT_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"FORT_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"FORT_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<p>Reflex (DEX)\n"
+@output_buffer.concat "\t\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"REFLEX_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<p>Will (WIS)\n"
+@output_buffer.concat "\t\t\t\t<input disabled=\"disabled\" type=\"text\" id=\"WILL_TOTAL\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t=<input disabled=\"disabled\" type=\"text\" id=\"WILL_ABILITY\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"WILL_MISC\" value=\"0\" size=\"2\">\n"
+@output_buffer.concat "\t\t\t\t+<input disabled=\"disabled\" type=\"text\" id=\"WILL_BASE\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<p>Available Skill Points: <input disabled=\"disabled\" type=\"text\" id=\"skillz\" value=\"0\" size=\"2\"></p>\n"
+@output_buffer.concat "\t\t<div id=\"skillz\">\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_appraise, :label => 'Appraise', :input_html => { :size => 2, :disabled => true :float => right }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_balance\" value=\"+\" /><input type=\"button\" id=\"minus_balance\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_balance, :label => 'Balance', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_bluff\" value=\"+\" /><input type=\"button\" id=\"minus_bluff\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_bluff, :label => 'Bluff', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_climb\" value=\"+\" /><input type=\"button\" id=\"minus_climb\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_climb, :label => 'Climb', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_concentration\" value=\"+\" /><input type=\"button\" id=\"minus_concentration\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_concentration, :label => 'Concentration', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_craft\" value=\"+\" /><input type=\"button\" id=\"minus_craft\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_craft, :label => 'Craft', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_decipher_script\" value=\"+\" /><input type=\"button\" id=\"minus_decipher_script\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_decipher_script, :label => 'Decipher Script', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_diplomacy\" value=\"+\" /><input type=\"button\" id=\"minus_diplomacy\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_diplomacy, :label => 'Diplomacy', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_disable_device\" value=\"+\" /><input type=\"button\" id=\"minus_disable_device\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_disable_device, :label => 'Disable Device', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_disguise\" value=\"+\" /><input type=\"button\" id=\"minus_disguise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_disguise, :label => 'Disguise', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_escape_artist\" value=\"+\" /><input type=\"button\" id=\"minus_escape_artist\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_escape_artist, :label => 'Escape Artist', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_forgery\" value=\"+\" /><input type=\"button\" id=\"minus_forgery\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_forgery, :label => 'Forgery', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_gather_information\" value=\"+\" /><input type=\"button\" id=\"minus_gather_information\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_gather_information, :label => 'Gather Information', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_handle_animal\" value=\"+\" /><input type=\"button\" id=\"minus_handle_animal\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_handle_animal, :label => 'Handle Animal', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_heal\" value=\"+\" /><input type=\"button\" id=\"minus_heal\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_heal, :label => 'Heal', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_hide\" value=\"+\" /><input type=\"button\" id=\"minus_hide\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_hide, :label => 'Hide', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_intimidate\" value=\"+\" /><input type=\"button\" id=\"minus_intimidate\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_intimidate, :label => 'Intimidate', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_jump\" value=\"+\" /><input type=\"button\" id=\"minus_jump\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_jump, :label => 'Jump', :input_html => { :size => 2, :disabled => true }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_arcana\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_arcana\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_arcana, :label => 'Knowledge (arcana)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_architecture\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_architecture\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_architecture, :label => 'Knowledge (architecture and engineering)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_dungeoneering\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_dungeoneering\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_dungeoneering, :label => 'Knowledge (dungeoneering)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_geography\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_geography\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_geography, :label => 'Knowledge (geography)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_history\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_history\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_history, :label => 'Knowledge (history)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_knowledge_local\" value=\"+\" /><input type=\"button\" id=\"minus_knowledge_local\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_local, :label => 'Knowledge (local)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_nature, :label => 'Knowledge (nature)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_nobility, :label => 'Knowledge (nobility and royalty)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_religion, :label => 'Knowledge (religion)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_knowledge_planes, :label => 'Knowledge (planes)', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_listen, :label => 'Listen', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_move_silently, :label => 'Move Silently', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_open_lock, :label => 'Open Lock', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_perform, :label => 'Perform', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_profession, :label => 'Profession', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_ride, :label => 'Ride', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_search, :label => 'Search', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_sense_motive, :label => 'Sense Motive', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_sleight_of_hand, :label => 'Sleight of Hand', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_speak_language, :label => 'Speak Language', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_spellcraft, :label => 'Spellcraft', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_spot, :label => 'Spot', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_survival, :label => 'Survival', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_swim, :label => 'Swim', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_tumble, :label => 'Tumble', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_use_magic_device, :label => 'Use Magic Device', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<p class=\"right\"><input type=\"button\" id=\"add_appraise\" value=\"+\" /><input type=\"button\" id=\"minus_appraise\" value=\"-\" /></p>\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( f.input :skill_use_rope, :label => 'Use Rope', :input_html => { :size => 2, :disabled => true  }  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t";  f.buttons do ; @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( f.commit_button ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t";  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:209:in `compile!'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:276:in `render'
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/edit.html.erb:10:in `_run_erb_app47views47characters47edit46html46erb'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/helpers/form_helper.rb:499:in `fields_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/helpers/form_helper.rb:282:in `form_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1741:in `semantic_form_for'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1719:in `with_custom_field_error_proc'
+/Users/ssfrisk/.gem/ruby/1.8/gems/formtastic-0.9.10/rails/../lib/formtastic.rb:1740:in `semantic_form_for'
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/edit.html.erb:9:in `_run_erb_app47views47characters47edit46html46erb'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/ssfrisk/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ssfrisk/Documents/Programing/RPGalot/app/views/characters/_form.html.erb:107: syntax error, unexpected ':', expecting '}'
+...size => 2, :disabled => true :float => right }  ).to_s); @ou...
+                              ^) on line #107 of app/views/characters/_form.html.erb:
+104: 		<p>Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></p>
+105: 		<div id="skillz">
+106: 			<p class="right"><input type="button" id="add_appraise" value="+" /><input type="button" id="minus_appraise" value="-" /></p>
+107: 			<%= f.input :skill_appraise, :label => 'Appraise', :input_html => { :size => 2, :disabled => true :float => right }  %>
+108: 			<p class="right"><input type="button" id="add_balance" value="+" /><input type="button" id="minus_balance" value="-" /></p>
+109: 			<%= f.input :skill_balance, :label => 'Balance', :input_html => { :size => 2, :disabled => true  }  %>
+110: 			<p class="right"><input type="button" id="add_bluff" value="+" /><input type="button" id="minus_bluff" value="-" /></p>
+
+    app/views/characters/_form.html.erb:209:in `compile!'
+    app/views/characters/edit.html.erb:10
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1741:in `semantic_form_for'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1719:in `with_custom_field_error_proc'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1740:in `semantic_form_for'
+    app/views/characters/edit.html.erb:9
+
+Rendered rescues/_trace (160.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:01:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (76.3ms)
+Completed in 111ms (View: 96, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:16:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (159.9ms)
+Completed in 196ms (View: 181, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:24:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (64.4ms)
+Completed in 97ms (View: 81, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:24:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (64.2ms)
+Completed in 103ms (View: 88, DB: 1) | 200 OK [http://localhost/characters/1/edit]

@@ -8,6 +8,14 @@ function Character(){
 	this.race_names = new Array('Human','Dwarf','Elf','Gnome','Half-Elf','Half-Orc','Halfling');
 	this.klass_names = new Array('Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Wizard');
 	this.alignments = new Array('Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil');
+	this.skill_names = new Array(['skill_appraise','skill_balance','skill_bluff','skill_climb','skill_concentration',
+	'skill_craft','skill_decipher_script','skill_diplomacy','skill_disable_device','skill_disguise','skill_escape_artist',
+	'skill_forgery','skill_gather_information','skill_handle_animal','skill_heal','skill_hide','skill_intimidate','skill_jump',
+	'skill_knowledge_arcana','skill_knowledge_architecture','skill_knowledge_dungeoneering','skill_knowledge_geography',
+	'skill_knowledge_history','skill_knowledge_local','skill_knowledge_nature','skill_knowledge_nobility','skill_knowledge_religion',
+	'skill_knowledge_planes','skill_listen','skill_move_silently','skill_open_lock','skill_perform','skill_profession','skill_ride',
+	'skill_search','skill_sense_motive','skill_sleight_of_hand','skill_speak_language','skill_spellcraft','skill_spot','skill_survival',
+	'skill_swim','skill_tumble','skill_use_magic_device','skill_use_rope']);
 
 	
 	//Basic Stats DOM info
@@ -48,6 +56,13 @@ function Character(){
 		character.abilities.push(new Ability($('#character_'+val), $('#MISC_'+val), $('#TOTAL_'+val), $('#MOD_'+val), $('#ERROR_'+val)));
 	})
 	
+
+	//Skill Stats
+	this.skills = []
+	$.each(this.skill_names,function(i,val){
+		//rank, plus, minus
+		character.skills.push(new Skillz($('#character_'+val),$('#add_'+val),$('minus_'+val)));
+	})
 
 	//Classes
 	this.klasses = [

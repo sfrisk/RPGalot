@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100723200353) do
+ActiveRecord::Schema.define(:version => 20100729195049) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "title",                            :null => false
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(:version => 20100723200353) do
   end
 
   create_table "characters", :force => true do |t|
-    t.integer  "user_id",     :null => false
-    t.integer  "campaign_id", :null => false
-    t.string   "name",        :null => false
+    t.integer  "user_id",                                      :null => false
+    t.integer  "campaign_id",                                  :null => false
+    t.string   "name",                                         :null => false
     t.integer  "age"
     t.string   "gender"
     t.integer  "height"
@@ -46,6 +46,51 @@ ActiveRecord::Schema.define(:version => 20100723200353) do
     t.integer  "level"
     t.string   "alignment"
     t.string   "deity"
+    t.integer  "skill_appraise",                :default => 0, :null => false
+    t.integer  "skill_balance",                 :default => 0, :null => false
+    t.integer  "skill_bluff",                   :default => 0, :null => false
+    t.integer  "skill_climb",                   :default => 0, :null => false
+    t.integer  "skill_concentration",           :default => 0, :null => false
+    t.integer  "skill_craft",                   :default => 0, :null => false
+    t.integer  "skill_decipher_script",         :default => 0, :null => false
+    t.integer  "skill_diplomacy",               :default => 0, :null => false
+    t.integer  "skill_disable_device",          :default => 0, :null => false
+    t.integer  "skill_disguise",                :default => 0, :null => false
+    t.integer  "skill_escape_artist",           :default => 0, :null => false
+    t.integer  "skill_forgery",                 :default => 0, :null => false
+    t.integer  "skill_gather_information",      :default => 0, :null => false
+    t.integer  "skill_handle_animal",           :default => 0, :null => false
+    t.integer  "skill_heal",                    :default => 0, :null => false
+    t.integer  "skill_hide",                    :default => 0, :null => false
+    t.integer  "skill_intimidate",              :default => 0, :null => false
+    t.integer  "skill_jump",                    :default => 0, :null => false
+    t.integer  "skill_knowledge_arcana",        :default => 0, :null => false
+    t.integer  "skill_knowledge_architecture",  :default => 0, :null => false
+    t.integer  "skill_knowledge_dungeoneering", :default => 0, :null => false
+    t.integer  "skill_knowledge_geography",     :default => 0, :null => false
+    t.integer  "skill_knowledge_history",       :default => 0, :null => false
+    t.integer  "skill_knowledge_local",         :default => 0, :null => false
+    t.integer  "skill_knowledge_nature",        :default => 0, :null => false
+    t.integer  "skill_knowledge_nobility",      :default => 0, :null => false
+    t.integer  "skill_knowledge_religion",      :default => 0, :null => false
+    t.integer  "skill_knowledge_planes",        :default => 0, :null => false
+    t.integer  "skill_listen",                  :default => 0, :null => false
+    t.integer  "skill_move_silently",           :default => 0, :null => false
+    t.integer  "skill_open_lock",               :default => 0, :null => false
+    t.integer  "skill_perform",                 :default => 0, :null => false
+    t.integer  "skill_profession",              :default => 0, :null => false
+    t.integer  "skill_ride",                    :default => 0, :null => false
+    t.integer  "skill_search",                  :default => 0, :null => false
+    t.integer  "skill_sense_motive",            :default => 0, :null => false
+    t.integer  "skill_sleight_of_hand",         :default => 0, :null => false
+    t.integer  "skill_speak_language",          :default => 0, :null => false
+    t.integer  "skill_spellcraft",              :default => 0, :null => false
+    t.integer  "skill_spot",                    :default => 0, :null => false
+    t.integer  "skill_survival",                :default => 0, :null => false
+    t.integer  "skill_swim",                    :default => 0, :null => false
+    t.integer  "skill_tumble",                  :default => 0, :null => false
+    t.integer  "skill_use_magic_device",        :default => 0, :null => false
+    t.integer  "skill_use_rope",                :default => 0, :null => false
   end
 
   create_table "games", :force => true do |t|

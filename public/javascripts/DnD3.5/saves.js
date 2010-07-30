@@ -6,7 +6,7 @@ function Saves(base, total, abilityMod, misc, ability)
 	this.$abilityMod.val(ability.val());
 	this.$misc = misc;
 	
-	this.AddingUpThePoints();
+	this.addingUpThePoints();
 	this.linkage(ability);
 }
 
@@ -20,21 +20,21 @@ Saves.prototype.linkage = function(ability)
 		$.link({
 			source: saves.$base,
 			target: saves.$total,
-			convert: function(){ return saves.AddingUpThePoints().val();}
+			convert: function(){ return saves.addingUpThePoints().val();}
 		})
 		$.link({
 			source: saves.$misc,
 			target: saves.$total,
-			convert: function(){ return saves.AddingUpThePoints().val();}
+			convert: function(){ return saves.addingUpThePoints().val();}
 		})	
 		$.link({
 			source: saves.$abilityMod,
 			target: saves.$total,
-			convert: function(){ return saves.AddingUpThePoints().val();}
+			convert: function(){ return saves.addingUpThePoints().val();}
 		})	
 }
 
-Saves.prototype.AddingUpThePoints = function ()
+Saves.prototype.addingUpThePoints = function ()
 {
 	total = parseInt(this.$base.val(),10) + parseInt(this.$misc.val(),10) + parseInt(this.$abilityMod.val(),10);
 	return this.$total.val(total);

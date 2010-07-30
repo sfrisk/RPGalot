@@ -7,12 +7,12 @@ function Ability(base,misc,total,mod,error){
 	this.$mod = mod;
 	this.$error = error;
 	
-	this.AddingUpThePoints();
-	this.ModPowerGo(); 
+	this.addingUpThePoints();
+	this.modPowerGo(); 
 	this.linkage();
 }
 
-Ability.prototype.ModPowerGo = function ()
+Ability.prototype.modPowerGo = function ()
 {
 	return this.$mod.val(Math.floor(this.$total.val() / 2) - 5);
 }
@@ -23,7 +23,7 @@ Ability.prototype.getMod = function()
 }
 
 //Currently only takes into account level 1
-Ability.prototype.AddingUpThePoints = function ()
+Ability.prototype.addingUpThePoints = function ()
 {
 	if(parseInt(this.$base.val(),10) > 18){
 		alert('Base Too High');
@@ -45,17 +45,17 @@ Ability.prototype.linkage = function ()
 	 	$.link({
 			source: ability.$base,
 			target: ability.$total,
-			convert: function(){ return ability.AddingUpThePoints().val();}
+			convert: function(){ return ability.addingUpThePoints().val();}
 		})
 		$.link({
 			source: ability.$misc,
 			target: ability.$total,
-			convert: function(){ return ability.AddingUpThePoints().val();}
+			convert: function(){ return ability.addingUpThePoints().val();}
 		})
 		$.link({
 			source: ability.$total,
 			target: ability.$mod,
-			convert: function(){ return ability.ModPowerGo().val();}
+			convert: function(){ return ability.modPowerGo().val();}
 		})
 }
 
