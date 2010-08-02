@@ -19782,3 +19782,1191 @@ Rendering template within layouts/application
 Rendering characters/edit
 Rendered characters/_form (64.2ms)
 Completed in 103ms (View: 88, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:49:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.6ms)
+Completed in 95ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:50:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.7ms)
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:50:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (136.4ms)
+Completed in 167ms (View: 152, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:50:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.4ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:51:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.6ms)
+Completed in 90ms (View: 76, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:51:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.0ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-30 18:51:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.7ms)
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-31 01:03:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (137.9ms)
+Completed in 168ms (View: 154, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-31 01:04:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.7ms)
+Completed in 94ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-07-31 03:45:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (91.6ms)
+Completed in 174ms (View: 113, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 16:59:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.5ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (83.2ms)
+Completed in 150ms (View: 101, DB: 2) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:01:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.5ms)
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:02:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (138.7ms)
+Completed in 169ms (View: 155, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:03:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.5ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:04:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.6ms)
+Completed in 91ms (View: 76, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:07:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.6ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:07:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (66.8ms)
+Completed in 97ms (View: 82, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:07:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (139.4ms)
+Completed in 170ms (View: 155, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:08:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.8ms)
+Completed in 94ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:08:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.4ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:11:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.9ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:16:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.1ms)
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:20:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (144.1ms)
+Completed in 174ms (View: 160, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:20:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (79.8ms)
+Completed in 111ms (View: 96, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:21:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.3ms)
+Completed in 91ms (View: 76, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:23:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.9ms)
+Completed in 94ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 17:52:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.7ms)
+Completed in 91ms (View: 76, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 23:04:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.6ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (138.9ms)
+Completed in 185ms (View: 156, DB: 2) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 23:04:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.1ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 23:04:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.5ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 23:05:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.6ms)
+Completed in 93ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 23:06:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.5ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 23:07:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (139.6ms)
+Completed in 170ms (View: 155, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-01 23:07:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.5ms)
+Completed in 93ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:04:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.9ms)
+Completed in 93ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:04:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.3ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:05:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.1ms)
+Completed in 93ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:05:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (139.6ms)
+Completed in 170ms (View: 155, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:06:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.0ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:07:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.2ms)
+Completed in 91ms (View: 76, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:08:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (63.1ms)
+Completed in 167ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:09:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (63.8ms)
+Completed in 95ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:10:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (138.9ms)
+Completed in 169ms (View: 155, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:12:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.4ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (67.9ms)
+Completed in 101ms (View: 84, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:12:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (67.9ms)
+Completed in 98ms (View: 84, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:13:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.8ms)
+Completed in 167ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:18:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.8ms)
+Completed in 95ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:18:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.4ms)
+Completed in 174ms (View: 159, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:20:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.8ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:25:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.0ms)
+Completed in 94ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:27:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.2ms)
+Completed in 168ms (View: 153, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:28:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.1ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:29:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.2ms)
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:29:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.6ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:34:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.6ms)
+Completed in 92ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:35:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (63.1ms)
+Completed in 166ms (View: 152, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:35:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.8ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:38:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (67.4ms)
+Completed in 100ms (View: 85, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:38:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (64.2ms)
+Completed in 97ms (View: 81, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:39:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (63.2ms)
+Completed in 95ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:47:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (142.4ms)
+Completed in 173ms (View: 158, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:48:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.8ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:48:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.6ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:53:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (63.4ms)
+Completed in 95ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:57:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.1ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:57:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (138.3ms)
+Completed in 169ms (View: 154, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:58:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.6ms)
+Completed in 94ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 00:58:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.7ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:02:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.4ms)
+Completed in 94ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:03:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.7ms)
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:03:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (139.2ms)
+Completed in 171ms (View: 155, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:03:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.2ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:03:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (64.3ms)
+Completed in 97ms (View: 82, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:04:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.2ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:04:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.0ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:04:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (139.3ms)
+Completed in 170ms (View: 155, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:04:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.7ms)
+Completed in 94ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:05:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (75.6ms)
+Completed in 106ms (View: 92, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:08:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (65.9ms)
+Completed in 101ms (View: 84, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:09:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.5ms)
+Completed in 96ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:11:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (151.8ms)
+Completed in 184ms (View: 169, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:11:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (66.9ms)
+Completed in 99ms (View: 83, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:15:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.1ms)
+Completed in 93ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:17:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.8ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (75.6ms)
+Completed in 117ms (View: 93, DB: 2) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:19:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (63.9ms)
+Completed in 98ms (View: 81, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:19:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (141.8ms)
+Completed in 172ms (View: 158, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:19:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.4ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.5ms)
+Completed in 94ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:20:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.5ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:21:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (63.5ms)
+Completed in 170ms (View: 80, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:22:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.8ms)
+Completed in 94ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:22:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (141.7ms)
+Completed in 173ms (View: 158, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:23:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.4ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (64.1ms)
+Completed in 96ms (View: 80, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:25:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.7ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:25:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.4ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (64.6ms)
+Completed in 175ms (View: 81, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:26:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.2ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:27:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.1ms)
+Completed in 91ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:27:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (93.8ms)
+Completed in 140ms (View: 115, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:27:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.1ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:28:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.6ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (64.4ms)
+Completed in 171ms (View: 156, DB: 2) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:29:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.3ms)
+Completed in 93ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:29:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.4ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:30:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.9ms)
+Completed in 94ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:30:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.1ms)
+Completed in 96ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:30:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (138.1ms)
+Completed in 169ms (View: 154, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:44:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.0ms)
+Completed in 95ms (View: 80, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:52:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.0ms)
+Completed in 94ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:52:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (62.7ms)
+Completed in 95ms (View: 79, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:52:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.0ms)
+Completed in 92ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:55:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (76.2ms)
+Completed in 188ms (View: 173, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:55:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (76.5ms)
+Completed in 111ms (View: 96, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:56:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (154.7ms)
+Completed in 189ms (View: 174, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:56:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (73.8ms)
+Completed in 111ms (View: 94, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:57:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.4ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (151.8ms)
+Completed in 186ms (View: 171, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:57:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (75.1ms)
+Completed in 111ms (View: 95, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 01:57:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (74.4ms)
+Completed in 186ms (View: 172, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:00:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (77.6ms)
+Completed in 113ms (View: 98, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:13:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (61.5ms)
+Completed in 92ms (View: 78, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:13:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (60.7ms)
+Completed in 93ms (View: 77, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:13:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (73.6ms)
+Completed in 108ms (View: 93, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:14:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (151.0ms)
+Completed in 185ms (View: 170, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:16:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (25.8ms)
+Completed in 61ms (View: 45, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:17:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (27.9ms)
+Completed in 63ms (View: 48, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:18:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (26.0ms)
+Completed in 62ms (View: 47, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:18:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (17.2ms)
+Completed in 48ms (View: 33, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:20:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (25.6ms)
+Completed in 60ms (View: 45, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:27:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.4ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (48.0ms)
+Completed in 85ms (View: 69, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:28:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (37.3ms)
+Completed in 69ms (View: 53, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:28:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (122.6ms)
+Completed in 157ms (View: 142, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:29:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.4ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (47.8ms)
+Completed in 84ms (View: 68, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 02:29:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (47.6ms)
+Completed in 82ms (View: 67, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 03:01:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (37.1ms)
+Completed in 70ms (View: 54, DB: 1) | 200 OK [http://localhost/characters/1/edit]
+
+
+Processing CharactersController#edit (for 127.0.0.1 at 2010-08-02 03:01:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+Rendered characters/_form (35.5ms)
+Completed in 68ms (View: 53, DB: 1) | 200 OK [http://localhost/characters/1/edit]

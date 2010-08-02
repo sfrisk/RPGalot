@@ -103,99 +103,53 @@
 
 		<p>Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></p>
 		<div id="skillz">
-			<p class="right"><input type="button" id="add_appraise" value="+" /><input type="button" id="minus_appraise" value="-" /></p>
-			<%= f.input :skill_appraise, :label => 'Appraise', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_balance" value="+" /><input type="button" id="minus_balance" value="-" /></p>
-			<%= f.input :skill_balance, :label => 'Balance', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_bluff" value="+" /><input type="button" id="minus_bluff" value="-" /></p>
-			<%= f.input :skill_bluff, :label => 'Bluff', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_climb" value="+" /><input type="button" id="minus_climb" value="-" /></p>
-			<%= f.input :skill_climb, :label => 'Climb', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_concentration" value="+" /><input type="button" id="minus_concentration" value="-" /></p>
-			<%= f.input :skill_concentration, :label => 'Concentration', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_craft" value="+" /><input type="button" id="minus_craft" value="-" /></p>
-			<%= f.input :skill_craft, :label => 'Craft', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_decipher_script" value="+" /><input type="button" id="minus_decipher_script" value="-" /></p>
-			<%= f.input :skill_decipher_script, :label => 'Decipher Script', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_diplomacy" value="+" /><input type="button" id="minus_diplomacy" value="-" /></p>
-			<%= f.input :skill_diplomacy, :label => 'Diplomacy', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_disable_device" value="+" /><input type="button" id="minus_disable_device" value="-" /></p>
-			<%= f.input :skill_disable_device, :label => 'Disable Device', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_disguise" value="+" /><input type="button" id="minus_disguise" value="-" /></p>
-			<%= f.input :skill_disguise, :label => 'Disguise', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_escape_artist" value="+" /><input type="button" id="minus_escape_artist" value="-" /></p>
-			<%= f.input :skill_escape_artist, :label => 'Escape Artist', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_forgery" value="+" /><input type="button" id="minus_forgery" value="-" /></p>
-			<%= f.input :skill_forgery, :label => 'Forgery', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_gather_information" value="+" /><input type="button" id="minus_gather_information" value="-" /></p>
-			<%= f.input :skill_gather_information, :label => 'Gather Information', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_handle_animal" value="+" /><input type="button" id="minus_handle_animal" value="-" /></p>
-			<%= f.input :skill_handle_animal, :label => 'Handle Animal', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_heal" value="+" /><input type="button" id="minus_heal" value="-" /></p>
-			<%= f.input :skill_heal, :label => 'Heal', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_hide" value="+" /><input type="button" id="minus_hide" value="-" /></p>
-			<%= f.input :skill_hide, :label => 'Hide', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_intimidate" value="+" /><input type="button" id="minus_intimidate" value="-" /></p>
-			<%= f.input :skill_intimidate, :label => 'Intimidate', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_jump" value="+" /><input type="button" id="minus_jump" value="-" /></p>
-			<%= f.input :skill_jump, :label => 'Jump', :input_html => { :size => 2, :disabled => true }  %>
-			<p class="right"><input type="button" id="add_knowledge_arcana" value="+" /><input type="button" id="minus_knowledge_arcana" value="-" /></p>
-			<%= f.input :skill_knowledge_arcana, :label => 'Knowledge (arcana)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_architecture" value="+" /><input type="button" id="minus_knowledge_architecture" value="-" /></p>
-			<%= f.input :skill_knowledge_architecture, :label => 'Knowledge (architecture and engineering)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_dungeoneering" value="+" /><input type="button" id="minus_knowledge_dungeoneering" value="-" /></p>
-			<%= f.input :skill_knowledge_dungeoneering, :label => 'Knowledge (dungeoneering)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_geography" value="+" /><input type="button" id="minus_knowledge_geography" value="-" /></p>
-			<%= f.input :skill_knowledge_geography, :label => 'Knowledge (geography)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_history" value="+" /><input type="button" id="minus_knowledge_history" value="-" /></p>
-			<%= f.input :skill_knowledge_history, :label => 'Knowledge (history)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_local" value="+" /><input type="button" id="minus_knowledge_local" value="-" /></p>
-			<%= f.input :skill_knowledge_local, :label => 'Knowledge (local)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_nature" value="+" /><input type="button" id="minus_knowledge_nature" value="-" /></p>
-			<%= f.input :skill_knowledge_nature, :label => 'Knowledge (nature)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_nobility" value="+" /><input type="button" id="minus_knowledge_nobility" value="-" /></p>
-			<%= f.input :skill_knowledge_nobility, :label => 'Knowledge (nobility and royalty)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_religion" value="+" /><input type="button" id="minus_knowledge_religion" value="-" /></p>
-			<%= f.input :skill_knowledge_religion, :label => 'Knowledge (religion)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_knowledge_planes" value="+" /><input type="button" id="minus_knowledge_planes" value="-" /></p>
-			<%= f.input :skill_knowledge_planes, :label => 'Knowledge (planes)', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_listen," value="+" /><input type="button" id="minus_listen," value="-" /></p>
-			<%= f.input :skill_listen, :label => 'Listen', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_move_silently" value="+" /><input type="button" id="minus_move_silently" value="-" /></p>
-			<%= f.input :skill_move_silently, :label => 'Move Silently', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_open_lock" value="+" /><input type="button" id="minus_open_lock" value="-" /></p>
-			<%= f.input :skill_open_lock, :label => 'Open Lock', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_perform" value="+" /><input type="button" id="minus_perform" value="-" /></p>
-			<%= f.input :skill_perform, :label => 'Perform', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_profession" value="+" /><input type="button" id="minus_profession" value="-" /></p>
-			<%= f.input :skill_profession, :label => 'Profession', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_ride" value="+" /><input type="button" id="minus_ride" value="-" /></p>
-			<%= f.input :skill_ride, :label => 'Ride', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_search" value="+" /><input type="button" id="minus_search" value="-" /></p>
-			<%= f.input :skill_search, :label => 'Search', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_sense_motive" value="+" /><input type="button" id="minus_sense_motive" value="-" /></p>
-			<%= f.input :skill_sense_motive, :label => 'Sense Motive', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_sleight_of_hand" value="+" /><input type="button" id="minus_sleight_of_hand" value="-" /></p>
-			<%= f.input :skill_sleight_of_hand, :label => 'Sleight of Hand', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_speak_language" value="+" /><input type="button" id="minus_speak_language" value="-" /></p>
-			<%= f.input :skill_speak_language, :label => 'Speak Language', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_spellcraft" value="+" /><input type="button" id="minus_spellcraft" value="-" /></p>
-			<%= f.input :skill_spellcraft, :label => 'Spellcraft', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_spot" value="+" /><input type="button" id="minus_spot" value="-" /></p>
-			<%= f.input :skill_spot, :label => 'Spot', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_survival" value="+" /><input type="button" id="minus_survival" value="-" /></p>
-			<%= f.input :skill_survival, :label => 'Survival', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_swim" value="+" /><input type="button" id="minus_swim" value="-" /></p>
-			<%= f.input :skill_swim, :label => 'Swim', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_tumble" value="+" /><input type="button" id="minus_tumble" value="-" /></p>
-			<%= f.input :skill_tumble, :label => 'Tumble', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_use_magic_device" value="+" /><input type="button" id="minus_use_magic_device" value="-" /></p>
-			<%= f.input :skill_use_magic_device, :label => 'Use Magic Device', :input_html => { :size => 2, :disabled => true  }  %>
-			<p class="right"><input type="button" id="add_use_rope" value="+" /><input type="button" id="minus_use_rope" value="-" /></p>
-			<%= f.input :skill_use_rope, :label => 'Use Rope', :input_html => { :size => 2, :disabled => true  }  %>
 			
-			
-			
+			<p>Appraise<input type="button" id="minus_appraise" value="-" /><%= f.text_field :skill_appraise, :size => 2, :disabled => true%><input type="button" id="add_appraise" value="+" /></p>
+			<p>Balance<input type="button" id="minus_balance" value="-" /><%= f.text_field :skill_balance, :size => 2, :disabled => true%><input type="button" id="add_balance" value="+" /></p>
+			<p>Bluff<input type="button" id="minus_bluff" value="-" /><%= f.text_field :skill_bluff, :size => 2, :disabled => true%><input type="button" id="add_bluff" value="+" /></p>
+			<p>Climb<input type="button" id="minus_climb" value="-" /><%= f.text_field :skill_climb, :size => 2, :disabled => true%><input type="button" id="add_climb" value="+" /></p>
+			<p>Concentration<input type="button" id="minus_concentration" value="-" /><%= f.text_field :skill_concentration, :size => 2, :disabled => true%><input type="button" id="add_concentration" value="+" /></p>
+			<p>Craft<input type="button" id="minus_craft" value="-" /><%= f.text_field :skill_craft, :size => 2, :disabled => true%><input type="button" id="add_craft" value="+" /></p>
+			<p>Decipher Script<input type="button" id="minus_decipher_script" value="-" /><%= f.text_field :skill_decipher_script, :size => 2, :disabled => true%><input type="button" id="add_decipher_script" value="+" /></p>
+			<p>Diplomacy<input type="button" id="minus_diplomacy" value="-" /><%= f.text_field :skill_diplomacy, :size => 2, :disabled => true%><input type="button" id="add_diplomacy" value="+" /></p>
+			<p>Disable Device<input type="button" id="minus_disable_device" value="-" /><%= f.text_field :skill_disable_device, :size => 2, :disabled => true%><input type="button" id="add_disable_device" value="+" /></p>
+			<p>Disguise<input type="button" id="minus_disguise" value="-" /><%= f.text_field :skill_disguise, :size => 2, :disabled => true%><input type="button" id="add_disguise" value="+" /></p>
+			<p>Escape Artist<input type="button" id="minus_escape_artist" value="-" /><%= f.text_field :skill_escape_artist, :size => 2, :disabled => true%><input type="button" id="add_escape_artist" value="+" /></p>
+			<p>Forgery<input type="button" id="minus_forgery" value="-" /><%= f.text_field :skill_forgery, :size => 2, :disabled => true%><input type="button" id="add_forgery" value="+" /></p>
+			<p>Gather Information<input type="button" id="minus_gather_information" value="-" /><%= f.text_field :skill_gather_information, :size => 2, :disabled => true%><input type="button" id="add_gather_information" value="+" /></p>
+			<p>Handle Animal<input type="button" id="minus_handle_animal" value="-" /><%= f.text_field :skill_handle_animal, :size => 2, :disabled => true%><input type="button" id="add_handle_animal" value="+" /></p>
+			<p>Heal<input type="button" id="minus_heal" value="-" /><%= f.text_field :skill_heal, :size => 2, :disabled => true%><input type="button" id="add_heal" value="+" /></p>
+			<p>Hide<input type="button" id="minus_hide" value="-" /><%= f.text_field :skill_hide, :size => 2, :disabled => true%><input type="button" id="add_hide" value="+" /></p>
+			<p>Intimidate<input type="button" id="minus_intimidate" value="-" /><%= f.text_field :skill_intimidate, :size => 2, :disabled => true%><input type="button" id="add_intimidate" value="+" /></p>
+			<p>Jump<input type="button" id="minus_jump" value="-" /><%= f.text_field :skill_jump, :size => 2, :disabled => true%><input type="button" id="add_jump" value="+" /></p>
+			<p>Knowledge (arcana)<input type="button" id="minus_knowledge_arcana" value="-" /><%= f.text_field :skill_knowledge_arcana, :size => 2, :disabled => true%><input type="button" id="add_knowledge_arcana" value="+" /></p>
+			<p>Knowledge (architecture and engineering)<input type="button" id="minus_knowledge_architecture" value="-" /><%= f.text_field :skill_knowledge_architecture, :size => 2, :disabled => true%><input type="button" id="add_knowledge_architecture" value="+" /></p>
+			<p>Knowledge (dungeoneering)<input type="button" id="minus_knowledge_dungeoneering" value="-" /><%= f.text_field :skill_knowledge_dungeoneering, :size => 2, :disabled => true%><input type="button" id="add_knowledge_dungeoneering" value="+" /></p>
+			<p>Knowledge (geography)<input type="button" id="minus_knowledge_geography" value="-" /><%= f.text_field :skill_knowledge_geography, :size => 2, :disabled => true%><input type="button" id="add_knowledge_geography" value="+" /></p>
+			<p>Knowledge (history)<input type="button" id="minus_knowledge_history" value="-" /><%= f.text_field :skill_knowledge_history, :size => 2, :disabled => true%><input type="button" id="add_knowledge_history" value="+" /></p>
+			<p>Knowledge (local)<input type="button" id="minus_knowledge_local" value="-" /><%= f.text_field :skill_knowledge_local, :size => 2, :disabled => true%><input type="button" id="add_knowledge_local" value="+" /></p>
+			<p>Knowledge (nature)<input type="button" id="minus_knowledge_nature" value="-" /><%= f.text_field :skill_knowledge_nature, :size => 2, :disabled => true%><input type="button" id="add_knowledge_nature" value="+" /></p>
+			<p>Knowledge (nobility and royalty)<input type="button" id="minus_knowledge_nobility" value="-" /><%= f.text_field :skill_knowledge_nobility, :size => 2, :disabled => true%><input type="button" id="add_knowledge_nobility" value="+" /></p>
+			<p>Knowledge (religion)<input type="button" id="minus_knowledge_religion" value="-" /><%= f.text_field :skill_knowledge_religion, :size => 2, :disabled => true%><input type="button" id="add_knowledge_religion" value="+" /></p>
+			<p>Knowledge (planes)<input type="button" id="minus_knowledge_planes" value="-" /><%= f.text_field :skill_knowledge_planes, :size => 2, :disabled => true%><input type="button" id="add_knowledge_planes" value="+" /></p>
+			<p>Listen<input type="button" id="minus_listen," value="-" /><%= f.text_field :skill_listen, :size => 2, :disabled => true%><input type="button" id="add_listen," value="+" /></p>
+			<p>Move Silently<input type="button" id="minus_move_silently" value="-" /><%= f.text_field :skill_move_silently, :size => 2, :disabled => true%><input type="button" id="add_move_silently" value="+" /></p>
+			<p>Open Lock<input type="button" id="minus_open_lock" value="-" /><%= f.text_field :skill_open_lock, :size => 2, :disabled => true%><input type="button" id="add_open_lock" value="+" /></p>
+			<p>Perform<input type="button" id="minus_perform" value="-" /><%= f.text_field :skill_perform, :size => 2, :disabled => true%><input type="button" id="add_perform" value="+" /></p>
+			<p>Profession<input type="button" id="minus_profession" value="-" /><%= f.text_field :skill_profession, :size => 2, :disabled => true%><input type="button" id="add_profession" value="+" /></p>
+			<p>Ride<input type="button" id="minus_ride" value="-" /><%= f.text_field :skill_ride, :size => 2, :disabled => true%><input type="button" id="add_ride" value="+" /></p>
+			<p>Search<input type="button" id="minus_search" value="-" /><%= f.text_field :skill_search, :size => 2, :disabled => true%><input type="button" id="add_search" value="+" /></p>
+			<p>Sense Motive<input type="button" id="minus_sense_motive" value="-" /><%= f.text_field :skill_sense_motive, :size => 2, :disabled => true%><input type="button" id="add_sense_motive" value="+" /></p>
+			<p>Sleight of Hand<input type="button" id="minus_sleight_of_hand" value="-" /><%= f.text_field :skill_sleight_of_hand, :size => 2, :disabled => true%><input type="button" id="add_sleight_of_hand" value="+" /></p>
+			<p>Speak Language<input type="button" id="minus_speak_language" value="-" /><%= f.text_field :skill_speak_language, :size => 2, :disabled => true%><input type="button" id="add_speak_language" value="+" /></p>
+			<p>Spellcraft<input type="button" id="minus_spellcraft" value="-" /><%= f.text_field :skill_spellcraft, :size => 2, :disabled => true%><input type="button" id="add_spellcraft" value="+" /></p>
+			<p>Spot<input type="button" id="minus_spot" value="-" /><%= f.text_field :skill_spot, :size => 2, :disabled => true%><input type="button" id="add_spot" value="+" /></p>
+			<p>Survival<input type="button" id="minus_survival" value="-" /><%= f.text_field :skill_survival, :size => 2, :disabled => true%><input type="button" id="add_survival" value="+" /></p>
+			<p>Swim<input type="button" id="minus_swim" value="-" /><%= f.text_field :skill_swim, :size => 2, :disabled => true%><input type="button" id="add_swim" value="+" /></p>
+			<p>Tumble<input type="button" id="minus_tumble" value="-" /><%= f.text_field :skill_tumble, :size => 2, :disabled => true%><input type="button" id="add_tumble" value="+" /></p>
+			<p>Use Magic Device<input type="button" id="minus_use_magic_device" value="-" /><%= f.text_field :skill_use_magic_device, :size => 2, :disabled => true%><input type="button" id="add_use_magic_device" value="+" /></p>
+			<p>Use Rope<input type="button" id="minus_use_rope" value="-" /><%= f.text_field :skill_use_rope, :size => 2, :disabled => true%><input type="button" id="add_use_rope" value="+" /></p>
+
 	
 	</div>
 

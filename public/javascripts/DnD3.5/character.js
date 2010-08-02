@@ -8,14 +8,14 @@ function Character(){
 	this.race_names = new Array('Human','Dwarf','Elf','Gnome','Half-Elf','Half-Orc','Halfling');
 	this.klass_names = new Array('Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Wizard');
 	this.alignments = new Array('Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil');
-	this.skill_names = new Array(['skill_appraise','skill_balance','skill_bluff','skill_climb','skill_concentration',
-	'skill_craft','skill_decipher_script','skill_diplomacy','skill_disable_device','skill_disguise','skill_escape_artist',
-	'skill_forgery','skill_gather_information','skill_handle_animal','skill_heal','skill_hide','skill_intimidate','skill_jump',
-	'skill_knowledge_arcana','skill_knowledge_architecture','skill_knowledge_dungeoneering','skill_knowledge_geography',
-	'skill_knowledge_history','skill_knowledge_local','skill_knowledge_nature','skill_knowledge_nobility','skill_knowledge_religion',
-	'skill_knowledge_planes','skill_listen','skill_move_silently','skill_open_lock','skill_perform','skill_profession','skill_ride',
-	'skill_search','skill_sense_motive','skill_sleight_of_hand','skill_speak_language','skill_spellcraft','skill_spot','skill_survival',
-	'skill_swim','skill_tumble','skill_use_magic_device','skill_use_rope']);
+	this.skill_names = new Array('appraise','balance','bluff','climb','concentration','craft',
+	'decipher_script','diplomacy','disable_device','disguise','escape_artist',
+	'forgery','gather_information','handle_animal','heal','hide','intimidate','jump',
+	'knowledge_arcana','knowledge_architecture','knowledge_dungeoneering','knowledge_geography',
+	'knowledge_history','knowledge_local','knowledge_nature','knowledge_nobility','knowledge_religion',
+	'knowledge_planes','listen','move_silently','open_lock','perform','profession','ride',
+	'search','sense_motive','sleight_of_hand','speak_language','spellcraft','spot','survival',
+	'swim','tumble','use_magic_device','use_rope');
 
 	
 	//Basic Stats DOM info
@@ -53,17 +53,18 @@ function Character(){
 	//Ability Stats
 	this.abilities = [];
 	$.each(this.ability_names, function(i, val){
-		character.abilities.push(new Ability($('#character_'+val), $('#MISC_'+val), $('#TOTAL_'+val), $('#MOD_'+val), $('#ERROR_'+val)));
+		character.abilities.push(new Ability($('#character_'+val), $('#MISC_'+val), $('#TOTAL_'+val), $('#MOD_'+val), $('#ERROR_'+val), character.$skillz));
 	})
 	
 
 	//Skill Stats
 	this.skills = []
-	$.each(this.skill_names,function(i,val){
-		//rank, plus, minus
-		character.skills.push(new Skillz($('#character_'+val),$('#add_'+val),$('minus_'+val)));
+	$.each(this.skill_names, function(i, val){
+		//rank, plus, minus, points
+		character.skills.push(new Skill($('#character_skill_'+val),$('#add_'+val),$('#minus_'+val)));
 	})
 
+	//console.log(this.skills);
 	//Classes
 	this.klasses = [
 	
@@ -245,6 +246,7 @@ Character.prototype.setBaseSaves = function(BaseSaves)
 
 Character.prototype.setSkillPoints = function(skillz,intelligence)
 {
+
 	return this.$skillz.val((skillz[0] + parseInt(intelligence, 10)) * 4);
 }
 
