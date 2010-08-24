@@ -1,0 +1,42 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'Edit', edit_skill_path(@skill) %> </span>
+	<h2><%=@skill.fancy_name %></h2>
+</div>
+
+<div id="sheet">
+
+<p>
+  <b>Fancy Name:</b>
+  <%=h @skill.fancy_name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @skill.name %>
+</p>
+
+<p>
+  <b>Armor penalty:</b>
+  <%=h @skill.armor_penalty %>
+</p>
+
+<p>
+  <b>Need training:</b>
+  <%=h @skill.need_training %>
+</p>
+
+<p>
+  <b>Ability:</b>
+  <%=h @skill.ability %>
+</p>
+
+<p>
+  <b>Game:</b>
+  <%=h @skill.game_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_skill_path(@skill) %> |
+<%= link_to 'Back', skills_path %>
+
+</div>

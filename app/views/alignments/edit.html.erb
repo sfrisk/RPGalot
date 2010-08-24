@@ -1,0 +1,16 @@
+<h1>Editing alignment</h1>
+
+<% form_for(@alignment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @alignment %> |
+<%= link_to 'Back', alignments_path %>

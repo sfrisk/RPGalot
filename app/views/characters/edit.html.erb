@@ -1,7 +1,7 @@
 <%=h javascript_include_tag 'Dnd3.5/character', 'Dnd3.5/ability', 'Dnd3.5/race', 'DnD3.5/klass', 'DnD3.5/saves', 'DnD3.5/skillz' %>
 
 <div id="sheet_header">
-<span class="right"><%= link_to  h(@character.name), @character %> </span>
+<span class="right"><%= link_to  h("#{@character.name}'s Profile"), @character %> </span>
 <h2>Editing <%=h @character.name %></h2>
 
 </div>

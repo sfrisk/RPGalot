@@ -1,0 +1,12 @@
+<% f.inputs do %>
+  <%= f.input :fancy_name %>
+  <%= f.input :name %>
+  <%= f.input :armor_penalty %>
+  <%= f.input :need_training, :as => :select, :label =>'Untrained' %>
+  <%= f.input :ability, :as => :select, :collection => Skill::Abilities  %>
+  <%= f.input :game_id, :as => :select, :collection => Game.all, :include_blank => false %>
+
+	<% f.buttons do %>
+	  <%= f.commit_button %>
+	<% end %>
+<% end %>

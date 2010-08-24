@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100729195049) do
+ActiveRecord::Schema.define(:version => 20100824233538) do
+
+  create_table "alignments", :force => true do |t|
+    t.string   "title",      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "campaigns", :force => true do |t|
     t.string   "title",                            :null => false
@@ -112,6 +118,17 @@ ActiveRecord::Schema.define(:version => 20100729195049) do
   create_table "memberships", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.integer  "group_id",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string   "name",          :null => false
+    t.string   "fancy_name",    :null => false
+    t.integer  "armor_penalty", :null => false
+    t.boolean  "need_training", :null => false
+    t.string   "ability",       :null => false
+    t.integer  "game_id",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

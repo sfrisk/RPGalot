@@ -1,0 +1,34 @@
+<div id="sheet_header">
+	<span class="right"><%= link_to 'New Skill', new_skill_path %></span>
+	<h2>Skills</h2>
+</div>
+
+
+<table>
+  <tr>
+    <th>Fancy Name</th>
+    <th>Name</th>
+    <th>Armor penalty</th>
+    <th>Need training</th>
+    <th>Ability</th>
+    <th>Game</th>
+  </tr>
+
+<% @skills.each do |skill| %>
+  <tr>
+    <td><%=h skill.fancy_name %></td>
+    <td><%=h skill.name %></td>
+    <td><%=h skill.armor_penalty %></td>
+    <td><%=h skill.need_training %></td>
+    <td><%=h skill.ability %></td>
+    <td><%=h skill.game_id %></td>
+    <td><%= link_to 'Show', skill %></td>
+    <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
+    <td><%= link_to 'Destroy', skill, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+</div>

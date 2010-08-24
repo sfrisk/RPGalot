@@ -11,10 +11,14 @@ klass.prototype.getFalseAlignments = function(){
 	return this.alignment;
 }
 
-klass.prototype.getSkillz = function(){
+klass.prototype.getSkillPoints = function(){
 	return this.skillPoints
 }
 
 klass.prototype.getBaseSaves = function(){
 	return this.saves;
+}
+
+klass.prototype.getSkillz = function(){
+	return this.skillz;
 }

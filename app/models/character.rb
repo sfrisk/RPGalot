@@ -2,8 +2,7 @@ class Character < ActiveRecord::Base
 	
 	# t.integer :user_id, :null => false
 	#t.integer :campaign_id, :null=>false
-	#   t.string :first_name, :null => false
-	#   t.string :last_name, :null => false
+	#   t.string :name, :null => false
 	#   t.integer :age
 	#   t.string :gender
 	#   t.integer :height
@@ -27,6 +26,8 @@ class Character < ActiveRecord::Base
 	Klasses = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Wizard']
 	Alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']
 	Deities = ['Boccob', 'Corellon Larethian', 'Ehlonna', 'Erythnul', 'Fharlanghn', 'Garl Glittergold', 'Gruumsh', 'Heironeous', 'Hextor', 'Kord', 'Moradin', 'Nerull', 'Obad-Hai', 'Olidammara', 'Pelor', 'St. Cuthbert', 'Vecna', 'Wee Jas', 'Yondalla', 'Atheist']
+	Levels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+	
 	
 	belongs_to :user, :class_name => 'User'
 	belongs_to :campaign, :class_name => 'Campaign'

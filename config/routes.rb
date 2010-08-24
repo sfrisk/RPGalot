@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :alignments
+
+  map.resources :skills
+
   map.resources :abilities
 
   map.resources :games

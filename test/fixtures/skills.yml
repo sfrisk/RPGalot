@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: MyString
+  name: MyString
+  armor_penalty: 1
+  need_training: false
+  ability: MyString
+  game_id: 1
+
+two:
+  id: MyString
+  name: MyString
+  armor_penalty: 1
+  need_training: false
+  ability: MyString
+  game_id: 1

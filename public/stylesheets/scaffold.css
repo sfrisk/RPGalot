@@ -98,6 +98,11 @@ a:visited { color: #290418; }
 	min-height: 400px;
 }
 
+
+#skillz {
+	line-height: 1.5em;
+}
+
 .profile_list{
 	padding: 5px;
 	margin: 5px auto;
@@ -152,4 +157,17 @@ a:visited { color: #290418; }
 .ability_stuff{
 	float:right;
 	margin-right: 130px;
+}
+
+.tableSkill{
+	background: #EEEEEE;
+
+}
+
+.tiny{
+	font-size: 7px;
+}
+
+.input_border{
+	border: 2px solid red;
 }

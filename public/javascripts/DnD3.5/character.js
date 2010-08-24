@@ -8,14 +8,14 @@ function Character(){
 	this.race_names = new Array('Human','Dwarf','Elf','Gnome','Half-Elf','Half-Orc','Halfling');
 	this.klass_names = new Array('Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Wizard');
 	this.alignments = new Array('Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil');
-	this.skill_names = new Array('appraise','balance','bluff','climb','concentration','craft',
-	'decipher_script','diplomacy','disable_device','disguise','escape_artist',
-	'forgery','gather_information','handle_animal','heal','hide','intimidate','jump',
-	'knowledge_arcana','knowledge_architecture','knowledge_dungeoneering','knowledge_geography',
-	'knowledge_history','knowledge_local','knowledge_nature','knowledge_nobility','knowledge_religion',
-	'knowledge_planes','listen','move_silently','open_lock','perform','profession','ride',
-	'search','sense_motive','sleight_of_hand','speak_language','spellcraft','spot','survival',
-	'swim','tumble','use_magic_device','use_rope');
+	this.skill_names = new Array(['appraise','INT'],['balance','DEX'],['bluff','CHA'],['climb','STR'],['concentration','CON'],['craft','INT'],
+	['decipher_script','INT'],['diplomacy','CHA'],['disable_device','INT'],['disguise','CHA'],['escape_artist','DEX'],
+	['forgery','INT'],['gather_information','CHA'],['handle_animal','CHA'],['heal','WIS'],['hide','DEX'],['intimidate','CHA'],['jump','STR'],
+	['knowledge_arcana','INT'],['knowledge_architecture','INT'],['knowledge_dungeoneering','INT'],['knowledge_geography','INT'],
+	['knowledge_history','INT'],['knowledge_local','INT'],['knowledge_nature','INT'],['knowledge_nobility','INT'],['knowledge_religion','INT'],
+	['knowledge_planes','INT'],['listen','WIS'],['move_silently','DEX'],['open_lock','DEX'],['perform','CHA'],['profession','WIS'],['ride','DEX'],
+	['search','INT'],['sense_motive','WIS'],['sleight_of_hand','DEX'],['spellcraft','INT'],['spot','WIS'],['survival','WIS'],
+	['swim','STR'],['tumble','DEX'],['use_magic_device','CHA'],['use_rope','DEX']);
 
 	
 	//Basic Stats DOM info
@@ -60,8 +60,8 @@ function Character(){
 	//Skill Stats
 	this.skills = []
 	$.each(this.skill_names, function(i, val){
-		//rank, plus, minus, points
-		character.skills.push(new Skill($('#character_skill_'+val),$('#add_'+val),$('#minus_'+val)));
+		//rank, plus, minus, points 
+		character.skills.push(new Skill($('#character_skill_'+val[0]),$('#add_'+val[0]),$('#minus_'+val[0]),$('#'+val[0]+'_total'),$('#'+val[0]+'_ability_mod'),$('#MOD_'+val[1]),$('#klass_skill_'+val[0])));
 	})
 
 	//console.log(this.skills);
@@ -71,7 +71,7 @@ function Character(){
 		//Barbarian
 		new klass(
 			12, //Hit Die
-			['Climb','Craft','Handle Animal','Intimidate','Jump','Listen','Ride','Survival','Swim'], //class skillz
+			['climb','craft','handle_animal','intimidate','jump','listen','ride','survival','swim'], //class skillz
 			['Lawful Good','Lawful Neutral','Lawful Evil'], //alignments you can't be
 			[4,4], //skill point calculation
 			[2,0,0]), //save calculations
@@ -79,10 +79,12 @@ function Character(){
 		//Bard
 		new klass(
 			6,
-			['Appraise','Balance','Bluff','Climb','Concentration','Craft','Decipher Script',
-			'Diplomacy','Disguise','Escape Artist','Gather Information','Hide','Jump','Knowledge(all)',
-			'Listen','Move Silently','Perform','Profession','Sense Motive','Sleight of Hand','Speak Languages',
-			'Spellcraft','Swim','Tumble','Use Magic Device'],
+			['appraise','balance','bluff','climb','concentration','craft','decipher_script',
+			'diplomacy','disguise','escape_artist','gather_information','hide','jump','knowledge_arcana',
+			'knowledge_architecture','knowledge_dungeoneering','knowledge_geography','knowledge_history',
+			'knowledge_local','knowledge_nature','knowledge_nobility','knowledge_religion','knowledge_planes',
+			'listen','move_silently','perform','profession','sense_motive','sleight_of_hand','speak_languages',
+			'spellcraft','swim','tumble','use_magic_device'],
 			['Lawful Good','Lawful Neutral','Lawful Evil'],
 			[6,6],
 			[0,2,2]),
@@ -90,8 +92,8 @@ function Character(){
 		//Cleric
 		new klass(
 			8,
-			['Concentration','Craft','Diplomacy','Heal','Knowledge (arcana)','Knowledge (history)',
-			'Knowledge (religion)', 'Knowledge (the planes)', 'Profession', 'Spellcraft'],
+			['concentration','craft','diplomacy','heal','knowledge_arcana','knowledge_history',
+			'knowledge_religion', 'knowledge_planes', 'profession', 'spellcraft'],
 			[],//will need to adjust this based on diety
 			[2,2],
 			[2,0,2]),
@@ -99,8 +101,8 @@ function Character(){
 		//Druid
 		new klass(
 			8,
-			['Concentration','Craft','Diplomacy','Handle Animal','Heal','Knowledge (nature)',
-			'Listen', 'Profession', 'Ride', 'Spellcraft', 'Spot', 'Survival', 'Swim'],
+			['concentration','craft','diplomacy','handle_animal','heal','knowledge_nature',
+			'listen', 'profession', 'ride', 'spellcraft', 'spot', 'survival', 'swim'],
 			['Lawful Good', 'Chaotic Good', 'Lawful Evil', 'Chaotic Evil'],
 			[4,4],
 			[2,0,2]),
@@ -108,7 +110,7 @@ function Character(){
 		//Fighter
 		new klass(
 			10,
-			['Climb','Craft','Handle Animal','Intimidate','Jump','Ride','Swim'],
+			['climb','craft','handle_animal','intimidate','jump','ride','swim'],
 			[],
 			[2,2],
 			[2,0,0]),
@@ -116,9 +118,9 @@ function Character(){
 		//Monk
 		new klass(
 			8,
-			['Balance','Climb','Concentration','Craft','Diplomacy','Escape Artist','Hide',
-			'Jump','Knowledge (arcana)','Knowledge (religion)', 'Listen', 'Move Silently', 'Perform',
-			'Profession', 'Sense Motive', 'Spot', 'Swim', 'Tumble'],
+			['balance','climb','concentration','craft','diplomacy','escape_artist','hide',
+			'jump','knowledge_arcana','knowledge_religion', 'listen', 'move_silently', 'perform',
+			'profession', 'sense_motive', 'spot', 'swim', 'tumble'],
 			['Neutral Good', 'Chaotic Good', 'Neutral', 'Chaotic Neutral', 'Neutral Evil', 'Chaotic Evil'],
 			[4,4],
 			[2,2,2]),
@@ -126,8 +128,8 @@ function Character(){
 		//Paladin
 		new klass(
 			10,
-			['Concentration', 'Craft', 'Diplomacy', 'Handle Animal', 'Heal', 'Knowledge (nobility and royalty)',
-			'Knowledge (religion)', 'Profession', 'Ride', 'Sense Motive'],
+			['concentration', 'craft', 'diplomacy', 'handle_animal', 'heal', 'knowledge_nobility',
+			'knowledge_religion', 'profession', 'ride', 'sense_motive'],
 			['Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'Neutral', 'Chaotic Neutral', 'Lawful Evil',
 			'Neutral Evil', 'Chaotic Evil'],
 			[2,2],
@@ -136,8 +138,8 @@ function Character(){
 		//Ranger	
 		new klass(
 			8,
-			['Climb','Concentration','Craft','Handle Animal', 'Heal', 'Hide', 'Jump', 'Knowledge (dungeoneering)',
-			'Knowledge (geography)', 'Knowledge (nature)', 'Listen', 'Move Silently', 'Profession', 'Ride',
+			['climb','concentration','craft','handle_animal', 'heal', 'hide', 'jump', 'knowledge_dungeoneering',
+			'knowledge_geography', 'knowledge_nature', 'listen', 'move_silently', 'profession', 'ride',
 			'Search', 'Spot', 'Survival', 'Swim', 'Use Rope'],
 			[],
 			[6,6],
@@ -146,11 +148,11 @@ function Character(){
 		//Rogue
 		new klass(
 			6,
-			['Appraise','Balance', 'Bluff', 'Climb', 'Craft', 'Decipher Script', 'Diplomacy',
-			'Disable Device', 'Disguise', 'Escape Artist', 'Forgery', 'Gather Information',
-			'Hide', 'Intimidate', 'Jump', 'Knowledge (local)', 'Listen', 'Move Silently', 
-			'Open Lock', 'Perform', 'Profession', 'Search', 'Sense Motive', 'Sleight of Hand',
-			'Spot', 'Swim', 'Tumble', 'Use Magic Device', 'Use Rope'],
+			['appraise','balance', 'bluff', 'climb', 'craft', 'decipher_script', 'diplomacy',
+			'disable_device', 'disguise', 'escape_artist', 'forgery', 'gather_information',
+			'gide', 'intimidate', 'jump', 'knowledge_local', 'listen', 'move_silently', 
+			'open_lock', 'perform', 'profession', 'search', 'sense_motive', 'sleight_of_hand',
+			'spot', 'swim', 'tumble', 'use_magic_device', 'use_rope'],
 			[],
 			[8,8],
 			[0,2,0]),
@@ -158,7 +160,7 @@ function Character(){
 		//Sorcerer
 		new klass(
 			4,
-			['Bluff', 'Concentration', 'Craft', 'Knowledge (arcana)', 'Profession', 'Spellcraft'],
+			['bluff', 'concentration', 'craft', 'knowledge_arcana', 'profession', 'spellcraft'],
 			[],
 			[2,2],
 			[0,0,2]),
@@ -166,8 +168,10 @@ function Character(){
 		//Wizard
 		new klass(
 			4,
-			['Concentration', 'Craft', 'Decipher Script', 'Knowledge (all)', 'Profession',
-			'Spellcraft'],
+			['concentration', 'craft', 'decipher Script', 'knowledge_arcana',
+			'knowledge_architecture','knowledge_dungeoneering','knowledge_geography','knowledge_history',
+			'knowledge_local','knowledge_nature','knowledge_nobility','knowledge_religion','knowledge_planes', 'profession',
+			'spellcraft'],
 			[],
 			[2,2],
 			[0,0,2])
@@ -217,8 +221,9 @@ Character.prototype.doKlassyThings = function (){
 	$.each(character.klass_names, function(i,val){
 		if(character.$klass.val() == val){
 			character.setAvailableAlignments(character.klasses[i].getFalseAlignments());
-			character.setSkillPoints(character.klasses[i].getSkillz(),character.abilities[3].getMod());
-			character.setBaseSaves(character.klasses[i].getBaseSaves());
+			character.setClassSkills(character.klasses[i].getSkillz());
+			character.setSkillPoints(character.klasses[i].getSkillPoints(),character.abilities[3].getMod());
+			character.setBaseSaves(character.klasses[i].getBaseSaves())
 		}
 	})
 }
@@ -236,6 +241,32 @@ Character.prototype.setAvailableAlignments = function (align){
 	})
 }
 
+Character.prototype.setClassSkills = function(classSkills)
+{
+	var i=0;
+	var j=0;
+	var character = this;
+	for (i=0;i<this.skill_names.length;i++)
+	{
+		for (j = 0; j < classSkills.length; j++)
+		{
+			skill = this.skill_names[i];
+			//console.log("skill = " + skill[0] + " classSkill = "+classSkills[j]);
+			if(skill[0] == classSkills[j])
+			{
+				this.skills[i].setClassSkill(true);
+				i++
+			}
+			else
+			{
+				this.skills[i].setClassSkill(false);
+				
+			}
+			
+		}
+	}
+}
+
 Character.prototype.setBaseSaves = function(BaseSaves)
 {
 		character = this;
@@ -244,12 +275,27 @@ Character.prototype.setBaseSaves = function(BaseSaves)
 	})
 }
 
-Character.prototype.setSkillPoints = function(skillz,intelligence)
-{
-
-	return this.$skillz.val((skillz[0] + parseInt(intelligence, 10)) * 4);
+Character.prototype.setSkillPoints = function(skillPoints,intelligence)
+{	
+	points =  (skillPoints[0] + parseInt(intelligence, 10)) * 4;
+	used = this.checkUsedPoints();
+	total = points - used;
+	if(this.cur_race == "human")
+	{
+		this.$skillz.val(parseInt(this.$skillz.val,10) + 4)
+	}
+	return this.$skillz.val(total);
+	
 }
 
+Character.prototype.checkUsedPoints = function()
+{
+	var points = 0;
+	$.each(this.skills, function(i, skill){
+		points = points + skill.getRank()
+	})
+	return points;		
+}
 
 Character.prototype.setRaceModifiers = function (){
 	character = this;
@@ -262,6 +308,10 @@ Character.prototype.setRaceModifiers = function (){
 		}			
 	})
 	character.cur_race = character.$race.val();
+	if(character.cur_race == "Human")
+	{
+		this.$skillz.val(parseInt(this.$skillz.val(),10) + 4)
+	}
 }
 
 
