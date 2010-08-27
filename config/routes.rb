@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :klass_skills
+
+  map.resources :klass_alignments
+
+  map.resources :klasses
+
   map.resources :alignments
 
   map.resources :skills

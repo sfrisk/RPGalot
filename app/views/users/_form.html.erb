@@ -12,7 +12,7 @@
 	  <%= f.input :gender, :as => :select, :collection => User::Genders %>
 	  <%= f.input :eye_color %>
 	  <%= f.input :hair_color %>
-	  <%= f.input :alignment, :as => :select, :collection => User::Alignments %>
+	  <%= f.input :alignment, :as => :select, :collection => Alignment.all %>
 		<%= f.input :group_ids, :as => :check_boxes, :collection => Group.all, :label => 'Groups'  %>
 	
 <% end %>

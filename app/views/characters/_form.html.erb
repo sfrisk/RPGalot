@@ -15,10 +15,10 @@
 	</table>
 	<table style="width:600px">
 	<tr>
-		<td><%= f.select :klass, Character::Klasses %></td>
+		<td><%= f.collection_select :klass, Klass.all, :title, :title %></td>
 		<td><%= f.select :level, Character::Levels %></td>
 		<td><%= f.select :race, Character::Races  %></td>
-		<td><%= f.select :alignment, Character::Alignments  %></td>
+		<td><%= f.collection_select :alignment, Alignment.all, :title, :title %></td>
 		<td><%= f.select :deity, Character::Deities  %></td>
 	</tr>
 	<tr>
@@ -167,7 +167,7 @@
 	
 	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px" >
 		<tr>
-			<th style="color: white; background:black;" colspan="2">Speed</span></th>
+			<th style="color: white; background:black;" colspan="2">Speed</th>
 		</tr>
 		<tr>
 			<td><input disabled="disabled" type="text" id="HP" value="0" size="15"></td>

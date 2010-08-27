@@ -1,0 +1,19 @@
+<% f.inputs do %>
+  <%= f.input :title %>
+  <%= f.input :hit_die, :as => :select, :collection =>[4,6,8,10,12] %>
+  <%= f.input :skill_points, :as => :select, :collection =>[2,4,6,8] %>
+  <%= f.input :attack_bonus, :as => :select, :collection => {'Good' => 1, 'Average' => 2, 'Poor' => 3} %>
+
+	<p>Check off the major saves for this class</p>
+  <%= f.input :fort_save %>
+  <%= f.input :ref_save %>
+  <%= f.input :will_save %>
+
+	<%= f.input :alignment_ids, :as => :check_boxes, :collection => Alignment.all, :label => 'Class Alignments'  %>
+	<%= f.input :skill_ids, :as => :check_boxes, :collection => Skill.all, :label => 'Class Skills'  %>
+	
+
+	<% f.buttons do %>
+	  <%= f.commit_button %>
+	<% end %>
+<% end %>

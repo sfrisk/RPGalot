@@ -11,6 +11,7 @@ class Skill < ActiveRecord::Base
 	
 	validates_presence_of :name, :fancy_name, :armor_penalty, :ability, :game_id
 	belongs_to :game, :class_name => 'Game'
-	
+	has_many :klass_skills
+	has_many :klasses, :through => :klass_skills
 	
 end

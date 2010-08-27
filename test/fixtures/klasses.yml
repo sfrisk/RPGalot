@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  hit_die: 1
+  skill_points: 1
+  attack_bonus: 1
+  fort_save: false
+  ref_save: false
+  will_save: false
+
+two:
+  title: MyString
+  hit_die: 1
+  skill_points: 1
+  attack_bonus: 1
+  fort_save: false
+  ref_save: false
+  will_save: false

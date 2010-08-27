@@ -1,0 +1,2 @@
+module KlassSkillsHelper
+end

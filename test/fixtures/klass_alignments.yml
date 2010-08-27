@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  klass_id: 1
+  alignment_id: 1
+
+two:
+  klass_id: 1
+  alignment_id: 1

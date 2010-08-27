@@ -1,0 +1,53 @@
+<p>
+  <b>Class Name:</b>
+  <%=h @klass.title %>
+</p>
+
+<p>
+  <b>Hit die:</b>
+  <%=h @klass.hit_die %>
+</p>
+
+<p>
+  <b>Skill points:</b>
+  <%=h @klass.skill_points %>
+</p>
+
+<p>
+  <b>Attack bonus:</b>
+  <%=h @klass.attack_bonus %>
+</p>
+
+<p>
+  <b>Fort save:</b>
+  <%=h @klass.fort_save %>
+</p>
+
+<p>
+  <b>Ref save:</b>
+  <%=h @klass.ref_save %>
+</p>
+
+<p>
+  <b>Will save:</b>
+  <%=h @klass.will_save %>
+</p>
+
+<p>
+	<b>Class Alignments:</b>
+		<%= 
+			@klass.alignments.map do |alignment|
+				h(alignment.title)
+			end.join(', ')
+		%>
+</p>
+<p>
+	<b>Class Skills:</b>
+		<%= @klass.skills.map do |skill|
+				h(skill.fancy_name+" ("+skill.ability+")")
+			 end.join(', ')
+				%>
+</p>
+
+<%= link_to 'Edit', edit_klass_path(@klass) %> |
+<%= link_to 'Back', klasses_path %>

@@ -1,0 +1,32 @@
+<h1>Listing klasses</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Hit die</th>
+    <th>Skill points</th>
+    <th>Attack bonus</th>
+    <th>Fort save</th>
+    <th>Ref save</th>
+    <th>Will save</th>
+  </tr>
+
+<% @klasses.each do |klass| %>
+  <tr>
+    <td><%=h klass.title %></td>
+    <td><%=h klass.hit_die %></td>
+    <td><%=h klass.skill_points %></td>
+    <td><%=h klass.attack_bonus %></td>
+    <td><%=h klass.fort_save %></td>
+    <td><%=h klass.ref_save %></td>
+    <td><%=h klass.will_save %></td>
+    <td><%= link_to 'Show', klass %></td>
+    <td><%= link_to 'Edit', edit_klass_path(klass) %></td>
+    <td><%= link_to 'Destroy', klass, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New klass', new_klass_path %>

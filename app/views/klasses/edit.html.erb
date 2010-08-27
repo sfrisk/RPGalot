@@ -1,0 +1,8 @@
+<h1>Editing klass</h1>
+
+<% semantic_form_for(@klass) do |f| %>
+      <%= render 'form', :f => f %>
+<% end %>
+
+<%= link_to 'Show', @klass %> |
+<%= link_to 'Back', klasses_path %>

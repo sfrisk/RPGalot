@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100824233538) do
+ActiveRecord::Schema.define(:version => 20100827013147) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",      :null => false
@@ -111,6 +111,32 @@ ActiveRecord::Schema.define(:version => 20100824233538) do
     t.text     "description"
     t.boolean  "invite_only",   :default => false, :null => false
     t.integer  "created_by_id",                    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "klass_alignments", :force => true do |t|
+    t.integer  "klass_id",     :null => false
+    t.integer  "alignment_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "klass_skills", :force => true do |t|
+    t.integer  "klass_id",   :null => false
+    t.integer  "skill_id",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "klasses", :force => true do |t|
+    t.string   "title",        :null => false
+    t.integer  "hit_die",      :null => false
+    t.integer  "skill_points", :null => false
+    t.integer  "attack_bonus", :null => false
+    t.boolean  "fort_save",    :null => false
+    t.boolean  "ref_save",     :null => false
+    t.boolean  "will_save",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
