@@ -33,6 +33,7 @@ function Character(){
 	//current stats
 	this.cur_race = "";
 	this.cur_klass = this.$klass.val();	
+	console.log(this.cur_klass);
 	this.$skillz = $('#skillz');
 	
 	
