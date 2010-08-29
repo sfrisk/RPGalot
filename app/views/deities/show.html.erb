@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @deity.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @deity.description %>
+</p>
+
+<p>
+  <b>Alignment:</b>
+  <%=h @deity.alignment.title %>
+</p>
+
+<p>
+  <b>Domains:</b>
+  <%=h @deity.domains %>
+</p>
+
+
+<%= link_to 'Edit', edit_deity_path(@deity) %> |
+<%= link_to 'Back', deities_path %>

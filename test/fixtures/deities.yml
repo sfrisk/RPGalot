@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  alignment_id: 1
+  domains: MyString
+
+two:
+  title: MyString
+  description: MyString
+  alignment_id: 1
+  domains: MyString

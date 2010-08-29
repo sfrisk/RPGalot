@@ -1,0 +1,26 @@
+<h1>Listing deities</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Alignment</th>
+    <th>Domains</th>
+  </tr>
+
+<% @deities.each do |deity| %>
+  <tr>
+    <td><%=h deity.title %></td>
+    <td><%=h deity.description %></td>
+    <td><%=h deity.alignment.title %></td>
+    <td><%=h deity.domains %></td>
+    <td><%= link_to 'Show', deity %></td>
+    <td><%= link_to 'Edit', edit_deity_path(deity) %></td>
+    <td><%= link_to 'Destroy', deity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New deity', new_deity_path %>

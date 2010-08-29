@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :deities
+
   map.resources :klass_skills
 
   map.resources :klass_alignments

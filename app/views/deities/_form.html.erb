@@ -1,0 +1,12 @@
+<% f.inputs do %>
+	
+    <%= f.input :title %>  
+    <%= f.input :description %>
+    <%= f.input :alignment, :as => :select, :collection => Alignment.all,  :label => "Alignment" %>
+    <%= f.input :domains %>
+
+<% f.buttons do %>
+  <%= f.commit_button %>
+<% end %>
+
+<% end %>

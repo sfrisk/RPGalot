@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100827013147) do
+ActiveRecord::Schema.define(:version => 20100829063623) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",      :null => false
@@ -97,6 +97,16 @@ ActiveRecord::Schema.define(:version => 20100827013147) do
     t.integer  "skill_tumble",                  :default => 0, :null => false
     t.integer  "skill_use_magic_device",        :default => 0, :null => false
     t.integer  "skill_use_rope",                :default => 0, :null => false
+  end
+
+  create_table "deities", :force => true do |t|
+    t.string   "title",                       :null => false
+    t.string   "description"
+    t.integer  "alignment_id",                :null => false
+    t.string   "domains"
+    t.integer  "game_id",      :default => 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "games", :force => true do |t|

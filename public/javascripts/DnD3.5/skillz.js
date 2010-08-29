@@ -80,9 +80,11 @@ Skill.prototype.setClassSkill = function(skill)
 {
 	this.classSkill = skill;
 	maxRanks = 2;
-	if (this.classSkill == false || parseInt(this.$rank.val(),10) > maxRanks)
+	if (this.classSkill == false)
 	{
-		this.$rank.val(maxRanks);
+		if (parseInt(this.$rank.val(),10) > maxRanks)
+				this.$rank.val(maxRanks);
+		
 		this.$klassSkill.attr('checked',false);
 	}
 	if (this.classSkill == true)

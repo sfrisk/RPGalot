@@ -15,11 +15,11 @@
 	</table>
 	<table style="width:600px">
 	<tr>
-		<td><%= f.collection_select :klass, Klass.all, :title, :title %></td>
+		<td><%= f.collection_select :klass, Klass.all, :title, :title %> <%= link_to ' ?', klasses_path %></td>
 		<td><%= f.select :level, Character::Levels %></td>
 		<td><%= f.select :race, Character::Races  %></td>
-		<td><%= f.collection_select :alignment, Alignment.all, :title, :title %></td>
-		<td><%= f.select :deity, Character::Deities  %></td>
+		<td><%= f.collection_select :alignment, Alignment.all, :title, :title %> <%= link_to ' ?', alignments_path %></td>
+		<td><%= f.collection_select :deity, Deity.all, :title, :title  %><%= link_to ' ?', deities_path %></td>
 	</tr>
 	<tr>
 		<td class="character_label">Class</td>
