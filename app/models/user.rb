@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	acts_as_authentic
 	
 	# t.string :first_name
 	#   t.string :last_name
@@ -14,12 +15,17 @@ class User < ActiveRecord::Base
 	# :users, :tactical_focused
 	# :users, :combat_focused
 	# :users, :strategic_focused
+		# add_column :users, :username, :string
+		# add_column :users, :email, :string
+		# add_column :users, :crypted_password, :string
+		# add_column :users, :password_salt, :string
+		# add_column :users, :persistence_token, :string
 	
 	Alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']
 	Genders = ['Male', 'Female']
 	
 	
-	validates_presence_of :first_name, :last_name
+	#validates_presence_of :first_name, :last_name
 	validates_numericality_of :story_focused, :tactical_focused, :combat_focused, :strategic_focused, :greater_than => 0, :less_than_or_equal_to => 5
 	#validates_inclusion_of :alignment, :in => Alignments, :allow_blank => true
 	validates_inclusion_of :gender, :in => Genders, :allow_blank => true

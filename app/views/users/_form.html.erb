@@ -1,10 +1,14 @@
 <% f.inputs do %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
+  <%= f.input :username %>
+  <%= f.input :email %>
+	<%= f.input :password %>
 
 <% unless f.object.new_record? %>
 	
 		<h3>Just the facts, ma'am</h3>
+		<%= f.input :first_name %>
+	  <%= f.input :last_name %>
+		
 	  <%= f.input :bio %>
 	  <%= f.input :gender, :as => :select, :collection => User::Genders %>
 	

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100829083144) do
+ActiveRecord::Schema.define(:version => 20100831050607) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",      :null => false
@@ -193,6 +193,11 @@ ActiveRecord::Schema.define(:version => 20100829083144) do
     t.integer  "tactical_focused"
     t.integer  "combat_focused"
     t.integer  "strategic_focused"
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
   end
 
 end

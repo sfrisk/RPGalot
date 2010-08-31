@@ -48903,3 +48903,1176 @@ Rendering users/index
   [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
   [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 3)) [0m
 Completed in 37ms (View: 25, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:19:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (2.0ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 72ms (View: 56, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:20:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.9ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 71ms (View: 55, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:48:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (2.0ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 81ms (View: 64, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:48:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (2.0ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.6ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 152ms (View: 137, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:48:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (1.9ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 78ms (View: 62, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:48:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.9ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 160ms (View: 64, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:49:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (1.9ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 76ms (View: 61, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:49:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.9ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 79ms (View: 63, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:49:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (2.0ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 152ms (View: 137, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:50:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.9ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 78ms (View: 62, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-31 00:50:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM "groups" [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+Rendered users/_form (95.3ms)
+Completed in 198ms (View: 105, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-08-31 00:50:29) [PUT]
+  Parameters: {"user"=>{"story_focused"=>"5", "combat_focused"=>"1", "tactical_focused"=>"3", "gender"=>"Female", "group_ids"=>["", "1", "", "2"], "strategic_focused"=>"4", "bio"=>"Programing junkie, creative writing (& reading) enthusiast, and Star Wars fangirl. Not necessarily in that order.", "first_name"=>"Sarah", "last_name"=>"Frisk"}, "commit"=>"Update User", "authenticity_token"=>"D/eNOrI1WnbmizuNHPY+5uwqmZFy08AQwMGaBr9c+ho=", "id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" IN (1,2)) [0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mUser Update (23.5ms)[0m   [0mUPDATE "users" SET "strategic_focused" = 4, "combat_focused" = 1, "updated_at" = '2010-08-31 04:50:29' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 55ms (DB: 25) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:50:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (1.9ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 147ms (View: 132, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:50:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (2.0ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 69ms (View: 54, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:52:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (2.0ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 168ms (View: 152, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-31 00:53:32) [GET]
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 3)) [0m
+Completed in 38ms (View: 26, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-08-31 00:53:33) [GET]
+  [4;35;1mGroup Load (1.3ms)[0m   [0mSELECT * FROM "groups" [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 68ms (View: 58, DB: 3) | 200 OK [http://localhost/groups]
+
+
+Processing CampaignsController#index (for 127.0.0.1 at 2010-08-31 00:53:34) [GET]
+  [4;36;1mCampaign Load (1.2ms)[0m   [0;1mSELECT * FROM "campaigns" [0m
+Rendering template within layouts/application
+Rendering campaigns/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Completed in 113ms (View: 53, DB: 3) | 200 OK [http://localhost/campaigns]
+
+
+Processing CharactersController#index (for 127.0.0.1 at 2010-08-31 00:53:37) [GET]
+  [4;35;1mCharacter Load (4.1ms)[0m   [0mSELECT * FROM "characters" [0m
+Rendering template within layouts/application
+Rendering characters/index
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 62ms (View: 48, DB: 6) | 200 OK [http://localhost/characters]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-31 00:53:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 31ms (View: 28, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-31 00:53:39) [GET]
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 3)) [0m
+Completed in 120ms (View: 107, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 00:53:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (1.9ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 76ms (View: 59, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing HomeController#index (for 192.168.1.140 at 2010-08-31 01:44:25) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://prettyprincess.local/]
+
+
+Processing UsersController#index (for 192.168.1.140 at 2010-08-31 01:44:30) [GET]
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 3)) [0m
+Completed in 116ms (View: 105, DB: 3) | 200 OK [http://prettyprincess.local/users]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:44:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.*) on line #32 of app/views/users/show.html.erb:
+29: 		<table>
+30: 			<tr>
+31: 				<td><strong>Story</strong></td>
+32: 				<td><div style="width:<%= @user.story_focused * 40 %>px; background-color:green">&nbsp;</div></td>
+33: 			</tr>
+34: 			<tr>
+35: 				<td><strong>Tactical</strong></td>
+
+    app/views/users/show.html.erb:32
+    app/controllers/users_controller.rb:18:in `show'
+
+Rendered rescues/_trace (47.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:44:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (2.0ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 173ms (View: 64, DB: 4) | 200 OK [http://prettyprincess.local/users/1]
+
+
+Processing GroupsController#show (for 192.168.1.140 at 2010-08-31 01:44:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering groups/show
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns".group_id = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "memberships" ON "users".id = "memberships".user_id WHERE (("memberships".group_id = 1)) [0m
+Completed in 57ms (View: 37, DB: 2) | 200 OK [http://prettyprincess.local/groups/1]
+
+
+Processing GroupsController#show (for 192.168.1.140 at 2010-08-31 01:44:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering groups/show
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns".group_id = 2) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "memberships" ON "users".id = "memberships".user_id WHERE (("memberships".group_id = 2)) [0m
+Completed in 118ms (View: 106, DB: 2) | 200 OK [http://prettyprincess.local/groups/2]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:44:50) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.*) on line #32 of app/views/users/show.html.erb:
+29: 		<table>
+30: 			<tr>
+31: 				<td><strong>Story</strong></td>
+32: 				<td><div style="width:<%= @user.story_focused * 40 %>px; background-color:green">&nbsp;</div></td>
+33: 			</tr>
+34: 			<tr>
+35: 				<td><strong>Tactical</strong></td>
+
+    app/views/users/show.html.erb:32
+    app/controllers/users_controller.rb:18:in `show'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:45:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.*) on line #32 of app/views/users/show.html.erb:
+29: 		<table>
+30: 			<tr>
+31: 				<td><strong>Story</strong></td>
+32: 				<td><div style="width:<%= @user.story_focused * 40 %>px; background-color:green">&nbsp;</div></td>
+33: 			</tr>
+34: 			<tr>
+35: 				<td><strong>Tactical</strong></td>
+
+    app/views/users/show.html.erb:32
+    app/controllers/users_controller.rb:18:in `show'
+
+Rendered rescues/_trace (133.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:45:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 73ms (View: 59, DB: 3) | 200 OK [http://prettyprincess.local/users/2]
+
+
+Processing UsersController#edit (for 192.168.1.140 at 2010-08-31 01:45:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+Rendered users/_form (30.0ms)
+Completed in 132ms (View: 40, DB: 1) | 200 OK [http://prettyprincess.local/users/2/edit]
+
+
+Processing UsersController#update (for 192.168.1.140 at 2010-08-31 01:46:14) [PUT]
+  Parameters: {"user"=>{"story_focused"=>"2", "combat_focused"=>"3", "tactical_focused"=>"4", "gender"=>"Male", "group_ids"=>["", "1", "", "2"], "strategic_focused"=>"3", "bio"=>"web programer", "first_name"=>"James", "last_name"=>"Daniels"}, "commit"=>"Update User", "authenticity_token"=>"CC5DgfHGFeuhV4PQ0YctuhpUJ7+VXlfwv4VI6cnLM3w=", "id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" IN (1,2)) [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "strategic_focused" = 3, "combat_focused" = 3, "story_focused" = 2, "tactical_focused" = 4, "gender" = 'Male', "updated_at" = '2010-08-31 05:46:14' WHERE "id" = 2[0m
+Redirected to http://prettyprincess.local:3000/users/2
+Completed in 32ms (DB: 2) | 302 Found [http://prettyprincess.local/users/2]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:46:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.4ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 2) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 138ms (View: 123, DB: 3) | 200 OK [http://prettyprincess.local/users/2]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:46:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.4ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mGroup Load (0.6ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 68ms (View: 53, DB: 4) | 200 OK [http://prettyprincess.local/users/2]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:46:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 151ms (View: 136, DB: 3) | 200 OK [http://prettyprincess.local/users/2]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:46:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 67ms (View: 52, DB: 3) | 200 OK [http://prettyprincess.local/users/2]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:46:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 156ms (View: 142, DB: 3) | 200 OK [http://prettyprincess.local/users/2]
+
+
+Processing CharactersController#show (for 192.168.1.140 at 2010-08-31 01:47:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering characters/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+Completed in 48ms (View: 32, DB: 2) | 200 OK [http://prettyprincess.local/characters/2]
+
+
+Processing CharactersController#edit (for 192.168.1.140 at 2010-08-31 01:47:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+  [4;35;1mKlass Load (1.5ms)[0m   [0mSELECT * FROM "klasses" [0m
+  [4;36;1mAlignment Load (0.7ms)[0m   [0;1mSELECT * FROM "alignments" [0m
+  [4;35;1mDeity Load (1.9ms)[0m   [0mSELECT * FROM "deities" [0m
+  [4;36;1mSkill Load (4.3ms)[0m   [0;1mSELECT * FROM "skills" [0m
+Rendered characters/_form (161.3ms)
+Completed in 195ms (View: 170, DB: 10) | 200 OK [http://prettyprincess.local/characters/2/edit]
+
+
+Processing CharactersController#update (for 192.168.1.140 at 2010-08-31 01:48:52) [PUT]
+  Parameters: {"commit"=>"Update Character", "character"=>{"klass"=>"Rogue", "name"=>"Frod Baggins", "WIS"=>"12", "DEX"=>"15", "CON"=>"18", "hair"=>"red", "weight"=>"78", "deity"=>"Yondalla", "INT"=>"12", "level"=>"1", "gender"=>"Male", "CHA"=>"17", "STR"=>"9", "eyes"=>"blue", "height"=>"6'11.9\"", "alignment"=>"Neutral Good", "age"=>"22", "race"=>"Halfling"}, "authenticity_token"=>"CC5DgfHGFeuhV4PQ0YctuhpUJ7+VXlfwv4VI6cnLM3w=", "id"=>"2"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 2) [0m
+  [4;36;1mCharacter Update (0.7ms)[0m   [0;1mUPDATE "characters" SET "eyes" = 'blue', "weight" = 78, "height" = 6, "hair" = 'red', "updated_at" = '2010-08-31 05:48:52' WHERE "id" = 2[0m
+Redirected to http://prettyprincess.local:3000/characters/2
+Completed in 29ms (DB: 2) | 302 Found [http://prettyprincess.local/characters/2]
+
+
+Processing CharactersController#show (for 192.168.1.140 at 2010-08-31 01:48:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCharacter Load (1.2ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering characters/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+Completed in 48ms (View: 32, DB: 2) | 200 OK [http://prettyprincess.local/characters/2]
+
+
+Processing CharactersController#edit (for 192.168.1.140 at 2010-08-31 01:49:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCharacter Load (1.3ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering characters/edit
+  [4;35;1mKlass Load (1.4ms)[0m   [0mSELECT * FROM "klasses" [0m
+  [4;36;1mAlignment Load (0.6ms)[0m   [0;1mSELECT * FROM "alignments" [0m
+  [4;35;1mDeity Load (1.8ms)[0m   [0mSELECT * FROM "deities" [0m
+  [4;36;1mSkill Load (4.1ms)[0m   [0;1mSELECT * FROM "skills" [0m
+Rendered characters/_form (79.9ms)
+Completed in 111ms (View: 88, DB: 9) | 200 OK [http://prettyprincess.local/characters/2/edit]
+
+
+Processing CampaignsController#show (for 192.168.1.140 at 2010-08-31 01:49:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering campaigns/show
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;35;1mCharacter Load (2.5ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".campaign_id = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 135ms (View: 121, DB: 4) | 200 OK [http://prettyprincess.local/campaigns/1]
+
+
+Processing CharactersController#show (for 192.168.1.140 at 2010-08-31 01:49:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering characters/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+Completed in 49ms (View: 33, DB: 2) | 200 OK [http://prettyprincess.local/characters/1]
+
+
+Processing CharactersController#new (for 192.168.1.140 at 2010-08-31 01:49:25) [GET]
+Rendering template within layouts/application
+Rendering characters/new
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mCampaign Load (0.5ms)[0m   [0mSELECT * FROM "campaigns" [0m
+  [4;36;1mKlass Load (1.4ms)[0m   [0;1mSELECT * FROM "klasses" [0m
+  [4;35;1mAlignment Load (0.7ms)[0m   [0mSELECT * FROM "alignments" [0m
+  [4;36;1mDeity Load (1.8ms)[0m   [0;1mSELECT * FROM "deities" [0m
+  [4;35;1mSkill Load (4.2ms)[0m   [0mSELECT * FROM "skills" [0m
+Rendered characters/_form (190.1ms)
+Completed in 210ms (View: 187, DB: 9) | 200 OK [http://prettyprincess.local/characters/new]
+
+
+Processing GroupsController#show (for 192.168.1.140 at 2010-08-31 01:49:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering groups/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns".group_id = 1) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "memberships" ON "users".id = "memberships".user_id WHERE (("memberships".group_id = 1)) [0m
+Completed in 41ms (View: 30, DB: 2) | 200 OK [http://prettyprincess.local/groups/1]
+
+
+Processing GroupsController#index (for 192.168.1.140 at 2010-08-31 01:49:37) [GET]
+  [4;36;1mGroup Load (1.1ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 119ms (View: 110, DB: 2) | 200 OK [http://prettyprincess.local/groups]
+
+
+Processing CampaignsController#index (for 192.168.1.140 at 2010-08-31 01:49:38) [GET]
+  [4;35;1mCampaign Load (1.3ms)[0m   [0mSELECT * FROM "campaigns" [0m
+Rendering template within layouts/application
+Rendering campaigns/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Completed in 37ms (View: 27, DB: 3) | 200 OK [http://prettyprincess.local/campaigns]
+
+
+Processing CampaignsController#show (for 192.168.1.140 at 2010-08-31 01:49:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering campaigns/show
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mCharacter Load (2.4ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".campaign_id = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 59ms (View: 47, DB: 4) | 200 OK [http://prettyprincess.local/campaigns/1]
+
+
+Processing CharactersController#index (for 192.168.1.140 at 2010-08-31 01:49:45) [GET]
+  [4;36;1mCharacter Load (81.6ms)[0m   [0;1mSELECT * FROM "characters" [0m
+Rendering template within layouts/application
+Rendering characters/index
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Completed in 136ms (View: 45, DB: 83) | 200 OK [http://prettyprincess.local/characters]
+
+
+Processing HomeController#index (for 192.168.1.140 at 2010-08-31 01:49:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://prettyprincess.local/]
+
+
+Processing UsersController#index (for 192.168.1.140 at 2010-08-31 01:49:56) [GET]
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 3)) [0m
+Completed in 35ms (View: 24, DB: 3) | 200 OK [http://prettyprincess.local/users]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:49:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (1.9ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.3ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 147ms (View: 133, DB: 4) | 200 OK [http://prettyprincess.local/users/1]
+
+
+Processing UsersController#show (for 192.168.1.140 at 2010-08-31 01:50:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (1.3ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 2) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 65ms (View: 50, DB: 3) | 200 OK [http://prettyprincess.local/users/2]
+WARNING: geokit-rails requires the Geokit gem. You either don't have the gem installed,
+or you haven't told Rails to require it. If you're using a recent version of Rails: 
+  config.gem "geokit" # in config/environment.rb
+and of course install the gem: sudo gem install geokit
+WARNING: geokit-rails requires the Geokit gem. You either don't have the gem installed,
+or you haven't told Rails to require it. If you're using a recent version of Rails: 
+  config.gem "geokit" # in config/environment.rb
+and of course install the gem: sudo gem install geokit
+WARNING: geokit-rails requires the Geokit gem. You either don't have the gem installed,
+or you haven't told Rails to require it. If you're using a recent version of Rails: 
+  config.gem "geokit" # in config/environment.rb
+and of course install the gem: sudo gem install geokit
+WARNING: geokit-rails requires the Geokit gem. You either don't have the gem installed,
+or you haven't told Rails to require it. If you're using a recent version of Rails: 
+  config.gem "geokit" # in config/environment.rb
+and of course install the gem: sudo gem install geokit
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100714223725)
+Migrating to CreateGroups (20100714233230)
+Migrating to CreateMemberships (20100715001007)
+Migrating to CreateCampaigns (20100716002404)
+Migrating to CreateCharacters (20100716020334)
+Migrating to CreateGames (20100716232908)
+Migrating to AddingToCharacters (20100720205707)
+Migrating to CharacterUserModifications (20100720223747)
+Migrating to NameChange (20100723200353)
+Migrating to AddCharacterSkillz (20100729195049)
+Migrating to CreateSkills (20100824021510)
+Migrating to CreateAlignments (20100824233538)
+Migrating to CreateKlasses (20100827004902)
+Migrating to CreateKlassAlignments (20100827005715)
+Migrating to CreateKlassSkills (20100827013147)
+Migrating to CreateDeities (20100829063623)
+Migrating to CreateFeats (20100829083144)
+Migrating to AddingUserAuthentication (20100831050607)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "users" ADD "username" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "users" ADD "email" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "crypted_password" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "users" ADD "password_salt" varchar(255)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "users" ADD "persistence_token" varchar(255)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100831050607')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("alignments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("campaigns")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("characters")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("deities")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("feats")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("games")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("klass_alignments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("klass_skills")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("klasses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("memberships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("skills")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:33:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x226530c>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered rescues/_trace (131.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:34:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x23c79c0>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-31 14:35:42) [GET]
+
+ActionController::RoutingError (No route matches "/character/1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:35:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x212f0dc>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered rescues/_trace (124.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:36:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x2384134>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:36:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x219bcf0>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered rescues/_trace (125.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:36:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (1.9ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.7ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 104ms (View: 85, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:37:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCharacter Load (2.2ms)[0m   [0;1mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;36;1mCampaign Load (0.4ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 194ms (View: 175, DB: 4) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:37:20) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (9.1ms)
+Completed in 30ms (View: 18, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-31 14:37:21) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:38:29) [GET]
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `password' for #<User:0x21a3324>) on line #4 of app/views/users/_form.html.erb:
+1: <% f.inputs do %>
+2:   <%= f.input :username %>
+3:   <%= f.input :email %>
+4: 	<%= f.input :password %>
+5: 
+6: <% unless f.object.new_record? %>
+7: 	
+
+    formtastic (0.9.10) rails/./lib/formtastic.rb:590:in `send'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:590:in `basic_input_helper'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:600:in `password_input'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1209:in `send'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1209:in `inline_input_for'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:106:in `send'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:106:in `input'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:105:in `map'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:105:in `input'
+    app/views/users/_form.html.erb:4
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1292:in `field_set_and_list_wrapping'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:267:in `inputs'
+    app/views/users/_form.html.erb:1
+    app/views/users/new.html.erb:4
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1741:in `semantic_form_for'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1719:in `with_custom_field_error_proc'
+    formtastic (0.9.10) rails/./lib/formtastic.rb:1740:in `semantic_form_for'
+    app/views/users/new.html.erb:3
+    app/controllers/users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (76.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:40:06) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x219a51c>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (131.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:40:15) [GET]
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x23b70ac>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:40:30) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x21e4a04>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (126.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:40:31) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x23f850c>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:40:32) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x222bfbc>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (126.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:40:33) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x248bb2c>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:40:33) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `acts_as_authentic' for #<Class:0x2265a14>):
+  app/models/user.rb:2
+  app/controllers/users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-31 14:41:49) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (10.9ms)
+Completed in 214ms (View: 31, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-31 14:42:09) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 2)) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 3)) [0m
+Completed in 148ms (View: 63, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-31 14:42:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCharacter Load (2.0ms)[0m   [0mSELECT * FROM "characters" WHERE ("characters".user_id = 1) [0m
+  [4;36;1mCampaign Load (0.3ms)[0m   [0;1mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 1) [0m
+  [4;35;1mCampaign Load (0.4ms)[0m   [0mSELECT * FROM "campaigns" WHERE ("campaigns"."id" = 2) [0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups".id = "memberships".group_id WHERE (("memberships".user_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "memberships" WHERE ("memberships".group_id = 2) [0m
+Completed in 83ms (View: 63, DB: 4) | 200 OK [http://localhost/users/1]

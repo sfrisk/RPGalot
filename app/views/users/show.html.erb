@@ -29,19 +29,19 @@
 		<table>
 			<tr>
 				<td><strong>Story</strong></td>
-				<td><%= @user.story_focused %></td>
+				<td><div style="width:<%= @user.story_focused.to_i * 40 %>px; background-color:green">&nbsp;</div></td>
 			</tr>
 			<tr>
 				<td><strong>Tactical</strong></td>
-				<td><%= @user.tactical_focused %></td>
+				<td><div style="width:<%= @user.tactical_focused.to_i * 40 %>px; background-color:blue">&nbsp;</div></td>
 			</tr>
 			<tr>
 				<td><strong>Combat</strong></td>
-				<td><%= @user.combat_focused %></td>
+				<td><div style="width:<%= @user.combat_focused.to_i * 40 %>px; background-color:red">&nbsp;</div></td>
 			</tr>
 			<tr>
 				<td><strong>Strategic</strong></td>
-				<td><%= @user.strategic_focused %></td>
+				<td><div style="width:<%= @user.strategic_focused.to_i * 40 %>px; background-color:purple">&nbsp;</div></td>
 			
 			</tr>
 		</table>
