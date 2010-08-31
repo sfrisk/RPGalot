@@ -1,6 +1,13 @@
 <div id="sheet_header">
-	<span class="right"><%= link_to 'Edit', edit_user_path(@user) %></span>
+	<div class="right">
+		<% if current_user && @user.username == current_user.username %>
+			<%= link_to 'Edit Profile', edit_user_path(:current) %>
+		<%end%>
+	</div>
 	<h2><%=h @user.name %></h2>
+	<% if current_user && @user.username == current_user.username %>
+		<p>This is you!</p>
+	<%end%>
 </div>
 	<p style="color: green"><%= notice %></p>
 <div id="sheet">

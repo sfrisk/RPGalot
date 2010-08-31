@@ -1,5 +1,5 @@
 <div id="sheet_header">
-	<span class="right"><%= link_to 'New User', new_user_path %></span>
+
 	<h2>Users</h2>
 </div>
 
@@ -19,7 +19,7 @@
 				<table>
 					<tr>
 						<td class="description"> Name:</td>
-						<td><strong><%= link_to h(user.name), user %></strong></td>
+						<td><strong><%= link_to h(user.name), :action => 'show', :id => user %></strong></td>
 					</tr>
 					<tr>
 						<td class="description"> Groups: </td>
@@ -28,7 +28,8 @@
 								link_to h(group.title), group
 							end.join(', ')
 						%></td>
-					<tr>
+					</tr>
+					
 				</table>
 			</td>
 		</tr>

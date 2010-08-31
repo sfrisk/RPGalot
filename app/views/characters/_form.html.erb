@@ -1,7 +1,8 @@
 <% f.inputs do %>
 
 <% if f.object.new_record? %>
-	<%= f.input :user_id, :as => :select, :collection => User.all %>
+
+	<%= f.input :user, :as => :select, :collection => User.all %>
   <%= f.input :campaign_id, :as => :select, :collection => Campaign.all %>
 <% end %>
 
