@@ -331,7 +331,7 @@
 			<td>+</td>
 			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
 			<td>+</td>
-			<td><input type="button" id="minus_<%=h skill.name %>" value="-" /><%= f.text_field "skill_#{skill.name}",  :size => 2, :disabled => true, :class => "input_border" %><input type="button" id="add_<%=h skill[0] %>" value="+" /></td>
+			<td><input type="button" id="minus_<%=h skill.name %>" value="-" /><%= f.text_field "skill_#{skill.name}",  :size => 2, :disabled => true, :class => "input_border" %><input type="button" id="add_<%=h skill.name %>" value="+" /></td>
 			
 		</tr> 
 		<% end %>

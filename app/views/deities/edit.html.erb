@@ -1,8 +1,9 @@
 <h1>Editing deity</h1>
-
+<div id="sheet">
 <% semantic_form_for(@deity) do |f| %>
 	<%= render 'form', :f => f %>
 <% end %>
 
 <%= link_to 'Show', @deity %> |
 <%= link_to 'Back', deities_path %>
+</div>

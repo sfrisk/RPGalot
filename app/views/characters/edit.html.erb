@@ -3,8 +3,8 @@
 <div id="sheet_header">
 <span class="right"><%= link_to  h("#{@character.name}'s Profile"), @character %> </span>
 <h2>Editing <%=h @character.name %></h2>
-
 </div>
+
 <div id="sheet">
 <% semantic_form_for(@character) do |f| %>
     <%= render 'form', :f => f %>

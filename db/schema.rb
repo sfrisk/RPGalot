@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100829063623) do
+ActiveRecord::Schema.define(:version => 20100829083144) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",      :null => false
@@ -105,6 +105,13 @@ ActiveRecord::Schema.define(:version => 20100829063623) do
     t.integer  "alignment_id",                :null => false
     t.string   "domains"
     t.integer  "game_id",      :default => 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feats", :force => true do |t|
+    t.string   "title",      :null => false
+    t.string   "benefit",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

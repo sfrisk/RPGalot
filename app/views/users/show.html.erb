@@ -1,94 +1,55 @@
 <div id="sheet_header">
 	<span class="right"><%= link_to 'Edit', edit_user_path(@user) %></span>
-	<h2>Player Sheet</h2>
-	<p>Suitable for players wanting to game </p>
+	<h2><%=h @user.name %></h2>
 </div>
-
+	<p style="color: green"><%= notice %></p>
 <div id="sheet">
+<div class="section right">	
+	<div class="profile">
+		<% if @user.gender == "Female"%>
+			<img src="/images/profile_female.png" alt"group photo" width="200px" />
+		<% else %>
+			<img src="/images/profile_male.png" alt"group photo" width="200px" />
+		<% end %>
 	
-<div id="avatar">
-	<% if @user.gender == "Female"%>
-		<img src="/images/profile_female.png" alt"group photo" width="100px" />
-	<% else %>
-		<img src="/images/profile_male.png" alt"group photo" width="100px" />
-	<% end %>
+		<h3><%= @user.name %></h3>
+		<h4>Bio</h4>
+		<p><%= @user.bio %>
+		<h4>Location</h4>
+		<p>a location</p>
+		<h4>Website</h4>
+		<p>www.awebsite.com</p>
+	
+	</div>
 </div>
 
-<table>
-	<tr>
-		<td>
-		<%=h @user.name %>
-		</td>		
-	</tr>
-	<tr>
-		<td class="character_label">PLAYER'S NAME</td>
-	</tr>
-</table>
+<div class="section">
+	<h3 class="sheet_header">How I Play</h3>
+	<div class="profile_list">
+		<table>
+			<tr>
+				<td><strong>Story</strong></td>
+				<td><%= @user.story_focused %></td>
+			</tr>
+			<tr>
+				<td><strong>Tactical</strong></td>
+				<td><%= @user.tactical_focused %></td>
+			</tr>
+			<tr>
+				<td><strong>Combat</strong></td>
+				<td><%= @user.combat_focused %></td>
+			</tr>
+			<tr>
+				<td><strong>Strategic</strong></td>
+				<td><%= @user.strategic_focused %></td>
+			
+			</tr>
+		</table>
+	</div>
+</div>
 
-<table>
-	<tr>
-		<td>
-			<% unless @user.prefered_class.empty? %>
-		  	<%=h @user.prefered_class %>
-			<% else %>
-				<%=h @user.confidential %>
-			<% end %>
-		</td>
-		<td>
-			<% unless @user.prefered_race.empty? %>
-		  	<%=h @user.prefered_race %>
-			<% else %>
-				<%=h @user.confidential %>
-			<% end %>
-		</td>
-		<td>
-			<% unless @user.gender.empty? %>
-		  	<%=h @user.gender %>
-			<% else %>
-				<%=h @user.confidential %>
-			<% end %>
-		</td>
-	</tr>
-	<tr>
-		<td class="character_label">CLASS</td>
-		<td class="character_label">RACE</td>
-		<td class="character_label">GENDER</td>
-	</tr>
-</table>
-
-<table>
-	<tr>
-		<td>
-			<% unless @user.alignment.empty? %>
-		  	<%=h @user.alignment %>
-			<% else %>
-				<%=h @user.confidential %>
-			<% end %>
-		</td>
-		<td>
-			<% unless @user.hair_color.empty? %>
-		  	<%=h @user.hair_color %>
-			<% else %>
-				<%=h @user.confidential %>
-			<% end %>
-		</td>
-		<td>
-			<% unless @user.eye_color.empty? %>
-		  	<%=h @user.eye_color %>
-			<% else %>
-				<%=h @user.confidential %>
-			<% end %>
-		</td>
-	</tr>
-	<tr>
-		<td class="character_label">ALIGNMENT</td>
-		<td class="character_label">HAIR COLOR</td>
-		<td class="character_label">EYE COLOR</td>
-	</tr>
-</table>
-
-<div class="section right">
-	<h3>Characters</h3>
+<div class="section">
+	<h3 class="sheet_header">Characters I Play</h3>
 <% @user.characters.map do |character| %>
 <div class="profile_list">
 	<table>
@@ -113,7 +74,7 @@
 </div>
 
 <div class="section">
-<h3>Groups</h3>
+<h3 class="sheet_header">Places I Game</h3>
 	<% @user.groups.map do |group| %>
 		<div class="profile_list">
 		<table>

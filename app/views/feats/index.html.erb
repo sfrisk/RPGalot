@@ -1,0 +1,22 @@
+<h1>Listing feats</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Benefit</th>
+  </tr>
+
+<% @feats.each do |feat| %>
+  <tr>
+    <td><%=h feat.title %></td>
+    <td><%=h feat.benefit %></td>
+    <td><%= link_to 'Show', feat %></td>
+    <td><%= link_to 'Edit', edit_feat_path(feat) %></td>
+    <td><%= link_to 'Destroy', feat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New feat', new_feat_path %>

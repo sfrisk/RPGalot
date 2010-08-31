@@ -20,8 +20,8 @@ class User < ActiveRecord::Base
 	
 	
 	validates_presence_of :first_name, :last_name
-	validates_numericality_of :story_focused, :tactical_focused, :combat_focused, :strategic_focus, :greater_than => 0, :less_than_or_equal_to => 5
-	validates_inclusion_of :alignment, :in => Alignments, :allow_blank => true
+	validates_numericality_of :story_focused, :tactical_focused, :combat_focused, :strategic_focused, :greater_than => 0, :less_than_or_equal_to => 5
+	#validates_inclusion_of :alignment, :in => Alignments, :allow_blank => true
 	validates_inclusion_of :gender, :in => Genders, :allow_blank => true
 	has_many :created_groups, :class_name => 'Group', :foreign_key => :created_by_id
 	has_many :characters, :class_name => 'Character', :foreign_key => :user_id

@@ -29,7 +29,7 @@
 </p>
 
 <div class="section right">
-	<h3>Campaigns</h3>
+	<h3 class="sheet_header">Campaigns</h3>
 		<%  @group.created_campaigns.map do |created_campaigns| %>
 			<div class="profile_list">
 				<%= link_to h(created_campaigns.title), created_campaigns%>
@@ -38,7 +38,7 @@
 </div>
 
 <div class="section">
-	<h3>Members</h3>
+	<h3 class="sheet_header">Members</h3>
 <% @group.users.map do |user| %>
 	<div class="profile_list">
 	<table>

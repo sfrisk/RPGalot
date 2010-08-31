@@ -7,7 +7,7 @@
 <div id="sheet">
 
 <div class="section right">
-	<h3>Characters</h3>
+	<h3 class="sheet_header">Characters</h3>
 	<p class="profile_list">For <%=h @campaign.min_characters %> - <%=h @campaign.max_characters %> characters<br />
 		<%= link_to 'New Character', new_character_path %></p>
 	
@@ -36,7 +36,7 @@
 
 <div class="section">
 <p>
-  <h3>Description:</h3>
+  <h3 class="sheet_header">Description:</h3>
   <p class="profile_list"><%=h @campaign.description %></p>
 </p>
 </div>

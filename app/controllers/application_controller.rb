@@ -7,4 +7,11 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+	private
+	
+	def mobile_device?
+			request.user_agent =~ /Mobile|webOS/
+	end
+	helper_method :mobile_device?
 end

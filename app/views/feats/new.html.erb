@@ -1,0 +1,7 @@
+<h1>New feat</h1>
+
+<% semantic_form_for(@feat) do |f| %>
+	<%= render 'form', :f => f %>
+<% end %>
+
+<%= link_to 'Back', feats_path %>

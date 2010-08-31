@@ -1,26 +1,33 @@
-<h1>Listing deities</h1>
+<div id="sheet_header">
+	<span class="right"><%= link_to 'New Deity', new_deity_path %></span>
+	<h2>Deities</h2>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Alignment</th>
-    <th>Domains</th>
-  </tr>
-
+<div id="sheet">
+	
 <% @deities.each do |deity| %>
-  <tr>
-    <td><%=h deity.title %></td>
-    <td><%=h deity.description %></td>
-    <td><%=h deity.alignment.title %></td>
-    <td><%=h deity.domains %></td>
-    <td><%= link_to 'Show', deity %></td>
-    <td><%= link_to 'Edit', edit_deity_path(deity) %></td>
-    <td><%= link_to 'Destroy', deity, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+<div class="list">
+<table>
+	<tr>
+		<td class="description">
+			<img src="/images/FSM.png" alt"deity photo" width="100px" />
+		</td>
+		<td>
+			<table>
+			  <tr>
+			    <td><strong>Name:</strong> <%= link_to h(deity.title), deity %>, <%=h deity.description %></td>
+				</tr>
+				<tr>
+			    <td><strong>Alignment:</strong> <%=h deity.alignment.title %></td>
+				</tr>
+				<tr>
+			    <td><strong>Domains:</strong> <%=h deity.domains %></td>
+			  </tr>
+			</table>
+		</td>
+	</tr>
 </table>
+</div>
+<% end %>
 
-<br />
-
-<%= link_to 'New deity', new_deity_path %>
+</div>

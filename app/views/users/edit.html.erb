@@ -1,8 +1,15 @@
-<h1>Editing user</h1>
+<div id="sheet_header">
+<span class="right"><%= link_to  h("#{@user.name}'s Profile"), @user %> </span>
+<h2>Editing <%=h @user.name %></h2>
+</div>
 
+<div id="sheet">
 <% semantic_form_for(@user) do |f| %>
 	<%= render 'form', :f => f %>
 <% end %>
 
+
 <%= link_to 'Show', @user %> |
 <%= link_to 'Destroy User', @group, :confirm => 'Are you sure?', :method => :delete %>
+
+</div>

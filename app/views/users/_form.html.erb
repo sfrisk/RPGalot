@@ -2,17 +2,21 @@
   <%= f.input :first_name %>
   <%= f.input :last_name %>
 
-
 <% unless f.object.new_record? %>
 	
+		<h3>Just the facts, ma'am</h3>
 	  <%= f.input :bio %>
-	  <%= f.input :looking_for_group %>
-	  <%= f.input :prefered_race %>
-	  <%= f.input :prefered_class %>
 	  <%= f.input :gender, :as => :select, :collection => User::Genders %>
-	  <%= f.input :eye_color %>
-	  <%= f.input :hair_color %>
-	  <%= f.input :alignment, :as => :select, :collection => Alignment.all %>
+	
+		<h3>Play Style</h3>
+		<p>Rate the importance of each of the following playing styles in your games from 1, not at all, to 5, very strongly</p>
+		<%= f.input :story_focused,  :as => :select, :collection => [1,2,3,4,5] %>
+		<%= f.input :tactical_focused, :as => :select, :collection => [1,2,3,4,5] %>
+		<%= f.input :combat_focused, :as => :select, :collection => [1,2,3,4,5] %>
+		<%= f.input :strategic_focused, :as => :select, :collection => [1,2,3,4,5] %>
+	
+	
+		<h3>Group Memberships</h3>
 		<%= f.input :group_ids, :as => :check_boxes, :collection => Group.all, :label => 'Groups'  %>
 	
 <% end %>

@@ -1,3 +1,5 @@
+<%=h javascript_include_tag 'Dnd3.5/character', 'Dnd3.5/ability', 'Dnd3.5/race', 'DnD3.5/klass', 'DnD3.5/saves', 'DnD3.5/skillz' %>
+
 <div id="sheet_header">
 	<span class="right"><%= link_to 'Edit', edit_character_path(@character) %> </span>
 	<h2>Character Sheet</h2>
@@ -96,38 +98,40 @@
 		</tr>
 	</table>
 
-		<table>
-			<tr>
-				<td><strong>STR<br /><span class="details">STRENGTH</span></strong></td>
-				<td><%=h @character.STR %></td>
-				<td>modifier</td>
-			</tr>
-			<tr>
-				<td><strong>DEX<br /><span class="details">DEXTERITY</span></strong></td>
-				<td><%=h @character.DEX %></td>
-				<td>modifier</td>
-			</tr>
-			<tr>
-				<td><strong>STR<br /><span class="details">STRENGTH</span></strong></td>
-				<td><%=h @character.CON %></td>
-				<td>modifier</td>
-			</tr>
-			<tr>
-				<td><strong>INT<br /><span class="details">INTELLIGENCE</span></strong></td>
-				<td><%=h @character.INT %></td>
-				<td>modifier</td>
-			</tr>
-			<tr>
-				<td><strong>WIS<br /><span class="details">WISDOM</span></strong></td>
-				<td><%=h @character.WIS %></td>
-				<td>modifier</td>
-			</tr>
-			<tr>
-				<td><strong>CHA<br /><span class="details">CHARISMA</span></strong></td>
-				<td><%=h @character.CHA %></td>
-				<td>modifier</td>
-			</tr>
-		</table>
+	<% @ability_names = [['STR','Strength',0,@character.STR],['DEX','Dexterity',1,@character.DEX],['CON','Constitution',0,@character.CON],['INT','Intelligence',1,@character.INT],['WIS','Wisdom',0,@character.WIS],['CHA','Charisma',1,@character.CHA]] %>
+	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width:300px; margin-top:10px">
+		<tr>
+			<th colspan="8" style="color: white; background:black;">Ability Scores</th>
+		</tr>
+		<tr>
+			<th class="details">Ability<br />Name</th>
+			<th class="details">Base</th>
+			<th></th>
+			<th class="details">Misc</th>
+			<th></th>
+			<th class="details">Total</th>
+			<th></th>
+			<th class="details">Modifier</th>
+		</tr>
+	<% @ability_names.each do |ability| %>
+		<tr
+		<% if(ability[2] == 0)%>
+			class="tableSkill"
+		<% end %>	
+		> 
+		<th><%=h ability[0] %><br /><span class="details"><%=h ability[1] %></span></th>
+		<td><input disabled="disabled" type="text" id="character_<%=ability[0] %>" value="<%= ability[3] %>" size="2"></td>
+		<td>+</td>
+		<td><input disabled="disabled" type="text" id="MISC_<%=h ability[0] %>" value="0" size="2"></td>
+		<td>=</td>
+		<td><input disabled="disabled" type="text" id="TOTAL_<%=h ability[0] %>" value="0" size="2"></td>
+		<td>|</td>
+		<td><input disabled="disabled" type="text" id="MOD_<%=h ability[0] %>" value="0" size="2"></td>
 
+		</tr>
+	<% end %>
+	</table>
 
-</div>
+	<script type="text/javascript" charset="utf-8">
+		var character  = new Character();
+	</script>
