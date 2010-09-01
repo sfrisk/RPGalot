@@ -31,11 +31,16 @@ class Character < ActiveRecord::Base
 	
 	belongs_to :user, :class_name => 'User'
 	belongs_to :campaign, :class_name => 'Campaign'
+	belongs_to :alignment, :class_name => 'Alignment'
+	belongs_to :klass, :class_name => 'Klass'
+	belongs_to :deity, :class_name => 'Deity'
+
+	
 	validates_inclusion_of :gender, :in => Genders, :allow_blank => false
-	validates_inclusion_of :klass, :in => Klasses, :allow_blank => false
-	validates_inclusion_of :race, :in => Races, :allow_blank => false
+	#validates_inclusion_of :klass, :in => Klasses, :allow_blank => false
+	#validates_inclusion_of :race_id, :in => Races, :allow_blank => false
 	validates_presence_of :user_id, :campaign_id
-	validates_numericality_of :STR, :DEX, :CON, :INT, :WIS, :CHA, :greater_than => 3, :less_than_or_equal_to => 18
+	#validates_numericality_of :STR, :DEX, :CON, :INT, :WIS, :CHA, :greater_than => 3, :less_than_or_equal_to => 18
 
 	
 end

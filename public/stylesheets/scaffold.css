@@ -17,6 +17,10 @@ a { color: #290418; }
 a:visited { color: #290418; }
 
 
+h1 a{
+	text-decoration: none;
+}
+
 .list {
 	padding: 5px;
 	margin: 5px auto;
@@ -89,6 +93,7 @@ a:visited { color: #290418; }
 	background: #EEEEEE;
 	margin: 0px;
 	width: 100%;
+	padding: 10px;
 	
 }
 
@@ -192,4 +197,8 @@ a:visited { color: #290418; }
 
 .input_border{
 	border: 2px solid red;
+}
+
+.box_header{
+	color: white; background:black; padding: 10px;
 }

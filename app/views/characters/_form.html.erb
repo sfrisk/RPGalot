@@ -2,8 +2,7 @@
 
 <% if f.object.new_record? %>
 
-	<%= f.input :user, :as => :select, :collection => User.all %>
-  <%= f.input :campaign_id, :as => :select, :collection => Campaign.all %>
+  <%= f.input :campaign %>
 <% end %>
 
 	<table style="width:600px">
@@ -16,11 +15,11 @@
 	</table>
 	<table style="width:600px">
 	<tr>
-		<td><%= f.collection_select :klass, Klass.all, :title, :title %> <%= link_to ' ?', klasses_path %></td>
-		<td><%= f.select :level, Character::Levels %></td>
-		<td><%= f.select :race, Character::Races  %></td>
-		<td><%= f.collection_select :alignment, Alignment.all, :title, :title %> <%= link_to ' ?', alignments_path %></td>
-		<td><%= f.collection_select :deity, Deity.all, :title, :title  %><%= link_to ' ?', deities_path %></td>
+		<td><%= f.collection_select :klass_id, Klass.all, :id, :title %> <%= link_to ' ?', klasses_path %></td>
+		<td><%= f.select :level, (1..20).to_a %></td>
+		<td><%= f.select :race_id, (0..6).to_a   %></td>
+		<td><%= f.collection_select :alignment_id, Alignment.all, :id, :title %> <%= link_to ' ?', alignments_path %></td>
+		<td><%= f.collection_select :deity_id, Deity.all, :id, :title %><%= link_to ' ?', deities_path %></td>
 	</tr>
 	<tr>
 		<td class="character_label">Class</td>
@@ -56,7 +55,7 @@
 	<div class="right">
 	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width:300px; margin-top:10px">
 		<tr>
-			<th colspan="8" style="color: white; background:black;">Ability Scores</th>
+			<th colspan="8" class="box_header">Ability Scores</th>
 		</tr>
 		<tr>
 			<th class="details">Ability<br />Name</th>

@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+	before_filter :require_no_user, :only =>[:new, :create]
+	before_filter :require_user, :only => [:show, :edit, :update]
+	
   # GET /users
   # GET /users.xml
   def index
@@ -44,7 +47,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(root_path, :notice => 'Registration successful.') }
+        format.html { redirect_to(@user, :notice => 'Registration successful.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
@@ -60,7 +63,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to(root_path, :notice => 'Successfully updated profile.') }
+        format.html { redirect_to(@user, :notice => 'Successfully updated profile.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

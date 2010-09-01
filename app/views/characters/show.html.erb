@@ -1,9 +1,12 @@
 <%=h javascript_include_tag 'Dnd3.5/character', 'Dnd3.5/ability', 'Dnd3.5/race', 'DnD3.5/klass', 'DnD3.5/saves', 'DnD3.5/skillz' %>
 
 <div id="sheet_header">
-	<span class="right"><%= link_to 'Edit', edit_character_path(@character) %> </span>
+	<div class="right">
+		<% if current_user && @character.user == current_user %>
+			<p><%= link_to 'Edit', edit_character_path(@character) %></p>
+		<%end%>
+	</div>
 	<h2>Character Sheet</h2>
-	<p>Mini blurb here</p>
 </div>
 
 <div id="sheet">
@@ -44,15 +47,15 @@
 
 				<table class="stats">
 					<tr>
-						<td><%=h @character.race %></td>
+						<td><%=h @character.race_id %></td>
 						<td width="10"></td>
-						<td><%=h @character.klass %></td>
+						<td><%=h @character.klass.title %></td>
 						<td width="10"></td>
 						<td><%=h @character.level %></td>
 						<td width="10"></td>
-						<td><%=h @character.deity %></td>
+						<td><%=h @character.deity.title %></td>
 						<td width="10"></td>
-						<td><%=h @character.alignment %></td>
+						<td><%=h @character.alignment.title %></td>
 					</tr>
 					<tr>
 						<td class="character_label">RACE</td>
@@ -99,9 +102,9 @@
 	</table>
 
 	<% @ability_names = [['STR','Strength',0,@character.STR],['DEX','Dexterity',1,@character.DEX],['CON','Constitution',0,@character.CON],['INT','Intelligence',1,@character.INT],['WIS','Wisdom',0,@character.WIS],['CHA','Charisma',1,@character.CHA]] %>
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width:300px; margin-top:10px">
+	<table class="right" style="border-collapse: collapse; border: solid 2px black; padding: 5px; width:300px; margin-top:10px">
 		<tr>
-			<th colspan="8" style="color: white; background:black;">Ability Scores</th>
+			<th colspan="8"  class="box_header">Ability Scores</th>
 		</tr>
 		<tr>
 			<th class="details">Ability<br />Name</th>
@@ -131,6 +134,66 @@
 		</tr>
 	<% end %>
 	</table>
+
+
+	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 450px; margin-top:10px">
+		<tr>
+			<th colspan="3"  class="box_header">Skills</th>
+			<th colspan="4"  class="box_header"> Max Ranks <br /><span class="details">Class/Cross-Class</span></th>
+			<th colspan="3"  class="box_header"><input disabled="disabled" type="text" id="class_skill" value="4" size="2"> / 
+			<input disabled="disabled" type="text" id="cross_class_skill" value="2" size="2"></th>
+		<tr>
+		<tr>
+			<th class="details">Class<br />Skill?</th>
+			<th class="details">Skill Name</th>
+			<th class="details">Key<br />Ability</th>
+			<th colspan="2" class="details">Skill Modifier</th>
+			<th colspan = "2" class="details">Ability<br />Modifier</th>
+			<th colspan = "2" class="details">Misc<br />Modifier</th>
+			<th class="details"> Ranks</th>
+		</tr>
+
+		<% Skill.all.each do |skill| %>
+		<tr
+		<% if(skill.id.odd?)%>
+			class="tableSkill"
+		<% end %>	
+		>	
+			<td><input type="checkbox" name="klass_skill_<%=h skill.name %>" id="klass_skill_<%=h skill.name %>" value="<%=h skill.fancy_name %>" disabled="disabled"></td>
+			<td style="width:110px; font-weight:bold;"><%=h skill.fancy_name %>
+				<% if(skill.need_training == true)%>
+					&#9632;
+				<% end %>	
+				</td>
+			<td style="font-size:10px;">
+				<%=h skill.ability %>
+				<% if(skill.armor_penalty == 1)%>
+						&sup1;
+				<% end %>
+				<% if(skill.armor_penalty == 2)%>
+						&sup2;
+				<% end %>	
+			</td>
+			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_total" value="0" size="2"></td>
+			<td>=</td>
+			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_ability_mod" value="0" size="2"></td>
+			<td>+</td>
+			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
+			<td>+</td>
+			<td><input disabled="disabled" type="text" id="character_skill_<%= skill.name %>" value="0" size="2"></td>
+			
+		</tr> 
+		<% end %>
+		<tr>
+			
+			<td colspan="10" style="font-size: 8px; line-height: 10px;">
+				&#9632; Denotes a skill that can be used untrained.<br />
+				&sup1; Armor check penalty applies to checks <br />
+				&sup2; Double the normal armor check penalty applies to checks. <br />
+			</td>
+		</tr>
+		</table>
+
 
 	<script type="text/javascript" charset="utf-8">
 		var character  = new Character();

@@ -40,7 +40,7 @@ class CharactersController < ApplicationController
   # POST /characters
   # POST /characters.xml
   def create
-    @character = Character.new(params[:character])
+    @character = current_user.characters.new(params[:character])
 
     respond_to do |format|
       if @character.save
@@ -56,13 +56,14 @@ class CharactersController < ApplicationController
   # PUT /characters/1
   # PUT /characters/1.xml
   def update
-    @character = Character.find(params[:id])
+    @character = current_user.characters.find(params[:id])
 
     respond_to do |format|
       if @character.update_attributes(params[:character])
         format.html { redirect_to(@character, :notice => 'Character was successfully updated.') }
         format.xml  { head :ok }
       else
+				logger.info @character.errors.inspect
         format.html { render :action => "edit" }
         format.xml  { render :xml => @character.errors, :status => :unprocessable_entity }
       end
@@ -72,7 +73,7 @@ class CharactersController < ApplicationController
   # DELETE /characters/1
   # DELETE /characters/1.xml
   def destroy
-    @character = Character.find(params[:id])
+    @character = current_user.characters.find(params[:id])
     @character.destroy
 
     respond_to do |format|

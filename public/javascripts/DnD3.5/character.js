@@ -20,11 +20,11 @@ function Character(){
 	
 	//Basic Stats DOM info
 	this.$name = $('#character_name');
-	this.$klass = $('#character_klass');
+	this.$klass = $('#character_klass_id');
 	this.$level = $('#character_level');
-	this.$race = $('#character_race');
-	this.$alignment = $('#character_alignment');
-	this.$deity = $('#character_deity');
+	this.$race = $('#character_race_id');
+	this.$alignment = $('#character_alignment_id');
+	this.$deity = $('#character_deity_id');
 	
 	//stuff that will need to be added for doms/database
 	//this.$hitPoints = $('#character_HP');
@@ -219,17 +219,18 @@ Character.prototype.linkage = function ()
 Character.prototype.doKlassyThings = function (){
 	//figure out what class we're on
 	character = this;
-	$.each(character.klass_names, function(i,val){
-		if(character.$klass.val() == val){
-			character.setAvailableAlignments(character.klasses[i].getFalseAlignments());
-			character.setClassSkills(character.klasses[i].getSkillz());
-			character.setSkillPoints(character.klasses[i].getSkillPoints(),character.abilities[3].getMod());
-			character.setBaseSaves(character.klasses[i].getBaseSaves())
-		}
-	})
+	i = parseInt(this.$klass.val(),0)-1
+	console.log("i ="+i)
+
+	character.setAvailableAlignments(character.klasses[i].getFalseAlignments());
+	character.setClassSkills(character.klasses[i].getSkillz());
+	character.setSkillPoints(character.klasses[i].getSkillPoints(),character.abilities[3].getMod());
+	character.setBaseSaves(character.klasses[i].getBaseSaves())
+
 }
 
 Character.prototype.setAvailableAlignments = function (align){
+	//FIX THIS
 	character = this;
 	
 	$.each(character.alignments, function(i, val){
@@ -281,7 +282,7 @@ Character.prototype.setSkillPoints = function(skillPoints,intelligence)
 	points =  (skillPoints[0] + parseInt(intelligence, 10)) * 4;
 	used = this.checkUsedPoints();
 	total = points - used;
-	if(this.cur_race == "human")
+	if(this.cur_race == 0)
 	{
 		this.$skillz.val(parseInt(this.$skillz.val,10) + 4)
 	}
@@ -300,25 +301,26 @@ Character.prototype.checkUsedPoints = function()
 
 Character.prototype.setRaceModifiers = function (){
 	character = this;
-	$.each(character.race_names, function(i,val){
-		if (character.$race.val() == val)			{
-			character.raceAdjustMisc(i, 1);
-		}
-		if (character.cur_race == val)			{
-			character.raceAdjustMisc(i, -1);
-		}			
-	})
-	character.cur_race = character.$race.val();
-	if(character.cur_race == "Human")
-	{
+	
+	race = character.$race.val()
+	
+	character.raceAdjustMisc(race, 1);
+	if(character.cur_race != "")
+		character.raceAdjustMisc(character.cur_race, -1);	
+	if(character.cur_race ==  0) //if human
+		this.$skillz.val(parseInt(this.$skillz.val(),10) - 4);
+	if(race == 0)
 		this.$skillz.val(parseInt(this.$skillz.val(),10) + 4)
-	}
+	
+	
+	character.cur_race = character.$race.val();
 }
 
 
 Character.prototype.raceAdjustMisc = function(loc, sign )
 {
 	character = this;
+	console.log("loc = "+loc);
 	abilities = character.races[loc].getAbility();
 	modify = character.races[loc].getAdjust();
 	$.each(abilities, function(i, raceAbility){
