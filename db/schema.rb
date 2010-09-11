@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100901063926) do
+ActiveRecord::Schema.define(:version => 20100911192858) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",      :null => false
@@ -206,6 +206,19 @@ ActiveRecord::Schema.define(:version => 20100901063926) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
+  end
+
+  create_table "weapons", :force => true do |t|
+    t.string   "title",         :null => false
+    t.integer  "cost"
+    t.string   "damage_small",  :null => false
+    t.string   "damage_medium", :null => false
+    t.string   "critical",      :null => false
+    t.integer  "range"
+    t.integer  "weight"
+    t.string   "proficiency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

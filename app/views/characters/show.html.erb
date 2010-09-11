@@ -192,7 +192,7 @@
 			<th class="details">Class<br />Skill?</th>
 			<th class="details">Skill Name</th>
 			<th class="details">Key<br />Ability</th>
-			<th colspan="2" class="details">Skill Modifier</th>
+			<th colspan="2" class="details">Skill<br />Modifier</th>
 			<th colspan = "2" class="details">Ability<br />Modifier</th>
 			<th colspan = "2" class="details">Misc<br />Modifier</th>
 			<th class="details"> Ranks</th>
@@ -204,8 +204,8 @@
 			class="tableSkill"
 		<% end %>	
 		>	
-			<td><input type="checkbox" name="klass_skill_<%=h skill.name %>" id="klass_skill_<%=h skill.name %>" value="<%=h skill.fancy_name %>" disabled="disabled"></td>
-			<td style="width:90px; font-weight:bold;"><%=h skill.fancy_name %>
+			<td style="padding: 0px;"><input type="checkbox" name="klass_skill_<%=h skill.name %>" id="klass_skill_<%=h skill.name %>" value="<%=h skill.fancy_name %>" disabled="disabled"></td>
+			<td style="width:90px; font-weight:bold; padding: 0px;"><%=h skill.fancy_name %>
 				<% if(skill.need_training == true)%>
 					&#9632;
 				<% end %>	
@@ -219,13 +219,13 @@
 						&sup2;
 				<% end %>	
 			</td>
-			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_total" value="0" size="2"></td>
-			<td>=</td>
-			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_ability_mod" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="character_skill_<%= skill.name %>" value="<%= @character.send("skill_#{skill.name}") %>" size="2"></td>
+			<td style="padding: 0px;"><input disabled="disabled"  type="text" id="<%=h skill.name %>_total" value="0" size="2"></td>
+			<td style="padding: 0px;">=</td>
+			<td style="padding: 0px;"><input disabled="disabled" type="text" id="<%=h skill.name %>_ability_mod" value="0" size="2"></td>
+			<td style="padding: 0px;">+</td>
+			<td style="padding: 0px;"><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
+			<td style="padding: 0px;">+</td>
+			<td style="padding: 0px;"><input disabled="disabled" type="text" id="character_skill_<%= skill.name %>" value="<%= @character.send("skill_#{skill.name}") %>" size="2"></td>
 			
 		</tr> 
 		<% end %>
@@ -240,7 +240,8 @@
 		</table>
 		</div>
 		<div class="ability">
-			<div class="right" style="margin-right: 2px">
+			<div class="right" style="width:200px">
+				<div class="side_ability" style="margin: 0px auto">
 			<table class="character_table" style ="margin-top: 0px;">
 				<tr>
 					<th></th>
@@ -253,13 +254,13 @@
 						-webkit-top-left-radius: 5px;
 						border-bottom-left-radius: 5px;
 						-moz-border-radius-bottomleft: 5px;
-						-webkit-bottom-left-radius: 5px; width: 50px;">HP<br /><span class="details">Hit Points</td>
-					<td class="tableSkill"><input disabled="disabled" type="text" id="HP" value="0" size="4"></td>
-					<td class="tableSkill"><input disabled="disabled" type="text" id="HP_current" value="0" size="8"></td>
+						-webkit-bottom-left-radius: 5px; width: 43px;">HP<br /><span class="details">Hit Points</td>
+					<td class="tableSkill"><input disabled="disabled" type="text" id="HP" value="<%=h @character.klass.hit_die %>" size="3"></td>
+					<td class="tableSkill"><input disabled="disabled" type="text" id="HP_current" value="" size="7"></td>
 				</tr>
 			</table>
 		
-		<table class="character_table" style="width: 170px">
+		<table class="character_table" style="width: 160px">
 			<tr>
 				<th></th>
 				<th class="details">Total</th>
@@ -277,24 +278,25 @@
 					-moz-border-radius-bottomleft: 5px;
 					-webkit-bottom-left-radius: 5px;">Initiative Modifier</td>
 				<td class="tableSkill"><input disabled="disabled" type="text" id="Initiative_Total" value="0" size="1"></td>
-				<td class="tableSkill">=</td>
-				<td class="tableSkill"><input disabled="disabled" type="text" id="Initiative_Dex" value="0" size="1"></td>
-				<td class="tableSkill">+</td>
-				<td class="tableSkill"><input disabled="disabled" type="text" id="Initiative_Misc" value="0" size="1"></td>
+				<td class="tableSkill" style="padding:0px">=</td>
+				<td class="tableSkill" style="padding:0px"><input disabled="disabled" type="text" id="Initiative_Dex" value="0" size="1"></td>
+				<td class="tableSkill" style="padding:0px">+</td>
+				<td class="tableSkill" style="padding:0px"><input disabled="disabled" type="text" id="Initiative_Misc" value="0" size="1"></td>
 			</tr>
 		</table>
 		<table class="character_table">
 			<tr>
-				<td style="background:black; color:white; width: 70px;
+				<td style="background:black; color:white; width: 61px;
 					border-top-left-radius: 5px;
 					-moz-border-radius-topleft: 5px;
 					-webkit-top-left-radius: 5px;
 					border-bottom-left-radius: 5px;
 					-moz-border-radius-bottomleft: 5px;
 					-webkit-bottom-left-radius: 5px;">Speed</td>
-				<td style="background:black; color:white"><input disabled="disabled" type="text" id="HP" value="0" size="15"></td>
+				<td style="background:black; color:white"><input disabled="disabled" type="text" id="HP" value="<%=h @character.race.speed %>" size="13"></td>
 			</tr>
 		</table>
+		</div>
 		</div>
 	
 	<% @ability_names = [['STR','Strength',0,@character.STR],['DEX','Dexterity',1,@character.DEX],['CON','Constitution',0,@character.CON],['INT','Intelligence',1,@character.INT],['WIS','Wisdom',0,@character.WIS],['CHA','Charisma',1,@character.CHA]] %>
@@ -363,7 +365,7 @@
 			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_BASE" value="0" size="2"></td>
 			<td style="background:black;color:white;">+</td>
 			<td class="tableSkill"><input disabled="disabled" type="text" id="FORT_TEMP" value="" size="2"></td>
-			<td class="tableSkill" rowspan="3"><textarea id="Conditional_Mod" style="font-size: 9px" cols=10, rows=8 readonly></textarea></td>
+			<td class="tableSkill" rowspan="3"><textarea id="Conditional_Mod" style="font-size: 9px" cols=15, rows=8 readonly></textarea></td>
 		</tr>
 		<tr>
 			<th style="background:black;color:white;">Reflex<br /><span class="details">(Dexterity)</span></th>
@@ -396,10 +398,10 @@
 	
 	<table class="character_table" >
 		<tr>
-			<th style="color: white; background:black; width: 145px">Base Attack Bonus</th>
+			<th style="color: white; background:black; width: 165px">Base Attack Bonus</th>
 			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Base_Attack_Bonus" value="0" size="3"></td>
 			<td></td>
-			<th style="color: white; background:black; width: 145px">Spell Resistance</th>
+			<th style="color: white; background:black; width: 165px">Spell Resistance</th>
 			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Spell Resistance" value="0" size="3"></td>
 		</tr>
 	</table>
@@ -422,7 +424,7 @@
 			<th class="details">Misc<br />Modifier</th>
 		</tr>
 		<tr>
-			<th style="background:black; color:white; width: 125px;
+			<th style="background:black; color:white; width: 155px;
 				border-top-left-radius: 5px;
 				-moz-border-radius-topleft: 5px;
 				-webkit-top-left-radius: 5px;

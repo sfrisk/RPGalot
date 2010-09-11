@@ -1,0 +1,34 @@
+<h1>Listing weapons</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Cost</th>
+    <th>Damage small</th>
+    <th>Damage medium</th>
+    <th>Critical</th>
+    <th>Range</th>
+    <th>Weight</th>
+    <th>Proficiency</th>
+  </tr>
+
+<% @weapons.each do |weapon| %>
+  <tr>
+    <td><%=h weapon.title %></td>
+    <td><%=h weapon.cost %></td>
+    <td><%=h weapon.damage_small %></td>
+    <td><%=h weapon.damage_medium %></td>
+    <td><%=h weapon.critical %></td>
+    <td><%=h weapon.range %></td>
+    <td><%=h weapon.weight %></td>
+    <td><%=h weapon.proficiency %></td>
+    <td><%= link_to 'Show', weapon %></td>
+    <td><%= link_to 'Edit', edit_weapon_path(weapon) %></td>
+    <td><%= link_to 'Destroy', weapon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New weapon', new_weapon_path %>

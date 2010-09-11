@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  cost: 
+  damage_small: MyString
+  damage_medium: MyString
+  critical: MyString
+  range: 
+  weight: 
+  type: MyString
+  proficiency: MyString
+
+two:
+  title: MyString
+  cost: 
+  damage_small: MyString
+  damage_medium: MyString
+  critical: MyString
+  range: 
+  weight: 
+  type: MyString
+  proficiency: MyString

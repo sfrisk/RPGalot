@@ -1,0 +1,15 @@
+<% f.inputs do %>
+  <%= f.input :title %>
+  <%= f.input :cost %>
+  <%= f.input :damage_small %>
+  <%= f.input :damage_medium %>
+  <%= f.input :critical %>
+  <%= f.input :range %>
+  <%= f.input :weight %>
+  <%= f.input :proficiency, :as => :select, :collection => Weapon::Proficiencies %>
+
+
+	<% f.buttons do %>
+	  <%= f.commit_button %>
+	<% end %>
+<% end %>

@@ -1,0 +1,43 @@
+<p>
+  <b>Title:</b>
+  <%=h @weapon.title %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%=h @weapon.cost %>
+</p>
+
+<p>
+  <b>Damage small:</b>
+  <%=h @weapon.damage_small %>
+</p>
+
+<p>
+  <b>Damage medium:</b>
+  <%=h @weapon.damage_medium %>
+</p>
+
+<p>
+  <b>Critical:</b>
+  <%=h @weapon.critical %>
+</p>
+
+<p>
+  <b>Range:</b>
+  <%=h @weapon.range %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%=h @weapon.weight %>
+</p>
+
+<p>
+  <b>Proficiency:</b>
+  <%=h @weapon.proficiency %>
+</p>
+
+
+<%= link_to 'Edit', edit_weapon_path(@weapon) %> |
+<%= link_to 'Back', weapons_path %>
