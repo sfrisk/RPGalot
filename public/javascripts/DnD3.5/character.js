@@ -302,7 +302,7 @@ Character.prototype.checkUsedPoints = function()
 Character.prototype.setRaceModifiers = function (){
 	character = this;
 	
-	race = character.$race.val()
+	race = parseInt(character.$race.val(),10)-1;
 	
 	character.raceAdjustMisc(race, 1);
 	if(character.cur_race != "")
@@ -313,7 +313,7 @@ Character.prototype.setRaceModifiers = function (){
 		this.$skillz.val(parseInt(this.$skillz.val(),10) + 4)
 	
 	
-	character.cur_race = character.$race.val();
+	character.cur_race = character.$race.val() - 1;
 }
 
 

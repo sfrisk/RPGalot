@@ -30,6 +30,7 @@
 
 <div class="section right">
 	<h3 class="sheet_header">Campaigns</h3>
+	
 		<%  @group.created_campaigns.map do |created_campaigns| %>
 			<div class="profile_list">
 				<%= link_to h(created_campaigns.title), created_campaigns%>

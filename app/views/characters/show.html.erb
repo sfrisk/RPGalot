@@ -3,7 +3,7 @@
 <div id="sheet_header">
 	<div class="right">
 		<% if current_user && @character.user == current_user %>
-			<p><%= link_to 'Edit', edit_character_path(@character) %></p>
+			<%= link_to 'Edit', edit_character_path(@character) %>
 		<%end%>
 	</div>
 	<h2>Character Sheet</h2>
@@ -47,15 +47,15 @@
 
 				<table class="stats">
 					<tr>
-						<td><%=h @character.race_id %></td>
+						<td><%=h @character.race.title %><input disabled="disabled" type="hidden" id="character_race_id" value="<%=h @character.race_id %>"></td>
 						<td width="10"></td>
-						<td><%=h @character.klass.title %></td>
+						<td><%=h @character.klass.title %><input disabled="disabled" hidden="hidden" type="hidden" id="character_klass_id" value="<%=h @character.klass_id %>"></td>
 						<td width="10"></td>
 						<td><%=h @character.level %></td>
 						<td width="10"></td>
-						<td><%=h @character.deity.title %></td>
+						<td><%=h @character.deity.title %><input disabled="disabled" hidden="hidden" type="hidden" id="character_deity_id" value="<%=h @character.deity_id %>"></td>
 						<td width="10"></td>
-						<td><%=h @character.alignment.title %></td>
+						<td><%=h @character.alignment.title %><input disabled="disabled" hidden="hidden" type="hidden" id="character_alignment_id" value="<%=h @character.alignment_id %>"></td>
 					</tr>
 					<tr>
 						<td class="character_label">RACE</td>
@@ -101,42 +101,87 @@
 		</tr>
 	</table>
 
-	<% @ability_names = [['STR','Strength',0,@character.STR],['DEX','Dexterity',1,@character.DEX],['CON','Constitution',0,@character.CON],['INT','Intelligence',1,@character.INT],['WIS','Wisdom',0,@character.WIS],['CHA','Charisma',1,@character.CHA]] %>
-	<table class="right" style="border-collapse: collapse; border: solid 2px black; padding: 5px; width:300px; margin-top:10px">
+	<table class="character_table right" style="margin-top: 29px;">
 		<tr>
-			<th colspan="8"  class="box_header">Ability Scores</th>
+			<td style="color: white; background:black; width: 70px">Touch<br /><span class="details">Armor Class</span></td>
+			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Touch" value="0" size="3"></td>
+			<td></td>
+			<td style="color: white; background:black;  width: 70px">Flat-Footed<br /><span class="details">Armor Class</span></td>
+			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Flat_Foot" value="0" size="3"></td>
 		</tr>
-		<tr>
-			<th class="details">Ability<br />Name</th>
-			<th class="details">Base</th>
-			<th></th>
-			<th class="details">Misc</th>
-			<th></th>
-			<th class="details">Total</th>
-			<th></th>
-			<th class="details">Modifier</th>
-		</tr>
-	<% @ability_names.each do |ability| %>
-		<tr
-		<% if(ability[2] == 0)%>
-			class="tableSkill"
-		<% end %>	
-		> 
-		<th><%=h ability[0] %><br /><span class="details"><%=h ability[1] %></span></th>
-		<td><input disabled="disabled" type="text" id="character_<%=ability[0] %>" value="<%= ability[3] %>" size="2"></td>
-		<td>+</td>
-		<td><input disabled="disabled" type="text" id="MISC_<%=h ability[0] %>" value="0" size="2"></td>
-		<td>=</td>
-		<td><input disabled="disabled" type="text" id="TOTAL_<%=h ability[0] %>" value="0" size="2"></td>
-		<td>|</td>
-		<td><input disabled="disabled" type="text" id="MOD_<%=h ability[0] %>" value="0" size="2"></td>
-
-		</tr>
-	<% end %>
 	</table>
 
-
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 450px; margin-top:10px">
+	<table class="character_table" >
+		<tr>
+			<th></th>
+			<th class="details">Total</th>
+			<th colspan="3"></th>
+			<th class="details">Armor<br />Bonus</th>
+			<th></th>
+			<th class="details">Shield<br />Bonus</th>
+			<th></th>
+			<th class="details">Dex<br />Modifier</th>
+			<th></th>
+			<th class="details">Size<br />Modifier</th>
+			<th></th>
+			<th class="details">Natural<br />Armor</th>
+			<th></th>
+			<th class="details">Deflection<br />Modifier</th>
+			<th></th>
+			<th class="details">Misc<br />Modifier</th>
+		</tr>
+		<tr class="tableSkill">
+			<td style="background: black; color:white; width: 60px; border-top-left-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-webkit-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				-moz-border-radius-bottomleft: 5px;
+				-webkit-bottom-left-radius: 5px;">
+				AC<br /><span class="details">Armor Class</span>
+			</td>
+			<td>
+				<input disabled="disabled" type="text" id="AC_TOTAL" value="10" size="2">
+			</td>
+			<td>=</td>
+			<td>
+				10
+			</td>
+			<td>+</td>
+			<td>
+				<input disabled="disabled" type="text" id="ARMOR_BONUS" value="0" size="2"
+			</td>	
+			<td>+</td>
+			<td>
+				<input disabled="disabled" type="text" id="SHIELD_BONUS" value="0" size="2"
+			</td>
+			<td>+</td>
+			<td>
+				<input disabled="disabled" type="text" id="DEX_MOD" value="0" size="2"
+			</td>	
+			<td>+</td>
+			<td>
+				<input disabled="disabled" type="text" id="SIZE_MOD" value="0" size="2"
+			</td>
+			<td>+</td>
+			<td>
+				<input disabled="disabled" type="text" id="NATURAL_ARMOR" value="0" size="2"
+			</td>
+			<td>+</td>
+			<td>
+				<input disabled="disabled" type="text" id="DEFLECTION_MODIFIER" value="0" size="2"
+			</td>
+			<td>+</td>
+			<td>
+				<input disabled="disabled" type="text" id="MISC_MODIFIER" value="0" size="2"
+			</td>
+		</tr>
+	</table>
+	
+		
+	
+	<div class="right">	
+	<table class="character_table" style="border: 1px solid black; 	border-collapse: collapse; 	padding: 1px; 
+		margin-top:10px; font-size: 10px;">
 		<tr>
 			<th colspan="3"  class="box_header">Skills</th>
 			<th colspan="4"  class="box_header"> Max Ranks <br /><span class="details">Class/Cross-Class</span></th>
@@ -160,7 +205,7 @@
 		<% end %>	
 		>	
 			<td><input type="checkbox" name="klass_skill_<%=h skill.name %>" id="klass_skill_<%=h skill.name %>" value="<%=h skill.fancy_name %>" disabled="disabled"></td>
-			<td style="width:110px; font-weight:bold;"><%=h skill.fancy_name %>
+			<td style="width:90px; font-weight:bold;"><%=h skill.fancy_name %>
 				<% if(skill.need_training == true)%>
 					&#9632;
 				<% end %>	
@@ -180,7 +225,7 @@
 			<td>+</td>
 			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
 			<td>+</td>
-			<td><input disabled="disabled" type="text" id="character_skill_<%= skill.name %>" value="0" size="2"></td>
+			<td><input disabled="disabled" type="text" id="character_skill_<%= skill.name %>" value="<%= @character.send("skill_#{skill.name}") %>" size="2"></td>
 			
 		</tr> 
 		<% end %>
@@ -193,6 +238,213 @@
 			</td>
 		</tr>
 		</table>
+		</div>
+		<div class="ability">
+			<div class="right" style="margin-right: 2px">
+			<table class="character_table" style ="margin-top: 0px;">
+				<tr>
+					<th></th>
+					<th class="details">Total</th>
+					<th class="details">Wounds/<br />Current HP</th>
+				</tr>
+				<tr>
+					<td style="background: black; color:white; border-top-left-radius: 5px;
+						-moz-border-radius-topleft: 5px;
+						-webkit-top-left-radius: 5px;
+						border-bottom-left-radius: 5px;
+						-moz-border-radius-bottomleft: 5px;
+						-webkit-bottom-left-radius: 5px; width: 50px;">HP<br /><span class="details">Hit Points</td>
+					<td class="tableSkill"><input disabled="disabled" type="text" id="HP" value="0" size="4"></td>
+					<td class="tableSkill"><input disabled="disabled" type="text" id="HP_current" value="0" size="8"></td>
+				</tr>
+			</table>
+		
+		<table class="character_table" style="width: 170px">
+			<tr>
+				<th></th>
+				<th class="details">Total</th>
+				<th></th>
+				<th class="details">Dex<br />Modifier</th>
+				<th></th>
+				<th class="details">Misc<br /> Modifier</th>
+			</tr>
+			<tr>
+				<td class="details" style="background:black; color:white;
+					border-top-left-radius: 5px;
+					-moz-border-radius-topleft: 5px;
+					-webkit-top-left-radius: 5px;
+					border-bottom-left-radius: 5px;
+					-moz-border-radius-bottomleft: 5px;
+					-webkit-bottom-left-radius: 5px;">Initiative Modifier</td>
+				<td class="tableSkill"><input disabled="disabled" type="text" id="Initiative_Total" value="0" size="1"></td>
+				<td class="tableSkill">=</td>
+				<td class="tableSkill"><input disabled="disabled" type="text" id="Initiative_Dex" value="0" size="1"></td>
+				<td class="tableSkill">+</td>
+				<td class="tableSkill"><input disabled="disabled" type="text" id="Initiative_Misc" value="0" size="1"></td>
+			</tr>
+		</table>
+		<table class="character_table">
+			<tr>
+				<td style="background:black; color:white; width: 70px;
+					border-top-left-radius: 5px;
+					-moz-border-radius-topleft: 5px;
+					-webkit-top-left-radius: 5px;
+					border-bottom-left-radius: 5px;
+					-moz-border-radius-bottomleft: 5px;
+					-webkit-bottom-left-radius: 5px;">Speed</td>
+				<td style="background:black; color:white"><input disabled="disabled" type="text" id="HP" value="0" size="15"></td>
+			</tr>
+		</table>
+		</div>
+	
+	<% @ability_names = [['STR','Strength',0,@character.STR],['DEX','Dexterity',1,@character.DEX],['CON','Constitution',0,@character.CON],['INT','Intelligence',1,@character.INT],['WIS','Wisdom',0,@character.WIS],['CHA','Charisma',1,@character.CHA]] %>
+	
+	<table class="character_table">
+		<tr>
+			<th class="details">Ability<br />Name</th>
+			<th class="details">Ability<br />Score</th>
+			<th class="details">Ability<br />Modifier</th>
+			<th class="details">Temporary<br />Score</th>
+			<th class="details">Temporary<br />Modifier</th>
+		</tr>
+	<% @ability_names.each do |ability| %>
+		<tr style="color: white;"> 
+		<th style="background:black;
+			<% if ability[0] == 'STR' %>
+				border-top-left-radius: 10px;
+				-moz-border-radius-topleft: 10px;
+				-webkit-top-left-radius: 10px;
+			<% end %>
+			<% if ability[0] == 'CHA' %>
+				border-bottom-left-radius: 10px;
+				-moz-border-radius-bottomleft: 10px;
+				-webkit-bottom-left-radius: 10px;
+			<% end %>
+		
+		"><%=h ability[0] %><br /><span class="details"><%=h ability[1] %></span></th>
+		<td style="background:black;">
+		<input disabled="disabled" type="hidden" id="character_<%=ability[0] %>" value="<%= ability[3] %>" size="2">
+		<input disabled="disabled" type="hidden" id="MISC_<%=h ability[0] %>" value="0" size="2">
+		<input disabled="disabled" type="text" id="TOTAL_<%=h ability[0] %>" value="0" size="2"></td>
+		<td style="background:black;"><input disabled="disabled" type="text" id="MOD_<%=h ability[0] %>" value="0" size="2"></td>
+		<td class="tableSkill"><input disabled="disabled" type="text" id="TScore_<%=h ability[0] %>" value="" size="2"></td>
+		<td class="tableSkill"><input disabled="disabled" type="text" id="TMod<%=h ability[0] %>" value="" size="2"></td>
+
+		</tr>
+	<% end %>
+	</table>
+	</div>
+
+
+	<table class="character_table" >
+		<tr>
+			<th class="details">Saving Throw</th>
+			<th class="details">Total</th>
+			<th></th>
+			<th class="details">Ability<br />Modifier</th>
+			<th></th>
+			<th class="details">Misc<br />Modifier</th>
+			<th></th>
+			<th class="details">Base<br />Save</th>
+			<th></th>
+			<th class="details">Temporary<br />Modifier</th>
+			<th class="tableSkill details">Conditional<br />Modifiers</th>
+		</tr>
+		<tr>
+			<th style="border-top-left-radius: 10px;
+			-moz-border-radius-topleft: 10px;
+			-webkit-top-left-radius: 10px;background:black; color:white;">Fortitude<br /><span class="details">(Constitution)</span></th>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_TOTAL" value="0" size="2"></td>
+			<td style="background:black;color:white;">=</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_ABILITY" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_MISC" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_BASE" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="FORT_TEMP" value="" size="2"></td>
+			<td class="tableSkill" rowspan="3"><textarea id="Conditional_Mod" style="font-size: 9px" cols=10, rows=8 readonly></textarea></td>
+		</tr>
+		<tr>
+			<th style="background:black;color:white;">Reflex<br /><span class="details">(Dexterity)</span></th>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_TOTAL" value="0" size="2"></td>
+			<td style="background:black;color:white;">=</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_ABILITY" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_MISC" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_BASE" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="REFLEX_TEMP" value="" size="2"></td>
+			
+		</tr>
+		<tr>
+			<th style="border-bottom-left-radius: 10px;
+			-moz-border-radius-bottomleft: 10px;
+			-webkit-bottom-left-radius: 10px; background:black;color:white;">Will<br /><span class="details">(Wisdom)</span></th>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_TOTAL" value="0" size="2"></td>
+			<td style="background:black;color:white;">=</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_ABILITY" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_MISC" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_BASE" value="0" size="2"></td>
+			<td style="background:black;color:white;">+</td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="WILL_TEMP" value="" size="2"></td>
+		</tr>
+	</table>
+	
+	<table class="character_table" >
+		<tr>
+			<th style="color: white; background:black; width: 145px">Base Attack Bonus</th>
+			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Base_Attack_Bonus" value="0" size="3"></td>
+			<td></td>
+			<th style="color: white; background:black; width: 145px">Spell Resistance</th>
+			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Spell Resistance" value="0" size="3"></td>
+		</tr>
+	</table>
+
+	
+
+	
+	
+	<table class="character_table" >
+		<tr>
+			<th></th>
+			<th class="details">Total</th>
+			<th></th>
+			<th class="details">Base Attack<br />Bonus</th>
+			<th></th>
+			<th class="details">Strength<br />Modifier</th>
+			<th></th>
+			<th class="details">Size<br />Modifier</th>
+			<th></th>
+			<th class="details">Misc<br />Modifier</th>
+		</tr>
+		<tr>
+			<th style="background:black; color:white; width: 125px;
+				border-top-left-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-webkit-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				-moz-border-radius-bottomleft: 5px;
+				-webkit-bottom-left-radius: 5px;">Grapple <br /> <span class="details">Modifier</span></th>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Total" value="0" size="2"></td>
+			<td class="tableSkill">=</td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Base_Attack" value="0" size="2"></td>
+			<td class="tableSkill">+</td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_STR" value="0" size="2"></td>
+			<td class="tableSkill">+</td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Size" value="0" size="2"></td>
+			<td class="tableSkill">+</td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Misc" value="0" size="2"></td>	
+		</tr>
+	</table>
+	
+	
+
+
+
 
 
 	<script type="text/javascript" charset="utf-8">

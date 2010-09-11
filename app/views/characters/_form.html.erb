@@ -17,7 +17,7 @@
 	<tr>
 		<td><%= f.collection_select :klass_id, Klass.all, :id, :title %> <%= link_to ' ?', klasses_path %></td>
 		<td><%= f.select :level, (1..20).to_a %></td>
-		<td><%= f.select :race_id, (0..6).to_a   %></td>
+		<td><%= f.collection_select :race_id, Race.all, :id, :title  %> <%= link_to ' ?', races_path %></td>
 		<td><%= f.collection_select :alignment_id, Alignment.all, :id, :title %> <%= link_to ' ?', alignments_path %></td>
 		<td><%= f.collection_select :deity_id, Deity.all, :id, :title %><%= link_to ' ?', deities_path %></td>
 	</tr>
@@ -224,7 +224,7 @@
 	
 	
 	</div>
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px;  width: 450px; margin-top:10px">
+	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px;  width: 425px; margin-top:10px">
 		<tr>
 			<th colspan="17" style="color: white; background:black;">Armor Class</th>
 		</tr>
@@ -284,7 +284,7 @@
 		</tr>
 	</table>
 
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 450px; margin-top:10px">
+	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 425px; margin-top:10px; font-size: 9px">
 		<tr>
 			<th colspan="10">Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></th>
 		</tr>
@@ -313,7 +313,7 @@
 			<td><input type="checkbox" name="klass_skill_<%=h skill.name %>" id="klass_skill_<%=h skill.name %>" value="<%=h skill.fancy_name %>" disabled="disabled"></td>
 			<td style="width:110px; font-weight:bold;"><%=h skill.fancy_name %>
 				<% if(skill.need_training == true)%>
-					&#9632;
+				&#9632;
 				<% end %>	
 				</td>
 			<td style="font-size:10px;">
@@ -331,7 +331,7 @@
 			<td>+</td>
 			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
 			<td>+</td>
-			<td><input type="button" id="minus_<%=h skill.name %>" value="-" /><%= f.text_field "skill_#{skill.name}",  :size => 2, :disabled => true, :class => "input_border" %><input type="button" id="add_<%=h skill.name %>" value="+" /></td>
+			<td><input type="button" id="minus_<%=h skill.name %>" value="-" /><%= f.text_field "skill_#{skill.name}",  :size => 2, :class => "input_border" %><input type="button" id="add_<%=h skill.name %>" value="+" /></td>
 			
 		</tr> 
 		<% end %>

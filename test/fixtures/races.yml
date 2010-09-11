@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  klass_id: 1
+  speed: 1
+  size: MyString
+
+two:
+  title: MyString
+  klass_id: 1
+  speed: 1
+  size: MyString

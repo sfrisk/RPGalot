@@ -9,7 +9,7 @@
 		<p>This is you!</p>
 	<%end%>
 </div>
-	<p style="color: green"><%= notice %></p>
+
 <div id="sheet">
 <div class="section right">	
 	<div class="profile">
@@ -24,8 +24,6 @@
 		<p><%= @user.bio %>
 		<h4>Location</h4>
 		<p>a location</p>
-		<h4>Website</h4>
-		<p>www.awebsite.com</p>
 	
 	</div>
 </div>
@@ -70,7 +68,7 @@
 			</td>
 			<td>
 				<%= link_to h(character.name), character %><br />
-				<strong>Class:</strong> <%=h character.klass %>
+				<strong>Class:</strong> <%=h  character.klass.title %>
 				<strong>Level:</strong> 1 <br/>
 				<strong>Campaign:</strong> <%=link_to h(character.campaign.title), character.campaign %>
 			</td>

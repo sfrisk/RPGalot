@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100901040248) do
+ActiveRecord::Schema.define(:version => 20100901063926) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",      :null => false
@@ -161,6 +161,14 @@ ActiveRecord::Schema.define(:version => 20100901040248) do
   create_table "memberships", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.integer  "group_id",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "races", :force => true do |t|
+    t.string   "title",      :null => false
+    t.integer  "speed",      :null => false
+    t.string   "size",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
