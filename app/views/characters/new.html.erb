@@ -1,4 +1,4 @@
-<%=h javascript_include_tag 'Dnd3.5/character', 'Dnd3.5/ability', 'Dnd3.5/race', 'DnD3.5/klass', 'DnD3.5/saves', 'DnD3.5/skillz' %>
+<%=h javascript_include_tag 'Dnd3.5/character','Dnd3.5/new_character_wizard', 'Dnd3.5/ability', 'Dnd3.5/race', 'DnD3.5/klass', 'DnD3.5/saves', 'DnD3.5/skillz' %>
 
 <div id="sheet_header">
 <h2>New character</h2>
@@ -12,7 +12,6 @@
 
 <script type="text/javascript" charset="utf-8">
 	var character  = new Character();
-	<%= var post = @post.to_json %>
 </script>
 
 </div>

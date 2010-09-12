@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>RPGalot</title>
-  <%= stylesheet_link_tag 'scaffold', 'formtastic', 'formtastic_changes', :media => "all" %>
+  <%= stylesheet_link_tag 'formtastic', 'formtastic_changes','scaffold', :media => "all" %>
 	<%=h javascript_include_tag 'jquery', 'jQuery.datalink' %>
 
 </head>
@@ -13,7 +13,7 @@
 	
 	<div id="header">
 		<ul id="top_nav">
-			<li><h1><%= link_to 'RPG-a-lot', root_path %></h1></li>
+			<li><h1><%= link_to 'Dragon Horde', root_path %></h1></li>
 			<li><%= link_to 'Users', users_path %></li>
 			<li><%= link_to 'Groups', groups_path %></li>
 			<li><%= link_to 'Campaigns', campaigns_path %></li>

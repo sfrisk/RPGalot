@@ -23,6 +23,7 @@ class Character < ActiveRecord::Base
 	
 	Genders = ['Male', 'Female']
 	Races = ['Human', 'Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Half-Orc', 'Halfling']
+	abilities = ['STR','DEX','CON','INT','WIS','CHA']
 
 	
 	belongs_to :user, :class_name => 'User'

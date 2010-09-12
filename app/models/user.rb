@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
 	
 	Alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil']
 	Genders = ['Male', 'Female']
+
 	
 	
 	#validates_presence_of :first_name, :last_name

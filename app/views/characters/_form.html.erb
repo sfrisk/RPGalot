@@ -1,289 +1,67 @@
-<% f.inputs do %>
+
+<div id = "character_wizard_nav">
+	<ul>
+		<li id ="ability_button">Abilities</li>
+		<li id ="race_button">Race</li>
+		<li id ="class_button">Class</li>
+		<li id ="skills_button">Skills</li>
+		<li id ="feats_button">Feats</li>
+		<li id ="details_button">Details</li>
+	</ul>
+</div>
+
 
 <% if f.object.new_record? %>
-
   <%= f.input :campaign %>
 <% end %>
 
-	<table style="width:600px">
-	<tr>
-		<td><%= f.text_field :name,  :size => 20 %></td>
-	</tr>
-	<tr>
-		<td class="character_label">Name</td>
-	</tr>
-	</table>
-	<table style="width:600px">
-	<tr>
-		<td><%= f.collection_select :klass_id, Klass.all, :id, :title %> <%= link_to ' ?', klasses_path %></td>
-		<td><%= f.select :level, (1..20).to_a %></td>
-		<td><%= f.collection_select :race_id, Race.all, :id, :title  %> <%= link_to ' ?', races_path %></td>
-		<td><%= f.collection_select :alignment_id, Alignment.all, :id, :title %> <%= link_to ' ?', alignments_path %></td>
-		<td><%= f.collection_select :deity_id, Deity.all, :id, :title %><%= link_to ' ?', deities_path %></td>
-	</tr>
-	<tr>
-		<td class="character_label">Class</td>
-		<td class="character_label">Level</td>
-		<td class="character_label">Race</td>
-		<td class="character_label">Alignment</td>
-		<td class="character_label">Deity</td>
-	</tr>
-	</table>
-	<table style="width:600px">
-		<tr>
-			<td><input disabled="disabled" type="text" id="Size" value="Medium" size="10"></td>
-			<td><%= f.text_field :age,  :size => 3, :class => "input_border"  %></td>
-			<td><%= f.select :gender, Character::Genders  %></td>
-			<td><%= f.text_field :height,  :size => 4, :class => "input_border"  %></td>
-			<td><%= f.text_field :weight,  :size => 4, :class => "input_border"  %></td>
-			<td><%= f.text_field :eyes,  :size => 10, :class => "input_border"  %></td>
-			<td><%= f.text_field :hair,  :size => 10, :class => "input_border"  %></td>
-		</tr>
-		<tr>
-			<td class="character_label">Size</td>
-			<td class="character_label">Age</td>
-			<td class="character_label">Gender</td>
-			<td class="character_label">Height</td>
-			<td class="character_label">Weight</td>
-			<td class="character_label">Eyes</td>
-			<td class="character_label">Hair</td>
-		</tr>
-	</table>	
 
+<div id="Abilities" class="wizard hidden" >
+	<h3>Abilities</h3>
 
-	<% @ability_names = [['STR','Strength',0],['DEX','Dexterity',1],['CON','Constitution',0],['INT','Intelligence',1],['WIS','Wisdom',0],['CHA','Charisma',1]] %>
-	<div class="right">
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width:300px; margin-top:10px">
-		<tr>
-			<th colspan="8" class="box_header">Ability Scores</th>
-		</tr>
-		<tr>
-			<th class="details">Ability<br />Name</th>
-			<th class="details">Base</th>
-			<th></th>
-			<th class="details">Misc</th>
-			<th></th>
-			<th class="details">Total</th>
-			<th></th>
-			<th class="details">Modifier</th>
-		</tr>
-	<% @ability_names.each do |ability| %>
-	<tr
-	<% if(ability[2] == 0)%>
-		class="tableSkill"
-	<% end %>	
-	>
-		<th><%=h ability[0] %><br /><span class="details"><%=h ability[1] %></span></th>
-		<td><%= f.text_field "#{ability[0]}",  :size => 2, :class => "input_border" %></td>
-		<td>+</td>
-		<td><input disabled="disabled" type="text" id="MISC_<%=h ability[0] %>" value="0" size="2"></td>
-		<td>=</td>
-		<td><input disabled="disabled" type="text" id="TOTAL_<%=h ability[0] %>" value="0" size="2"></td>
-		<td>|</td>
-		<td><input disabled="disabled" type="text" id="MOD_<%=h ability[0] %>" value="0" size="2"></td>
-
-		</tr>
-	<% end %>
-	</table>
-
-
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px" >
-		<tr>
-			<th colspan="8" style="color: white; background:black;">Saving Throws</th>
-		</tr>
-		<tr>
-			<th class="details">Save Name</th>
-			<th class="details">Total</th>
-			<th></th>
-			<th class="details">Ability<br />Modifier</th>
-			<th></th>
-			<th class="details">Misc<br />Modifier</th>
-			<th></th>
-			<th class="details">Base<br />Save</th>
-		</tr>
-		<tr class="tableSkill">
-			<th>Fortitude<br /><span class="details">(Constitution)</span></th>
-			<td><input disabled="disabled" type="text" id="FORT_TOTAL" value="0" size="2"></td>
-			<td>=</td>
-			<td><input disabled="disabled" type="text" id="FORT_ABILITY" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="FORT_MISC" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="FORT_BASE" value="0" size="2"></td>
-		</tr>
-		<tr>
-			<th>Reflex<br /><span class="details">(Dexterity)</span></th>
-			<td><input disabled="disabled" type="text" id="REFLEX_TOTAL" value="0" size="2"></td>
-			<td>=</td>
-			<td><input disabled="disabled" type="text" id="REFLEX_ABILITY" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="REFLEX_MISC" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="REFLEX_BASE" value="0" size="2"></td>
-		</tr>
-		<tr class="tableSkill">
-			<th>Will<br /><span class="details">(Wisdom)</span></th>
-			<td><input disabled="disabled" type="text" id="WILL_TOTAL" value="0" size="2"></td>
-			<td>=</td>
-			<td><input disabled="disabled" type="text" id="WILL_ABILITY" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="WILL_MISC" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="WILL_BASE" value="0" size="2"></td>
-		</tr>
-	</table>
+	<div class="right" style="width:350px">
+			<p id="ability_description" style="border: 1px solid black; padding:5px;border-radius: 10px;
+			-moz-border-radius: 10px; 
+			-webkit-border-radius: 10px; min-height: 20px"></p>
+		<p style="margin-top: 10px">Need some dice to roll?  Use ours!</p>
 	
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px" >
-		<tr>
-			<th style="color: white; background:black;">Base Attack Bonus</th>
-			<td><input disabled="disabled" type="text" id="Base_Attack_Bonus" value="0" size="3"></td>
-			<th style="color: white; background:black;">Spell Resistance</th>
-			<td><input disabled="disabled" type="text" id="Spell Resistance" value="0" size="3"></td>
-		</tr>
-	</table>
-	
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px" >
-		<tr>
-			<th style="color: white; background:black;">Touch<br /><span class="details">Armor Class</span></th>
-			<td><input disabled="disabled" type="text" id="Touch" value="0" size="3"></td>
-			<th style="color: white; background:black;">Flat-Footed<br /><span class="details">Armor Class</span></th>
-			<td><input disabled="disabled" type="text" id="Flat_Foot" value="0" size="3"></td>
-		</tr>
-	</table>
-	
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px" >
-		<tr>
-			<th style="color: white; background:black;" colspan="2">HP<br /><span class="details">Hit Points</span></th>
-		</tr>
-		<tr>
-			<th class="details">Total</th>
-			<th class="details">Wounds/Current HP</th>
-		</tr>
-		<tr>
-			<td><input disabled="disabled" type="text" id="HP" value="0" size="4"></td>
-			<td><input disabled="disabled" type="text" id="HP_current" value="0" size="10"></td>
-		</tr>
-	</table>
-	
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px" >
-		<tr>
-			<th style="color: white; background:black;" colspan="2">Speed</th>
-		</tr>
-		<tr>
-			<td><input disabled="disabled" type="text" id="HP" value="0" size="15"></td>
-		</tr>
-	</table>
-	
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px">
-		<tr>
-			<th colspan="5" style="color: white; background:black;">Initiative Modifier</th>
-		</tr>
-		<tr>
-			<th class="details">Total</th>
-			<th></th>
-			<th class="details">Dex Modifier</th>
-			<th></th>
-			<th class="details">Misc Modifier</th>
-		</tr>
-		<tr>
-			<td><input disabled="disabled" type="text" id="Initiative_Total" value="0" size="3"></td>
-			<td>=</td>
-			<td><input disabled="disabled" type="text" id="Initiative_Dex" value="0" size="3"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="Initiative_Misc" value="0" size="3"></td>
-		</tr>
-	</table>
-	
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 300px; margin-top:10px" >
-		<tr>
-			<th colspan="9" style="color: white; background:black;">Grapple Modifier</th>
-		</tr>
-		<tr>
-			<th class="details">Total</th>
-			<th></th>
-			<th class="details">Base Attack Bonus</th>
-			<th></th>
-			<th class="details">Strength Modifier</th>
-			<th></th>
-			<th class="details">Size Modifier</th>
-			<th></th>
-			<th class="details">Misc Modifier</th>
-		</tr>
-		<tr>
-			<td><input disabled="disabled" type="text" id="Grapple_Total" value="0" size="2"></td>
-			<td>=</td>
-			<td><input disabled="disabled" type="text" id="Grapple_Base_Attack" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="Grapple_STR" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="Grapple_Size" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="Grapple_Misc" value="0" size="2"></td>	
-		</tr>
-	</table>
-	
-	
+		<input type="button" id="roll_dice" value="Roll Dice!!!" />
+		<p><span id="dice"></span></p>
 	</div>
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px;  width: 425px; margin-top:10px">
-		<tr>
-			<th colspan="17" style="color: white; background:black;">Armor Class</th>
-		</tr>
-		<tr>
-			<th class="details">Total</th>
-			<th colspan="3"></th>
-			<th class="details">Armor<br />Bonus</th>
-			<th></th>
-			<th class="details">Shield<br />Bonus</th>
-			<th></th>
-			<th class="details">Dex<br />Modifier</th>
-			<th></th>
-			<th class="details">Size<br />Modifier</th>
-			<th></th>
-			<th class="details">Natural<br />Armor</th>
-			<th></th>
-			<th class="details">Deflection<br />Modifier</th>
-			<th></th>
-			<th class="details">Misc<br />Modifier</th>
-		</tr>
-		<tr class="tableSkill">
-			<td>
-				<input disabled="disabled" type="text" id="AC_TOTAL" value="10" size="2">
-			</td>
-			<td>=</td>
-			<td>
-				10
-			</td>
-			<td>+</td>
-			<td>
-				<input disabled="disabled" type="text" id="ARMOR_BONUS" value="0" size="2"
-			</td>	
-			<td>+</td>
-			<td>
-				<input disabled="disabled" type="text" id="SHIELD_BONUS" value="0" size="2"
-			</td>
-			<td>+</td>
-			<td>
-				<input disabled="disabled" type="text" id="DEX_MOD" value="0" size="2"
-			</td>	
-			<td>+</td>
-			<td>
-				<input disabled="disabled" type="text" id="SIZE_MOD" value="0" size="2"
-			</td>
-			<td>+</td>
-			<td>
-				<input disabled="disabled" type="text" id="NATURAL_ARMOR" value="0" size="2"
-			</td>
-			<td>+</td>
-			<td>
-				<input disabled="disabled" type="text" id="DEFLECTION_MODIFIER" value="0" size="2"
-			</td>
-			<td>+</td>
-			<td>
-				<input disabled="disabled" type="text" id="MISC_MODIFIER" value="0" size="2"
-			</td>
-		</tr>
-	</table>
+	
+	<% f.inputs do %>
+		<%= f.input :STR, :input_html => { :size => 3 }, :label => "Strength (STR)"  %> 
+		<%= f.input :DEX, :input_html => { :size => 3 }, :label => "Dexterity (DEX)"  %>
+		<%= f.input :CON, :input_html => { :size => 3 }, :label => "Constitution (CON)"  %>
+		<%= f.input :INT, :input_html => { :size => 3 }, :label => "Intelligence (INT)"  %>
+		<%= f.input :WIS, :input_html => { :size => 3 }, :label => "Wisdom (WIS)"  %>
+		<%= f.input :CHA, :input_html => { :size => 3}, :label => "Charisma (CHA)" %>
+			<% end %>
+		<% @abilities = ['STR','DEX','CON','INT','WIS','CHA'] %>
+		<% @abilities.each do |ability| %>
+			<input disabled="disabled" type="hidden" id="TOTAL_<%=h ability %>" value="0">
+			<input disabled="disabled" type="hidden" id="MISC_<%=h ability %>" value="0">
+			<input disabled="disabled" type="hidden" id="MOD_<%=h ability %>" value="0">
+			<% end %>
+			<div style="clear:both;"></div>
+</div>
 
+<div id="Race" class="wizard hidden">
+	<h3>Race</h3>
+	<% f.inputs do %>
+		<%= f.input :race_id, :as => :select, :collection => Race.find(:all) %>
+	<% end %>
+</div>
+
+<div id="Klass" class="wizard hidden">
+	<h3>Class</h3>
+	<% f.inputs do %>
+			<%= f.input :klass_id, :as => :select, :collection => Klass.find(:all), :label => 'Class' %> 
+	<% end %>
+</div>
+
+<div id="Skills" class="wizard hidden">
+	<h3>Skills</h3>
 	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 425px; margin-top:10px; font-size: 9px">
 		<tr>
 			<th colspan="10">Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></th>
@@ -332,11 +110,11 @@
 			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
 			<td>+</td>
 			<td><input type="button" id="minus_<%=h skill.name %>" value="-" /><%= f.text_field "skill_#{skill.name}",  :size => 2, :class => "input_border" %><input type="button" id="add_<%=h skill.name %>" value="+" /></td>
-			
+
 		</tr> 
 		<% end %>
 		<tr>
-			
+
 			<td colspan="10" style="font-size: 8px; line-height: 10px;">
 				&#9632; Denotes a skill that can be used untrained.<br />
 				&sup1; Armor check penalty applies to checks <br />
@@ -344,10 +122,35 @@
 			</td>
 		</tr>
 		</table>
+	
+</div>
+
+<div id="Feats" class="wizard hidden">
+	<h3>Feats</h3>
+</div>
+
+<div id="Details" class="wizard hidden">
+	<h3>Details</h3>
+	<% f.inputs do %>
+		<%= f.input :alignment_id, :as => :select, :collection => Alignment.find(:all) %>
+		<%= f.input :deity_id, :as => :select, :collection => Deity.find(:all)  %>
+		<%= f.input :age  %>
+		<%= f.input :gender, :as => :select, :collection => Character::Genders  %>
+		<%= f.input :height  %>
+		<%= f.input :weight %>
+		<%= f.input :eyes  %>
+		<%= f.input :hair  %>
+		<%= f.input :level, :as => :select, :collection => (1..20).to_a %>
+	<% end %>
+</div>
+
+
+
+
+	
 
 
 	<% f.buttons do %>
 	  <%= f.commit_button %>
 	<% end %>
 
-	<% end %>
