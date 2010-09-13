@@ -257,7 +257,7 @@ text-align: center;
 }
 
 #roll_dice {
-	width: 200px;
+	width: 150px;
 	background:#99CDC9;
 	height: 25px;
 	font-size: 15px;
@@ -265,4 +265,9 @@ text-align: center;
 	border-radius: 5px;
 	-moz-border-radius: 5px; 
 	-webkit-border-radius: 5px;
+}
+
+#dice {
+	color: red;
+	font-size: 10px;
 }

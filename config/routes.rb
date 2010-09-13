@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :character_feats
+
   map.resources :weapons
 
   map.resources :races

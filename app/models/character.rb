@@ -33,6 +33,8 @@ class Character < ActiveRecord::Base
 	belongs_to :deity, :class_name => 'Deity'
 	belongs_to :race, :class_name => 'Race'
 
+	has_many :character_feats
+	has_many :feats, :through => :character_feats
 	
 	validates_inclusion_of :gender, :in => Genders, :allow_blank => false
 	#validates_inclusion_of :race_id, :in => Races, :allow_blank => false

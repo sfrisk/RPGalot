@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100911192858) do
+ActiveRecord::Schema.define(:version => 20100912225945) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",      :null => false
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(:version => 20100911192858) do
     t.integer  "max_characters"
     t.integer  "min_characters"
     t.boolean  "open",           :default => true, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "character_feats", :force => true do |t|
+    t.integer  "character_id", :null => false
+    t.integer  "feat_id",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

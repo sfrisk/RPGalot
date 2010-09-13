@@ -12,4 +12,4 @@ The following style may be *conditionally* included for improved support on olde
 form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 
 --------------------------------------------------------------------------------------------------*/
-form.formtastic .wizard label {width:60%;}
+form.formtastic #Abilities label {width:60%;}

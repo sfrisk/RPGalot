@@ -279,6 +279,7 @@ Character.prototype.setBaseSaves = function(BaseSaves)
 
 Character.prototype.setSkillPoints = function(skillPoints,intelligence)
 {	
+	console.log("set Skill Points");
 	points =  (skillPoints[0] + parseInt(intelligence, 10)) * 4;
 	used = this.checkUsedPoints();
 	total = points - used;
@@ -303,7 +304,7 @@ Character.prototype.setRaceModifiers = function (){
 	character = this;
 	
 	race = parseInt(character.$race.val(),10)-1;
-	
+	console.log(race);
 	character.raceAdjustMisc(race, 1);
 	if(character.cur_race != "")
 		character.raceAdjustMisc(character.cur_race, -1);	
