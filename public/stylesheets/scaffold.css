@@ -213,7 +213,9 @@ h1 a{
 	padding: 3px;
 }
 
-
+input{
+	height: 11px;
+}
 
 .hidden{
 	display:none;
