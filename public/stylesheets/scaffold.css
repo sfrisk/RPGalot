@@ -1,5 +1,5 @@
 html, body {
-  font-family: "helvetica CY", sans-serif;
+  font-family: "helvetica", sans-serif;
   font-size:   13px;
 	color: black;
   line-height: 18px;
@@ -90,10 +90,11 @@ h1 a{
 }
 
 
-#content {
+.content {
 	width: 850px;
   margin: 5px auto;
-	min-height: 400px;
+	padding-bottom: 30px;
+
 }
 
 

@@ -5,12 +5,27 @@ html,body{
 
 #blurbs{
 	background:#fcfae6;
+	margin: 0px;
+}
+
+.blurb{
+	width: 230px;
+	margin: 13px;
+	border-radius: 10px;
+	background: #e8e7d2;
+	padding: 10px;
+	border: 2px #d5d2ad solid;
+}
+
+.blurb h2{
+	color: #8a2810;;
 }
 
 #content_box{
 	background: #e8e7d2;
 	margin-top:-5px;
 	padding: 20px;
+	border-bottom: 3px #d5d2ad solid;
 }
 
 #footer{
@@ -19,6 +34,7 @@ html,body{
 	height: 75px;
 	padding-top: 30px;
 	margin-bottom: 0px;
+	clear:both;
 }
 
 
@@ -59,7 +75,7 @@ html,body{
 	background-repeat:no-repeat;
 	top: 20px;
 	width: 400px;
-	height: 300px;
+	height: 270px;
 }
 
 .nav{
@@ -72,10 +88,13 @@ html,body{
 	color: #fcfae6;
 	padding: 10px;
 	width: 250px;
-	border-radius: 5px;
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px;
+	border-radius: 10px;
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px;
 	float: right;
+	-moz-box-shadow: 3px 3px 3px #666;
+  -webkit-box-shadow: 3px 3px 3px #666;
+  box-shadow: 3px 3px 3px #666;
 }
 
 
@@ -85,7 +104,7 @@ html,body{
 
 #welcome{
 	background: #e8e7d2;
-	height: 350px;
+	height: 300px;
 }
 
 #welcome a{
