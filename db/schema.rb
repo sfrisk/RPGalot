@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20100912225945) do
 
   create_table "characters", :force => true do |t|
     t.integer  "user_id",                                                     :null => false
-    t.integer  "campaign_id",                                                 :null => false
+    t.integer  "campaign_id"
     t.string   "name",                                                        :null => false
     t.integer  "age"
     t.string   "gender"

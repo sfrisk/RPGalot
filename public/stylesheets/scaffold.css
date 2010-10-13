@@ -1,10 +1,10 @@
 html, body {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "helvetica CY", sans-serif;
   font-size:   13px;
 	color: black;
   line-height: 18px;
 	background: #FFFFFF;
-	margin: 0;
+	margin: 0px;
 }
 
 pre {
@@ -89,17 +89,9 @@ h1 a{
 	color: #eeeeee;
 }
 
-#header {
-	background: #EEEEEE;
-	margin: 0px;
-	width: 100%;
-	padding: 10px;
-	
-}
 
 #content {
 	width: 850px;
-	border: 2px solid #aaaaaa;
   margin: 5px auto;
 	min-height: 400px;
 }
@@ -213,7 +205,7 @@ h1 a{
 	padding: 3px;
 }
 
-input{
+.wizard input{
 	height: 11px;
 }
 

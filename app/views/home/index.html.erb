@@ -1,13 +1,32 @@
-<h2>RPG-a-lot!</h2>
 
-<p>The app with a horrible name that needs to be fixed.  If you have any ideas, 
-	tell Sarah, because RPG-a-lot just isn't catchy.  Maybe Character Horde, or iHorde, or
-	A-Web-App-That-Does-DnD-Things?</p>
+<div id="welcome">
 	
-<h2> WHAT THIS APP WILL EVENTUALLY DO! </h2>
+<% if current_user %>
+	<p>Welcome, <%= current_user.name %>!</p>
+		
+<% else %>
+	<div id="sign_up">
+	<h2>Sign up (it's free!)</h2>
+	<p>Already have an account? <%= link_to 'Log In', login_path %></p>
+	<% semantic_form_for(@user) do |f| %>
+		<%= render 'users/form', :f => f%>
+		<script type="text/javascript">
+			$('#user_username').defaultValue({'value': 'Username'});
+			$('#user_email').defaultValue({'value': 'Email'});
+			$('#user_password').defaultValue({'value': 'Password'});
+			$('#user_password_confirmation').defaultValue({'value': 'Confirm Password'});
 
-<p>Help you RULE THE WORLD</p>
-
-<p>Er, not really. This app is D20 Character and Campaign management system.  But unlike
-	other webapps, you don't need software that only works on a windows computer to make this 
-	work.  You can use it anywhere, update your character at anytime, and all you need as TEH INTERWEBS</p>
+		</script>
+		<% end %>
+	</div>
+	<div id="intro">
+	<h3>Because everyone needs a webapp of holding . . .</h3>
+	<p>Emerse yourself into the world of tabletop gaming,<br /> 
+		without ever worrying about losing your character sheet.</p>
+	</div>
+	</div>
+	<div id = "blurbs">
+		
+	</div>
+	
+<% end %>

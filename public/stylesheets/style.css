@@ -1,0 +1,98 @@
+html,body{
+	background: #fcfae6;
+	margin: 0px;
+}
+
+#blurbs{
+	background:#fcfae6;
+}
+
+#content_box{
+	background: #e8e7d2;
+	margin-top:-5px;
+	padding: 20px;
+}
+
+#footer{
+	color: #e8e7d2;
+	background: #8a2810;
+	height: 75px;
+	padding-top: 30px;
+	margin-bottom: 0px;
+}
+
+
+#footer-nav{
+	margin: 0;
+	float: right;
+}
+
+#footer-nav li{
+	display:inline-block;
+	margin: 0 20px;
+}
+
+
+#header{
+	background: #444444;
+	color: #e8e7d2;
+	margin: 0px;
+	padding: 10px;
+	font-family: 'AleandWenchesBBRegular', sans-serif;
+	
+}
+
+#header a{
+	color: #e8e7d2;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#header_bottom{
+	margin: 0px;
+	height: 20px;
+	background: #8a2810;
+}
+
+#intro{
+	background: url(/images/dragon.jpg) ;
+	background-repeat:no-repeat;
+	top: 20px;
+	width: 400px;
+	height: 300px;
+}
+
+.nav{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#sign_up{
+	background: #444444;
+	color: #fcfae6;
+	padding: 10px;
+	width: 250px;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	float: right;
+}
+
+
+#top_nav{
+	float: right;
+}
+
+#welcome{
+	background: #e8e7d2;
+	height: 350px;
+}
+
+#welcome a{
+color: #fcfae6;
+}
+
+#welcome h3 {
+	color: #8a2810;
+	padding-top: 100px;
+}

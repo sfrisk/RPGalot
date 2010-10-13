@@ -5,32 +5,48 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>RPGalot</title>
-  <%= stylesheet_link_tag 'formtastic', 'formtastic_changes','scaffold', 'swapselect', :media => "all" %>
-	<%=h javascript_include_tag 'jquery', 'jQuery.datalink', 'swapselect' %>
+  <%= stylesheet_link_tag 'formtastic', 'formtastic_changes','scaffold', 'swapselect', 'style', 'fonts/stylesheet.css', :media => "all" %>
+	<%=h javascript_include_tag 'jquery', 'jQuery.datalink', 'swapselect', 'jquery.defaultvalue' %>
 
 </head>
 <body>
 	
 	<div id="header">
-		<ul id="top_nav">
-			<li><h1><%= link_to 'Dragon Horde', root_path %></h1></li>
-			<li><%= link_to 'Users', users_path %></li>
-			<li><%= link_to 'Groups', groups_path %></li>
-			<li><%= link_to 'Campaigns', campaigns_path %></li>
-			<li><%= link_to 'Characters', characters_path %></li>
-			<% if current_user %>
-				<li><%= link_to 'Edit Profile', edit_user_path(:current) %></li>
-				<li><%= link_to 'Logout', logout_path %></li>
-			<% else %>
-				<li><%= link_to 'Register', new_user_path %></li>
-				<li><%= link_to 'Login', login_path %></li>
-			<% end %>
-		</ul>
+		<div class="nav">
+			<ul id="top_nav">
+				<% if current_user %>
+					<li><%= link_to h(current_user.name), current_user %></li>
+					<li><%= link_to 'Edit Profile', edit_user_path(:current) %></li>
+					<li><%= link_to 'Log Out', logout_path %></li>
+				<% else %>
+					<li><%= link_to 'Register', new_user_path %></li>
+					<li><%= link_to 'Log In', login_path %></li>
+				<% end %>
+			</ul>
+			<h1><%= link_to 'Dragon Horde', root_path %></h1>
+		</div>
 	</div>
-<p style="color: green"><%= notice %></p>
+	<div id="header_bottom"></div>
+	
+<div id="content_box">
 	<div id="content">
 <%= yield %>
-
+	</div>
+</div>	
+	
+	<div id="footer">
+		<div class="nav">
+		
+		<ul id="footer-nav">
+			<li>Learn More</li>
+			<li>Feedback</li>
+			<li>Blog</li>
+			<li>Facebook</li>
+			<li>Twitter</li>
+		</ul>
+		
+		<p>Dragon Horde &copy; Frisky Business - Not a Porn Company</p>	
+		</div>	
 	</div>
 </body>
 </html>

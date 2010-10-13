@@ -1,14 +1,13 @@
 <% f.inputs do %>
-	<%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :username %>
-  <%= f.input :email %>
-	<%= f.input :password %>
-	<%= f.input :password_confirmation%>
+  <%= f.input :username, :label => false %>
+  <%= f.input :email, :label => false %>
+	<%= f.input :password, :label => false  %>
+	<%= f.input :password_confirmation, :label => false %>
 
 <% unless f.object.new_record? %>
 	
 		<h3>Just the facts, ma'am</h3>
+
 		<%= f.input :first_name %>
 	  <%= f.input :last_name %>
 		
