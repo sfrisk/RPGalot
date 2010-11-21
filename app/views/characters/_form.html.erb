@@ -1,9 +1,6 @@
 
 <% f.inputs do %>
-		<% if f.object.new_record? %>
-		  <%= f.input :campaign %>
-		<% end %>
-<% end %>
+
 
 
 <div id = "character_wizard_nav">
@@ -18,18 +15,19 @@
 </div>
 
 <div id="Abilities" class="wizard hidden" >
+	<div class="wizard_inner">
 	<h3>Abilities</h3>
 
-	<div class="right" style="width:350px">
-			<p id="ability_description" style="border: 1px solid black; padding:5px;border-radius: 10px;
+	<div class="right" style="width:300px; margin-right: 10px;">
+			<p id="ability_description" style="border: 1px solid black;padding:10px; border-radius: 10px;
 			-moz-border-radius: 10px; 
-			-webkit-border-radius: 10px; min-height: 20px">Strength measures your character’s muscle and physical power. 
+			-webkit-border-radius: 10px; min-height: 20px; background:#ccc9a7; height: 250px">Strength measures your character’s muscle and physical power. 
 			This ability is especially important for fighters, barbarians, 
 			paladins, rangers, and monks because it helps them prevail in 
 			combat. Strength also limits the amount of equipment your character can carry.</p>
 	
-		<p style="	margin-top: 15px;"><input type="button" id="roll_dice" value="Roll Dice!!!" />
-		<span id="dice"></span></p>
+		<!--<p style="	margin-top: 15px;"><input type="button" id="roll_dice" value="Roll Dice!!!" />
+		<span id="dice"></span></p> -->
 	</div>
 	
 	<% f.inputs do %>
@@ -47,9 +45,11 @@
 			<input disabled="disabled" type="hidden" id="MOD_<%=h ability %>" value="0">
 			<% end %>
 			<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+			</div>
 </div>
 
 <div id="Race" class="wizard hidden">
+	<div class="wizard_inner">
 	<h3>Race</h3>
 	
 	<div class="right">
@@ -73,17 +73,21 @@
 	-webkit-border-radius: 5px; width:200px" >A human. Pretty much everywhere</p>
 	
 	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+	</div>
 </div>
 
 <div id="Klass" class="wizard hidden">
+	<div class="wizard_inner">
 	<h3>Class</h3>
 	<% f.inputs do %>
 			<%= f.input :klass_id, :as => :select, :collection => Klass.find(:all), :label => false, :include_blank => false %> 
 	<% end %>
 	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+	</div>
 </div>
 
 <div id="Skills" class="wizard hidden">
+	<div class="wizard_inner">
 	<h3>Skills</h3>
 	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 425px; margin-top:10px; font-size: 9px">
 		<tr>
@@ -146,18 +150,22 @@
 		</tr>
 		</table>
 		<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+		</div>
 </div>
 
 <div id="Feats" class="wizard hidden">
+	<div class="wizard_inner">
 	<h3>Feats</h3>
 
 	<div style="margin: 0px auto; width: 475px">
 	<%= swapselect :character, @character, :feats, Feat.all.map{ |feat| [feat.title, feat.id] } %>
 	</div>
 	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+	</div>
 </div>
 
 <div id="Details" class="wizard hidden">
+	<div class="wizard_inner">
 	<h3>Details</h3>
 	<% f.inputs do %>
 		<%= f.input :name%>
@@ -172,6 +180,11 @@
 		<%= f.input :level, :as => :select, :collection => (1).to_a, :include_blank => false %>
 	<% end %>
 	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+	<% f.buttons do %>
+	  <%= f.commit_button %>
+	<% end %>
+	
+	</div>
 </div>
 
 
@@ -180,7 +193,4 @@
 	
 
 
-	<% f.buttons do %>
-	  <%= f.commit_button %>
 	<% end %>
-

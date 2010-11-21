@@ -29,18 +29,20 @@ div.swap_select label:active {
 }
 
 div.swap_select select {
-	border:1px solid #CBCBCB;
+	border:1px solid #ccc9a7;
+	background: #fcf9e7;
+	width: 200px;
 }
 
 div.swap_select select:focus {
-	border-color:#d20022;
+	border-color:#ccc9a7;
 }
 
 div.swap_select p.swap_select_available,
 div.swap_select p.swap_select_selected {
 	font-size:9px;
-	background-color:#EEEEEE;
-	border:1px solid #CBCBCB;
+	background-color:#e8e8d3;
+	border:1px solid #ccc9a7;
 	border-bottom:none;
 }
 

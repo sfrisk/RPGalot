@@ -207,7 +207,7 @@ h1 a{
 }
 
 .wizard input{
-	height: 11px;
+
 }
 
 .hidden{
@@ -222,14 +222,17 @@ h1 a{
 #character_wizard_nav ul{
 padding: 0px;
 text-align: center;
+
 }
 
 #character_wizard_nav li{
+	font-family: 'AleandWenchesBBRegular', sans-serif;
 	display: inline-block;
-	margin: 0 5px;
-	width: 70px;
+	color:#ccc9a7;
+	margin: 0 3px;
+	width: 80px;
 	font-size: 15px;
-	background: #efefef;
+	background: #474747;
 	padding: 5px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -238,17 +241,28 @@ text-align: center;
 	border-top-right-radius: 5px;
 	-moz-border-radius-topright: 5px;
 	border:1px #aaaaaa solid;
+	cursor: pointer;
 
 }
 
 .wizard {
-	border: 2px #aaaaaa solid;
-	padding: 10px;
+	background: #474747;
+	border: 2px #ccc9a7 solid;
+	padding: 20px;
 	border-radius: 10px;
 	-moz-border-radius: 10px; 
 	-webkit-border-radius: 10px;
 	width: 600px;
 	margin: 10px auto;
+}
+
+.wizard_inner{
+	background:#e8e7d3;
+	padding:10px;
+	border-radius: 10px;
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px;
+	
 }
 
 #roll_dice {
