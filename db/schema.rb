@@ -9,12 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101024200928) do
+ActiveRecord::Schema.define(:version => 20101123021212) do
 
   create_table "alignments", :force => true do |t|
-    t.string   "title",      :null => false
+    t.string   "title",                     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "game_id",    :default => 1
   end
 
   create_table "campaigns", :force => true do |t|
@@ -117,10 +118,11 @@ ActiveRecord::Schema.define(:version => 20101024200928) do
   end
 
   create_table "feats", :force => true do |t|
-    t.string   "title",      :null => false
-    t.string   "benefit",    :null => false
+    t.string   "title",                     :null => false
+    t.string   "benefit",                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "game_id",    :default => 1
   end
 
   create_table "games", :force => true do |t|
@@ -154,15 +156,16 @@ ActiveRecord::Schema.define(:version => 20101024200928) do
   end
 
   create_table "klasses", :force => true do |t|
-    t.string   "title",        :null => false
-    t.integer  "hit_die",      :null => false
-    t.integer  "skill_points", :null => false
-    t.integer  "attack_bonus", :null => false
-    t.boolean  "fort_save",    :null => false
-    t.boolean  "ref_save",     :null => false
-    t.boolean  "will_save",    :null => false
+    t.string   "title",                       :null => false
+    t.integer  "hit_die",                     :null => false
+    t.integer  "skill_points",                :null => false
+    t.integer  "attack_bonus",                :null => false
+    t.boolean  "fort_save",                   :null => false
+    t.boolean  "ref_save",                    :null => false
+    t.boolean  "will_save",                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "game_id",      :default => 1
   end
 
   create_table "memberships", :force => true do |t|
@@ -173,11 +176,12 @@ ActiveRecord::Schema.define(:version => 20101024200928) do
   end
 
   create_table "races", :force => true do |t|
-    t.string   "title",      :null => false
-    t.integer  "speed",      :null => false
-    t.string   "size",       :null => false
+    t.string   "title",                     :null => false
+    t.integer  "speed",                     :null => false
+    t.string   "size",                      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "game_id",    :default => 1
   end
 
   create_table "skills", :force => true do |t|
@@ -216,16 +220,17 @@ ActiveRecord::Schema.define(:version => 20101024200928) do
   end
 
   create_table "weapons", :force => true do |t|
-    t.string   "title",         :null => false
+    t.string   "title",                        :null => false
     t.integer  "cost"
-    t.string   "damage_small",  :null => false
-    t.string   "damage_medium", :null => false
-    t.string   "critical",      :null => false
+    t.string   "damage_small",                 :null => false
+    t.string   "damage_medium",                :null => false
+    t.string   "critical",                     :null => false
     t.integer  "range"
     t.integer  "weight"
     t.string   "proficiency"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "game_id",       :default => 1
   end
 
 end
