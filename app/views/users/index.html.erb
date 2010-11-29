@@ -27,7 +27,7 @@
 						<td><%= 
 							user.groups.map do |group|
 								link_to h(group.title), group
-							end.join(', ')
+							end.join(', ').html_safe
 						%></td>
 					</tr>
 					

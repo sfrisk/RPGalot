@@ -11,7 +11,7 @@
 			<div id="sign_up">
 				<h2>Sign up (it's free!)</h2>
 				<p>Already have an account? <%= link_to 'Log In', login_path %></p>
-				<% semantic_form_for(@user) do |f| %>
+				<%= semantic_form_for(@user) do |f| %>
 						<%= render 'users/form', :f => f%>
 						<script type="text/javascript">
 						$('#user_username').defaultValue({'value': 'Username'});

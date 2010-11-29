@@ -3,6 +3,53 @@
   <%=h @game.title %>
 </p>
 
+<p><strong>Weapons:</strong>
+<%= 
+	@game.weapons.map do |weapon|
+		link_to h(weapon.title), weapon
+	end.join(', ').html_safe
+%>
 
+<p><strong>Skills:</strong>
+<%= 
+	@game.skills.map do |skill|
+		link_to h(skill.fancy_name), skill
+	end.join(', ').html_safe
+%>
+
+<p><strong>Races:</strong>
+<%= 
+	@game.races.map do |race|
+		link_to h(race.title), race
+	end.join(', ').html_safe
+%>
+<p><strong>Classes:</strong>
+<%= 
+	@game.klasses.map do |klass|
+		link_to h(klass.title), klass
+	end.join(', ').html_safe
+%>
+<p><strong>Feats:</strong>
+<%= 
+	@game.feats.map do |feat|
+		link_to h(feat.title), feat
+	end.join(', ').html_safe
+%>
+<p><strong>Deities:</strong>
+<%= 
+	@game.deities.map do |deity|
+		link_to h(deity.title), deity
+	end.join(', ').html_safe
+%>
+
+<p><strong>Alignments:</strong>
+<%= 
+	@game.alignments.map do |alignment|
+		link_to h(alignment.title), alignment
+	end.join(', ').html_safe
+%>
+
+
+<p></p>
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>

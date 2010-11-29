@@ -4,7 +4,7 @@
 
 <h2>Login</h2>
 
-<% semantic_form_for @user_session do |f| %>
+<%= semantic_form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
   <% f.inputs do %>
     <%= f.input :username %>
     <%= f.input :password %>

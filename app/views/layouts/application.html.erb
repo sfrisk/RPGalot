@@ -7,16 +7,22 @@
   <title>RPGalot</title>
   <%= stylesheet_link_tag 'formtastic', 'formtastic_changes','scaffold', 'swapselect', 'style', 'fonts/stylesheet.css', :media => "all" %>
 	<%=h javascript_include_tag 'jquery', 'jQuery.datalink', 'swapselect', 'jquery.defaultvalue' %>
-
+	<!--[if !IE 7]>
+		<style type="text/css">
+			#wrap {display:table;height:100%}
+		</style>
+	<![endif]-->
 </head>
 <body>
-	
+	<div id="wrap">
 	<div id="header">
 		<div class="nav">
 			<ul id="top_nav">
 				<% if current_user %>
-					<li><%= link_to h(current_user.name), current_user %></li>
-					<li><%= link_to 'Edit Profile', edit_user_path(:current) %></li>
+					<li><%= link_to h(current_user.name), current_user %>
+						<ul><li><%= link_to 'Edit Profile', edit_user_path(:current) %></li>
+							</ul>
+							</li>
 					<li><%= link_to 'Log Out', logout_path %></li>
 				<% else %>
 					<li><%= link_to 'Register', new_user_path %></li>
@@ -29,10 +35,10 @@
 	<div id="header_bottom"></div>
 	
 
-
+<div id="main">
 <%= yield %>
-	
-
+</div>	
+	</div>
 	
 	<div id="footer">
 		<div class="nav">

@@ -4,7 +4,7 @@
 
 <h2>Sign Up</h2>
 
-<% semantic_form_for(@user) do |f| %>
+<%= semantic_form_for(@user) do |f| %>
 	<%= render 'form', :f => f%>
 	<script type="text/javascript">
 		$('#user_username').defaultValue({'value': 'Username'});

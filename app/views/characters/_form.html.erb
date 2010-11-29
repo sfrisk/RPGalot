@@ -66,7 +66,7 @@
 	</div>
 	<p style="margin-bottom: 10px"><img src="/images/profile_female.png" alt="race" width="200px" /></p>
 	<% f.inputs do %>
-		<%= f.input :race_id, :as => :select, :collection => Race.find(:all), :label => false, :include_blank => false %>
+		<%= f.input :race_id, :as => :select, :collection => Race.all, :label => false, :include_blank => false %>
 	<% end %>
 	<p style="border: 1px solid black; padding:5px;border-radius: 5px;
 	-moz-border-radius: 5px; 
@@ -80,7 +80,7 @@
 	<div class="wizard_inner">
 	<h3>Class</h3>
 	<% f.inputs do %>
-			<%= f.input :klass_id, :as => :select, :collection => Klass.find(:all), :label => false, :include_blank => false %> 
+			<%= f.input :klass_id, :as => :select, :collection => Klass.all, :label => false, :include_blank => false %> 
 	<% end %>
 	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
 	</div>
@@ -169,15 +169,16 @@
 	<h3>Details</h3>
 	<% f.inputs do %>
 		<%= f.input :name%>
-		<%= f.input :alignment_id, :as => :select, :collection => Alignment.find(:all) %>
-		<%= f.input :deity_id, :as => :select, :collection => Deity.find(:all)  %>
+		<%= f.input :alignment_id, :as => :select, :collection => Alignment.all %>
+		<%= f.input :deity_id, :as => :select, :collection => Deity.all  %>
 		<%= f.input :age  %>
 		<%= f.input :gender, :as => :select, :collection => Character::Genders  %>
 		<%= f.input :height  %>
 		<%= f.input :weight %>
 		<%= f.input :eyes  %>
 		<%= f.input :hair  %>
-		<%= f.input :level, :as => :select, :collection => (1).to_a, :include_blank => false %>
+			<%= f.input :level, :as => :select, :collection => [1,2,3,4,5], :include_blank => false %>
+	
 	<% end %>
 	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
 	<% f.buttons do %>
