@@ -1,0 +1,14 @@
+<div class="content" style="min-height: 400px">
+	<p>Welcome, <%= current_user.name %>!</p>
+	
+
+
+	<div style="width: 300px">
+		<strong>Characters:</strong>
+		<%= 
+			current_user.characters.map do |character|
+				link_to h(character.name), character
+			end.join(', ').html_safe
+		%>
+	</div>	
+</div>

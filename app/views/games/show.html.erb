@@ -1,3 +1,4 @@
+<div class="content">
 <p>
   <b>Game title:</b>
   <%=h @game.title %>
@@ -49,7 +50,15 @@
 	end.join(', ').html_safe
 %>
 
+<p><strong>Languages:</strong>
+<%= 
+	@game.languages.map do |language|
+		link_to h(language.title), language
+	end.join(', ').html_safe
+%>
+
 
 <p></p>
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
+</div>

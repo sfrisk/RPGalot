@@ -1,13 +1,11 @@
 
 <% f.inputs do %>
 
-
-
 <div id = "character_wizard_nav">
 	<ul>
-		<li id ="ability_button">Abilities</li>
 		<li id ="race_button">Race</li>
 		<li id ="class_button">Class</li>
+		<li id ="ability_button">Abilities</li>
 		<li id ="skills_button">Skills</li>
 		<li id ="feats_button">Feats</li>
 		<li id ="details_button">Details</li>
@@ -19,12 +17,7 @@
 	<h3>Abilities</h3>
 
 	<div class="right" style="width:300px; margin-right: 10px;">
-			<p id="ability_description" style="border: 1px solid black;padding:10px; border-radius: 10px;
-			-moz-border-radius: 10px; 
-			-webkit-border-radius: 10px; min-height: 20px; background:#ccc9a7; height: 250px">Strength measures your character’s muscle and physical power. 
-			This ability is especially important for fighters, barbarians, 
-			paladins, rangers, and monks because it helps them prevail in 
-			combat. Strength also limits the amount of equipment your character can carry.</p>
+		
 	
 		<!--<p style="	margin-top: 15px;"><input type="button" id="roll_dice" value="Roll Dice!!!" />
 		<span id="dice"></span></p> -->
@@ -44,84 +37,73 @@
 			<input disabled="disabled" type="hidden" id="MISC_<%=h ability %>" value="0">
 			<input disabled="disabled" type="hidden" id="MOD_<%=h ability %>" value="0">
 			<% end %>
-			<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+			
 			</div>
 </div>
 
 <div id="Race" class="wizard hidden">
 	<div class="wizard_inner">
 	<h3>Race</h3>
-	
 	<div class="right">
-		<ul style="list-style-type: disc; border: 1px solid black; padding:20px;border-radius: 5px;
-		-moz-border-radius: 5px; 
-		-webkit-border-radius: 5px; width: 310px">
-			<li>Medium: As Medium creatures, humans have no special bonuses or penalties due to their size.</li>
-			<li>Human base land speed is 30 feet. </li>
-			<li>1 extra feat at 1st level.</li>
-			<li>4 extra skill points at 1st level and 1 extra skill point at each additional level.</li>
-		 	<li>Automatic Language: Common. Bonus Languages: Any (other than secret languages, such as Druidic). See the Speak Language skill. </li>
-			<li>Favored Class: Any. When determining whether a multiclass human takes an experience point penalty, his or her highest-level class does not count.</li>
-		</ul>
+		
 	</div>
-	<p style="margin-bottom: 10px"><img src="/images/profile_female.png" alt="race" width="200px" /></p>
-	<% f.inputs do %>
-		<%= f.input :race_id, :as => :select, :collection => Race.all, :label => false, :include_blank => false %>
-	<% end %>
-	<p style="border: 1px solid black; padding:5px;border-radius: 5px;
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px; width:200px" >A human. Pretty much everywhere</p>
+
+	<ul class="wizardList">
 	
-	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+	<% Race.all.each do |race| %>
+	<li><label for="character_race_id_<%= race.id %>"><input type="radio" name="character[race_id]" id="character_race_id_<%= race.id %>" value="<%=h race.id %>" 
+		<% if @character.race_id == race.id %>
+			checked
+		<% end %>
+		
+		 /><%=h race.title %></label></li>
+	
+	<% end %>
+	
+	</ul>
+	
 	</div>
 </div>
 
 <div id="Klass" class="wizard hidden">
 	<div class="wizard_inner">
 	<h3>Class</h3>
-	<% f.inputs do %>
-			<%= f.input :klass_id, :as => :select, :collection => Klass.all, :label => false, :include_blank => false %> 
-	<% end %>
-	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+		<ul class="wizardList">
+		<% Klass.all.each do |klass| %>
+			<li><label for="character_klass_id_<%= klass.id %>"><input type="radio" name="character[klass_id]" id="character_klass_id_<%= klass.id %>" value="<%= klass.id %>"
+			<% if @character.klass_id == klass.id %>
+				checked
+			<% end %>
+			
+			/><%= klass.title %></label></li>
+		<% end %>
+	</ul>
+
+	
 	</div>
 </div>
 
 <div id="Skills" class="wizard hidden">
 	<div class="wizard_inner">
 	<h3>Skills</h3>
-	<table style="border-collapse: collapse; border: solid 2px black; padding: 5px; width: 425px; margin-top:10px; font-size: 9px">
+	<table align="center" style="border-collapse: collapse; padding: 5px; width: 400px;  margin-top:10px; font-size: 12px">
 		<tr>
-			<th colspan="10">Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></th>
-		</tr>
-		<tr style="color: white; background:black;">
-			<th colspan="3">Skills</th>
-			<th colspan="4"> Max Ranks <br /><span class="details">Class/Cross-Class</span></th>
-			<th colspan="3"><input disabled="disabled" type="text" id="class_skill" value="4" size="2"> / 
-			<input disabled="disabled" type="text" id="cross_class_skill" value="2" size="2"></th>
-		<tr>
-		<tr>
-			<th class="details">Class<br />Skill?</th>
-			<th class="details">Skill Name</th>
-			<th class="details">Key<br />Ability</th>
-			<th colspan="2" class="details">Skill Modifier</th>
-			<th colspan = "2" class="details">Ability<br />Modifier</th>
-			<th colspan = "2" class="details">Misc<br />Modifier</th>
-			<th class="details"> Ranks</th>
+			<th colspan="4">Available Skill Points: <input disabled="disabled" type="text" id="skillz" value="0" size="2"></th>
 		</tr>
 
 		<% Skill.all.each do |skill| %>
 		<tr
 		<% if(skill.id.odd?)%>
-			class="tableSkill"
+			style="background: #FCFAE6;"
 		<% end %>	
 		>	
 			<td><input type="checkbox" name="klass_skill_<%=h skill.name %>" id="klass_skill_<%=h skill.name %>" value="<%=h skill.fancy_name %>" disabled="disabled"></td>
-			<td style="width:110px; font-weight:bold;"><%=h skill.fancy_name %>
+			<td style="width:170px; font-weight:bold;"><%=h skill.fancy_name %>
 				<% if(skill.need_training == true)%>
 				&#9632;
 				<% end %>	
 				</td>
-			<td style="font-size:10px;">
+			<td align="center" style="font-size:12px;">
 				<%=h skill.ability %>
 				<% if(skill.armor_penalty == 1)%>
 						&sup1;
@@ -130,13 +112,8 @@
 						&sup2;
 				<% end %>	
 			</td>
-			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_total" value="0" size="2"></td>
-			<td>=</td>
-			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_ability_mod" value="0" size="2"></td>
-			<td>+</td>
-			<td><input disabled="disabled" type="text" id="<%=h skill.name %>_misc" value="0" size="2">
-			<td>+</td>
-			<td><input type="button" id="minus_<%=h skill.name %>" value="-" /><%= f.text_field "skill_#{skill.name}",  :size => 2, :class => "input_border" %><input type="button" id="add_<%=h skill.name %>" value="+" /></td>
+		
+			<td align="right"><input type="button" id="minus_<%=h skill.name %>" value="-" /><%= f.text_field "skill_#{skill.name}",  :size => 2, :class => "input_border" %><input type="button" id="add_<%=h skill.name %>" value="+" /></td>
 
 		</tr> 
 		<% end %>
@@ -149,7 +126,7 @@
 			</td>
 		</tr>
 		</table>
-		<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+		
 		</div>
 </div>
 
@@ -158,9 +135,10 @@
 	<h3>Feats</h3>
 
 	<div style="margin: 0px auto; width: 475px">
-	<%= swapselect :character, @character, :feats, Feat.all.map{ |feat| [feat.title, feat.id] } %>
+		<%= f.input :feats, :as => :check_boxes, :collection => Feat.all, :label => 'Feats'  %>
+
 	</div>
-	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+	
 	</div>
 </div>
 
@@ -180,7 +158,7 @@
 			<%= f.input :level, :as => :select, :collection => [1,2,3,4,5], :include_blank => false %>
 	
 	<% end %>
-	<div style="clear:both; text-align: right"><img src="/images/help.png" alt="help" /></div>
+	
 	<% f.buttons do %>
 	  <%= f.commit_button %>
 	<% end %>

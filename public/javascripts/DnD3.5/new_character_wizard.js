@@ -7,7 +7,7 @@ $(document).ready(function(){
 	var intelligence="Intelligence determines how well your character learns and reasons. This ability is important for wizards because it affects how many spells they can cast, how hard their spells are to resist, and how powerful their spells can be. It’s also important for any character who wants to have a wide assortment of skills.";
 	var wisdom="Wisdom describes a character’s willpower, common sense, per- ception, and intuition. While Intelligence represents one’s ability to analyze information, Wisdom represents being in tune with and aware of one’s surroundings. An “absentminded professor” has low Wisdom and high Intelligence. A simpleton (low Intelligence) might still have great insight (high Wisdom). Wisdom is the most important ability for clerics and druids, and it is also important for paladins and rangers. If you want your character to have acute senses, put a high score in Wisdom.";
 	var charisma="Charisma measures a character’s force of personality, persuasiveness, personal magnetism, ability to lead, and physical attractiveness. This ability represents actual strength of personality, not merely how one is perceived by others in a social setting. Charisma is most important for paladins, sorcerers, and bards. It is also important for clerics, since it affects their ability to turn undead.";
-	current = '#Abilities';
+	current = '#Race';
 	$(current).toggleClass("hidden");
 	
 	$('#character_STR_input').hover(function()

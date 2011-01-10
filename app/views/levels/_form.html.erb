@@ -1,0 +1,18 @@
+<% f.inputs do %>
+    <%= f.input :name %> 
+    <%= f.input :xp %>
+    <%= f.input :base_save_bonus_good %>
+    <%= f.input :base_save_bonus_poor %>
+    <%= f.input :base_attack_bonus_good, :as => :string %>
+    <%= f.input :base_attack_bonus_average, :as => :string  %>
+    <%= f.input :base_attack_bonus_poor, :as => :string  %>  
+    <%= f.input :class_skill_max_ranks %>
+    <%= f.input :cross_class_skill_max_ranks %> 
+    <%= f.input :new_feat %>
+    <%= f.input :ability_score_increases %>
+    <%= f.input :game_id, :as => :select, :collection => Game.all %>
+			<% f.buttons do %>
+			  <%= f.commit_button %>
+			<% end %>
+
+		<% end %>

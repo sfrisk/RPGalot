@@ -1,55 +1,7 @@
 
 	
 		<% if current_user %>
-		<div class="content" style="min-height: 400px">
-			<p>Welcome, <%= current_user.name %>!</p>
-		</div>
+			<%= render 'loginUser' %>
 		<% else %>
-		<div id="content_box">
-			<div class="content">
-				<div id="welcome">
-			<div id="sign_up">
-				<h2>Sign up (it's free!)</h2>
-				<p>Already have an account? <%= link_to 'Log In', login_path %></p>
-				<%= semantic_form_for(@user) do |f| %>
-						<%= render 'users/form', :f => f%>
-						<script type="text/javascript">
-						$('#user_username').defaultValue({'value': 'Username'});
-						$('#user_email').defaultValue({'value': 'Email'});
-						$('#user_password').defaultValue({'value': 'Password'});
-						$('#user_password_confirmation').defaultValue({'value': 'Confirm Password'});
-						</script>
-				<% end %>
-			</div>
-
-			<div id="intro">
-				<h3>Because everyone needs a webapp of holding . . .</h3>
-				<p>Embrace the world of tabletop gaming,<br /> 
-					without ever worrying about losing your character sheet.</p>
-			</div>
-		</div>
-	</div>
-	</div>
-	<div id = "blurbs">
-		<div class="content">
-		
-
-		<div class="blurb right" >
-			<h2>Game On!</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales, dolor in luctus fermentum, erat quam faucibus eros, sit amet commodo leo ligula non eros. Nulla facilisi. Praesent euismod nunc ut felis posuere ultrices. Vestibulum congue erat sit amet ligula luctus varius. Donec blandit urna eu purus aliquam non aliquet eros porttitor. </p>
-		</div>
-		
-		<div class="blurb right">
-			<h2>Find Fellow Players</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales, dolor in luctus fermentum, erat quam faucibus eros, sit amet commodo leo ligula non eros. Nulla facilisi. Praesent euismod nunc ut felis posuere ultrices. Vestibulum congue erat sit amet ligula luctus varius. Donec blandit urna eu purus aliquam non aliquet eros porttitor. </p>
-		</div>
-		
-		
-		<div class="blurb right">
-			<h2>Create Characters</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales, dolor in luctus fermentum, erat quam faucibus eros, sit amet commodo leo ligula non eros. Nulla facilisi. Praesent euismod nunc ut felis posuere ultrices. Vestibulum congue erat sit amet ligula luctus varius. Donec blandit urna eu purus aliquam non aliquet eros porttitor. </p>
-		</div>
-		
-	</div>
-
-<% end %>
+			 <%= render 'noUser' %>
+		<% end %>

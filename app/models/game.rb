@@ -11,4 +11,5 @@ class Game < ActiveRecord::Base
 	has_many :feats, :class_name => 'Feat', :foreign_key => :game_id
 	has_many :deities, :class_name => 'Deity', :foreign_key => :game_id
 	has_many :alignments, :class_name => 'Alignment', :foreign_key => :game_id
+	has_many :languages, :class_name => 'Language', :foreign_key => :game_id
 end

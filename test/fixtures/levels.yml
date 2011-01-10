@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: 1
+  xp: 1
+  base_save_bonus_good: 1
+  base_save_bonus_poor: 1
+  base_attack_bonus_good: MyText
+  base_attack_bonus_average: MyText
+  base_attack_bonus_poor: MyText
+  class_skill_max_ranks: 1
+  cross_class_skill_max_ranks: 9.99
+  new_feat: false
+  ability_score_increases: false
+  game_id: 1
+
+two:
+  name: 1
+  xp: 1
+  base_save_bonus_good: 1
+  base_save_bonus_poor: 1
+  base_attack_bonus_good: MyText
+  base_attack_bonus_average: MyText
+  base_attack_bonus_poor: MyText
+  class_skill_max_ranks: 1
+  cross_class_skill_max_ranks: 9.99
+  new_feat: false
+  ability_score_increases: false
+  game_id: 1

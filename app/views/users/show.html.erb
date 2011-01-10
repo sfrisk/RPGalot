@@ -1,19 +1,12 @@
 <div class="content">
-<div id="sheet_header">
-	<div class="right">
-		<% if current_user && @user.username == current_user.username %>
-			<%= link_to 'Edit Profile', edit_user_path(:current) %>
-		<%end%>
-	</div>
-	<h2><%=h @user.name %></h2>
-	<% if current_user && @user.username == current_user.username %>
-		<p>This is you!</p>
-	<%end%>
-</div>
+
 
 <div id="sheet">
 <div class="section right">	
 	<div class="profile">
+		<% if current_user && @user.username == current_user.username %>
+		<p style="text-align: right;">	<%= link_to 'Edit Profile', edit_user_path(:current) %></p>
+		<%end%>
 		<% if @user.gender == "Female"%>
 			<img src="/images/profile_female.png" alt"group photo" width="200px" />
 		<% else %>
@@ -28,7 +21,7 @@
 	
 	</div>
 </div>
-
+<!--
 <div class="section">
 	<h3 class="sheet_header">How I Play</h3>
 	<div class="profile_list">
@@ -53,9 +46,12 @@
 		</table>
 	</div>
 </div>
-
+-->
 <div class="section">
 	<h3 class="sheet_header">Characters I Play</h3>
+		<% if current_user && @user.username == current_user.username %>
+		<p class="sheet_header"><%= link_to 'Create New Character', new_character_path %></p>
+		<%end%>
 <% @user.characters.map do |character| %>
 <div class="profile_list">
 	<table>
@@ -78,7 +74,7 @@
 </div>
 <% end %>
 </div>
-
+<!--
 <div class="section">
 <h3 class="sheet_header">Places I Game</h3>
 	<% @user.groups.map do |group| %>
@@ -109,6 +105,7 @@
 		</div>
 	<% end %>
 </div>
+-->
 
 </div>
 </div>

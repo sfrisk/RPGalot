@@ -1,0 +1,12 @@
+<% f.inputs do %>
+
+	<%= f.input :title %>
+	<%= f.input :alphabet %>
+	<%= f.input :game_id, :as => :select, :collection => Game.all %>
+
+
+		<% f.buttons do %>
+		  <%= f.commit_button %>
+		<% end %>
+
+	<% end %>

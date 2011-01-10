@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @level.name %>
+</p>
+
+<p>
+  <b>Xp:</b>
+  <%= @level.xp %>
+</p>
+
+<p>
+  <b>Base save bonus good:</b>
+  <%= @level.base_save_bonus_good %>
+</p>
+
+<p>
+  <b>Base save bonus poor:</b>
+  <%= @level.base_save_bonus_poor %>
+</p>
+
+<p>
+  <b>Base attack bonus good:</b>
+  <%= @level.base_attack_bonus_good %>
+</p>
+
+<p>
+  <b>Base attack bonus average:</b>
+  <%= @level.base_attack_bonus_average %>
+</p>
+
+<p>
+  <b>Base attack bonus poor:</b>
+  <%= @level.base_attack_bonus_poor %>
+</p>
+
+<p>
+  <b>Class skill max ranks:</b>
+  <%= @level.class_skill_max_ranks %>
+</p>
+
+<p>
+  <b>Cross class skill max ranks:</b>
+  <%= @level.cross_class_skill_max_ranks %>
+</p>
+
+<p>
+  <b>New feat:</b>
+  <%= @level.new_feat %>
+</p>
+
+<p>
+  <b>Ability score increases:</b>
+  <%= @level.ability_score_increases %>
+</p>
+
+<p>
+  <b>Game:</b>
+  <%= @level.game_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_level_path(@level) %> |
+<%= link_to 'Back', levels_path %>

@@ -15,13 +15,14 @@ form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 form.formtastic #Abilities label {width:60%;}
 
 #sign_up form.formtastic  {width: 260px;}
-
-#sign_up form.formtastic ol li  {display: block; padding-right: 10px;}
+#sign_up form.formtastic ol li  {padding-right: 10px; margin-bottom: 5px; width: 340px;}
 #sign_up form.formtastic ol label {width: 60%;}
 
-#sign_up form.formtastic ol li input {max-width: none; display: block; width: 100%; padding: 5px; background: #fcf8e7; color: #444444; border: 1px  #444444 solid;}
+#sign_up form.formtastic ol li input {max-width: none; display: block; width: 240px;padding: 5px; background: #fcf8e7; color: #444444; border: 1px  #444444 solid;}
 
-#sign_up form.formtastic .create {width: 100px;border: 1px #e8e7d2 solid;
- display: inline-block; border-radius: 3px; padding:10px;}
+#sign_up form.formtastic fieldset.buttons{ padding-left: 0px; margin-left: -5px;}
+
+#sign_up form.formtastic .create {width: 100px;
+ display: inline-block; border-radius: 3px; padding:5px;}
 
 #sign_up form.formtastic ol li input.empty { color: #aaa89f;}

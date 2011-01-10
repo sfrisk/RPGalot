@@ -1,0 +1,45 @@
+<h1>Listing levels</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Xp</th>
+    <th>Base save bonus good</th>
+    <th>Base save bonus poor</th>
+    <th>Base attack bonus good</th>
+    <th>Base attack bonus average</th>
+    <th>Base attack bonus poor</th>
+    <th>Class skill max ranks</th>
+    <th>Cross class skill max ranks</th>
+    <th>New feat</th>
+    <th>Ability score increases</th>
+    <th>Game</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @levels.each do |level| %>
+  <tr>
+    <td><%= level.name %></td>
+    <td><%= level.xp %></td>
+    <td><%= level.base_save_bonus_good %></td>
+    <td><%= level.base_save_bonus_poor %></td>
+    <td><%= level.base_attack_bonus_good %></td>
+    <td><%= level.base_attack_bonus_average %></td>
+    <td><%= level.base_attack_bonus_poor %></td>
+    <td><%= level.class_skill_max_ranks %></td>
+    <td><%= level.cross_class_skill_max_ranks %></td>
+    <td><%= level.new_feat %></td>
+    <td><%= level.ability_score_increases %></td>
+    <td><%= level.game_id %></td>
+    <td><%= link_to 'Show', level %></td>
+    <td><%= link_to 'Edit', edit_level_path(level) %></td>
+    <td><%= link_to 'Destroy', level, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Level', new_level_path %>

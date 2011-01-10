@@ -1,8 +1,13 @@
 RPGalot::Application.routes.draw do 
+  resources :languages
+
+  resources :levels
+
 	root :to => 'home#index'
 	
 	match "login" => "user_sessions#new", :as => "login"
   match "logout" => "user_sessions#destroy", :as => "logout"
+
  	resources :user_sessions
   resources :character_feats
   resources :weapons
