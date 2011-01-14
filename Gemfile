@@ -34,3 +34,4 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'authlogic'
 gem 'formtastic'
+gem 'jquery-rails', '>= 0.2.6'

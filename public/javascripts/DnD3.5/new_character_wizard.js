@@ -36,31 +36,24 @@ $(document).ready(function(){
 	})
 	
 	$('#ability_button').click(function(){
-		console.log('ability');
 		update_wizard('#Abilities');
 	});
 	$('#race_button').click(function(){
-		console.log('race')
 		update_wizard('#Race');
 	});
 	$('#class_button').click(function(){
-		console.log('klass');
 		update_wizard('#Klass');
 	});
 	$('#skills_button').click(function(){
-		console.log('skills')
 		update_wizard('#Skills');
 	});
 	$('#feats_button').click(function(){
-		console.log('feats')
 		update_wizard('#Feats');
 	});
 	$('#details_button').click(function(){
-		console.log('details')
 		update_wizard('#Details');
 	});
 	$('#roll_dice').click(function(){
-		console.log('roll dice');
 		roll_abilities();
 	});
 	
@@ -92,9 +85,6 @@ $(document).ready(function(){
 	}
 	
 	function update_wizard(new_area){
-		console.log('update');
-		console.log('curent =' + current);
-		console.log('new_area = ' + new_area);
 		$(new_area).toggleClass("hidden");	
 		$(current).toggleClass("hidden");
 

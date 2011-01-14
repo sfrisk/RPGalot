@@ -419,3 +419,9 @@ text-align: center;
 	color: red;
 	font-size: 10px;
 }
+
+a.deleteCharacter {
+	text-decoration: none;
+	color: red;
+	font-weight: bold;
+}

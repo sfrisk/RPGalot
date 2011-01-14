@@ -1,26 +1,5 @@
 class Character < ActiveRecord::Base
 	
-	# t.integer :user_id, :null => false
-	#t.integer :campaign_id, :null=>false ///switched this so it can be null
-	#   t.string :name, :null => false 
-	#   t.integer :age
-	#   t.string :gender
-	#   t.integer :height
-	#   t.integer :weight
-	#   t.string :eyes
-	#   t.string :hair
-	# add_column :characters, :strength, :integer, :null => false
-	# add_column :characters, :dexterity, :integer, :null => false
-	# add_column :characters, :constitution, :integer, :null => false
-	# add_column :characters, :intelligence, :integer, :null => false
-	# add_column :characters, :wisdom, :integer, :null => false
-	# add_column :characters, :charisma, :integer, :null => false
-	# add_column :characters, :race, :string, :null => false
-	# add_column :characters, :klass, :string, :null => false
-	# add_column :characters, :level, :integer, :null => false
-	
-	
-	
 	Genders = ['Male', 'Female']
 	Races = ['Human', 'Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Half-Orc', 'Halfling']
 	abilities = ['STR','DEX','CON','INT','WIS','CHA']

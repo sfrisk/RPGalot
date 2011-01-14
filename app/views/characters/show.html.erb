@@ -28,7 +28,7 @@
 						</td>
 							<td></td>
 						<td>
-							<%=link_to h(@character.campaign.title), @character.campaign %>
+							<% # =link_to h(@character.campaign.title), @character.campaign %>
 						</td>
 					</tr>
 					<tr>
@@ -48,7 +48,17 @@
 						<td width="10"></td>
 						<td><%=h @character.level %></td>
 						<td width="10"></td>
-						<td><%=h @character.deity.title %><input disabled="disabled" hidden="hidden" type="hidden" id="character_deity_id" value="<%=h @character.deity_id %>"></td>
+						<td><% if @character.deity %> <%=h @character.deity.title %>
+							<input disabled="disabled" hidden="hidden" type="hidden" id="character_deity_id" value="<%=h @character.deity_id %>">
+							
+							<% else %>
+							No Deity Available -  Must Be An Atheist
+								<input disabled="disabled" hidden="hidden" type="hidden" id="character_deity_id" value="null">
+							
+							<% end %>
+							
+
+							</td>
 						<td width="10"></td>
 						<td><%=h @character.alignment.title %><input disabled="disabled" hidden="hidden" type="hidden" id="character_alignment_id" value="<%=h @character.alignment_id %>"></td>
 					</tr>
@@ -66,17 +76,17 @@
 				</table>
 				<table class="stats">
 					<tr>
-						<td><%=h @character.age %></td>
+						<td><% if @character.age %><%=h @character.age %><% else %>Confidential<% end %></td>
 						<td width="10"></td>
-						<td><%=h @character.gender %></td>
+						<td><% if @character.gender %><%=h @character.gender %><% else %>Confidential<% end %></td>
 						<td width="10"></td>
-					  <td><%=h @character.height %> inches</td>
+					  <td><% if @character.height %><%=h @character.height %><% else %>Confidential<% end %></td>
 						<td width="10"></td>
-					  <td><%=h @character.weight %> .lbs</td>
+					  <td><% if @character.weight %><%=h @character.weight %><% else %>Confidential<% end %></td>
 						<td width="10"></td>
-					  <td><%=h @character.eyes %></td>
+					  <td><% if @character.eyes %><%=h @character.eyes %><% else %>Confidential<% end %></td>
 						<td width="10"></td>
-					  <td><%=h @character.hair %></td>
+					  <td><% if @character.hair %><%=h @character.hair %><% else %>Confidential<% end %></td>
 					</tr>
 					<tr>
 						<td class="character_label">AGE</td>

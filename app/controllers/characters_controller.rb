@@ -78,6 +78,7 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(characters_url) }
+			format.js {render :nothing => true }
       format.xml  { head :ok }
     end
   end

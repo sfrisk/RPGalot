@@ -5,8 +5,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>RPGalot</title>
+<%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'formtastic', 'formtastic_changes','scaffold', 'swapselect', 'style', 'fonts/stylesheet.css', :media => "all" %>
-	<%=h javascript_include_tag 'jquery', 'jQuery.datalink', 'swapselect', 'jquery.defaultvalue' %>
+	<%= javascript_include_tag :defaults %>
+	<%=h javascript_include_tag 'jQuery.datalink',  'jquery.defaultvalue'%>
 	<!--[if !IE 7]>
 		<style type="text/css">
 			#wrap {display:table;height:100%}

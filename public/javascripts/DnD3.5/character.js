@@ -20,9 +20,9 @@ function Character(){
 	
 	//Basic Stats DOM info
 	this.$name = $('#character_name');
-	this.$klass = $('#character_klass_id');
+	this.$klass = $('input[name="character[klass_id]"]:radio');
 	this.$level = $('#character_level');
-	this.$race = $('#character_race_id');
+	this.$race = $('input[name="character[race_id]"]:radio');
 	this.$alignment = $('#character_alignment_id');
 	this.$deity = $('#character_deity_id');
 	
@@ -304,7 +304,7 @@ Character.prototype.setRaceModifiers = function (){
 	character = this;
 	
 	race = parseInt(character.$race.val(),10)-1;
-	console.log(race);
+	console.log("Race = " + character.$race.val());
 	character.raceAdjustMisc(race, 1);
 	if(character.cur_race != "")
 		character.raceAdjustMisc(character.cur_race, -1);	
@@ -322,6 +322,7 @@ Character.prototype.raceAdjustMisc = function(loc, sign )
 {
 	character = this;
 	console.log("loc = "+loc);
+	console.log(character.races);
 	abilities = character.races[loc].getAbility();
 	modify = character.races[loc].getAdjust();
 	$.each(abilities, function(i, raceAbility){

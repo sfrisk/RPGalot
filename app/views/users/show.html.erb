@@ -63,11 +63,12 @@
 					<img src="/images/profile_male.png" alt"group photo" width="50px" />
 				<% end %>
 			</td>
-			<td>
+			<td style="width: 250px;">
+				<% if current_user && @user.username == current_user.username %><span style="float: right; color: red; width: 20px;text-align: right;"><%= link_to 'X', character, :method => :delete, :remote=>true, :class => "deleteCharacter", :confirm => 'Are you sure?' %></span><% end %>
 				<%= link_to h(character.name), character %><br />
 				<strong>Class:</strong> <%=h  character.klass.title %>
 				<strong>Level:</strong> 1 <br/>
-				<strong>Campaign:</strong> <%=link_to h(character.campaign.title), character.campaign %>
+			
 			</td>
 		</tr>
 	</table>

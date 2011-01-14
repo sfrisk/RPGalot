@@ -68,6 +68,7 @@
 <div id="Klass" class="wizard hidden">
 	<div class="wizard_inner">
 	<h3>Class</h3>
+	
 		<ul class="wizardList">
 		<% Klass.all.each do |klass| %>
 			<li><label for="character_klass_id_<%= klass.id %>"><input type="radio" name="character[klass_id]" id="character_klass_id_<%= klass.id %>" value="<%= klass.id %>"
@@ -78,6 +79,7 @@
 			/><%= klass.title %></label></li>
 		<% end %>
 	</ul>
+
 
 	
 	</div>
