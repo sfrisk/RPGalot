@@ -11,6 +11,7 @@ class Character < ActiveRecord::Base
 	belongs_to :klass, :class_name => 'Klass'
 	belongs_to :deity, :class_name => 'Deity'
 	belongs_to :race, :class_name => 'Race'
+	belongs_to :level, :class_name => 'Level'
 
 	has_many :character_feats
 	has_many :feats, :through => :character_feats

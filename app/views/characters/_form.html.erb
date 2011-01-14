@@ -157,7 +157,7 @@
 		<%= f.input :weight %>
 		<%= f.input :eyes  %>
 		<%= f.input :hair  %>
-			<%= f.input :level, :as => :select, :collection => [1,2,3,4,5], :include_blank => false %>
+			<%= f.input :level, :as => :select, :collection => Level.all, :include_blank => false %>
 	
 	<% end %>
 	

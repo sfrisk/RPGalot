@@ -28,7 +28,7 @@
 						</td>
 							<td></td>
 						<td>
-							<% # =link_to h(@character.campaign.title), @character.campaign %>
+							<% if @character.campaign %> <%=link_to h(@character.campaign.title), @character.campaign %><% else %>Confidential<% end %>
 						</td>
 					</tr>
 					<tr>
@@ -46,7 +46,7 @@
 						<td width="10"></td>
 						<td><%=h @character.klass.title %><input disabled="disabled" hidden="hidden" type="hidden" id="character_klass_id" value="<%=h @character.klass_id %>"></td>
 						<td width="10"></td>
-						<td><%=h @character.level %></td>
+						<td><%=h @character.level.name %></td>
 						<td width="10"></td>
 						<td><% if @character.deity %> <%=h @character.deity.title %>
 							<input disabled="disabled" hidden="hidden" type="hidden" id="character_deity_id" value="<%=h @character.deity_id %>">
@@ -161,7 +161,7 @@
 			</td>
 			<td>+</td>
 			<td>
-				<input disabled="disabled" type="text" id="DEX_MOD" value="0" size="2"
+				<input disabled="disabled" type="text" id="DEX_MOD" value="<%= (@character.DEX/2).ceil-5 %>" size="2"
 			</td>	
 			<td>+</td>
 			<td>
@@ -210,7 +210,7 @@
 		<% end %>	
 		>	
 			<td style="padding: 0px;"><input type="checkbox" name="klass_skill_<%=h skill.name %>" id="klass_skill_<%=h skill.name %>" value="<%=h skill.fancy_name %>" disabled="disabled"></td>
-			<td style="width:90px; font-weight:bold; padding: 0px;"><%=h skill.fancy_name %>
+			<td style="width:150px; font-weight:bold; padding: 0px;"><%=h skill.fancy_name %>
 				<% if(skill.need_training == true)%>
 					&#9632;
 				<% end %>	
@@ -284,7 +284,7 @@
 					-webkit-bottom-left-radius: 5px;">Initiative Modifier</td>
 				<td class="tableSkill"><input disabled="disabled" type="text" id="Initiative_Total" value="0" size="1"></td>
 				<td class="tableSkill" style="padding:0px">=</td>
-				<td class="tableSkill" style="padding:0px"><input disabled="disabled" type="text" id="Initiative_Dex" value="0" size="1"></td>
+				<td class="tableSkill" style="padding:0px"><input disabled="disabled" type="text" id="Initiative_Dex" value="<%= (@character.DEX/2).ceil - 5 %>" size="1"></td>
 				<td class="tableSkill" style="padding:0px">+</td>
 				<td class="tableSkill" style="padding:0px"><input disabled="disabled" type="text" id="Initiative_Misc" value="0" size="1"></td>
 			</tr>
@@ -333,7 +333,7 @@
 		<input disabled="disabled" type="hidden" id="character_<%=ability[0] %>" value="<%= ability[3] %>" size="2">
 		<input disabled="disabled" type="hidden" id="MISC_<%=h ability[0] %>" value="0" size="2">
 		<input disabled="disabled" type="text" id="TOTAL_<%=h ability[0] %>" value="0" size="2"></td>
-		<td style="background:black;"><input disabled="disabled" type="text" id="MOD_<%=h ability[0] %>" value="0" size="2"></td>
+		<td style="background:black;"><input disabled="disabled" type="text" id="MOD_<%=h ability[0] %>" value="<%= (ability[3]).ceil %>" size="2"></td>
 		<td class="tableSkill"><input disabled="disabled" type="text" id="TScore_<%=h ability[0] %>" value="" size="2"></td>
 		<td class="tableSkill"><input disabled="disabled" type="text" id="TMod<%=h ability[0] %>" value="" size="2"></td>
 
@@ -363,11 +363,11 @@
 			-webkit-top-left-radius: 10px;background:black; color:white;">Fortitude<br /><span class="details">(Constitution)</span></th>
 			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_TOTAL" value="0" size="2"></td>
 			<td style="background:black;color:white;">=</td>
-			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_ABILITY" value="0" size="2"></td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_ABILITY" value="<%= (@character.CON/2).ceil-5 %>" size="2"></td>
 			<td style="background:black;color:white;">+</td>
 			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_MISC" value="0" size="2"></td>
 			<td style="background:black;color:white;">+</td>
-			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_BASE" value="0" size="2"></td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="FORT_BASE" value="<% if @character.klass.fort_save %><%=h @character.level.base_save_bonus_good %><% else %><%=h @character.level.base_save_bonus_poor %><% end %>" size="2"></td>
 			<td style="background:black;color:white;">+</td>
 			<td class="tableSkill"><input disabled="disabled" type="text" id="FORT_TEMP" value="" size="2"></td>
 			<td class="tableSkill" rowspan="3"><textarea id="Conditional_Mod" style="font-size: 9px" cols=15, rows=8 readonly></textarea></td>
@@ -376,11 +376,11 @@
 			<th style="background:black;color:white;">Reflex<br /><span class="details">(Dexterity)</span></th>
 			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_TOTAL" value="0" size="2"></td>
 			<td style="background:black;color:white;">=</td>
-			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_ABILITY" value="0" size="2"></td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_ABILITY" value="<%= (@character.DEX/2).ceil-5 %>" size="2"></td>
 			<td style="background:black;color:white;">+</td>
 			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_MISC" value="0" size="2"></td>
 			<td style="background:black;color:white;">+</td>
-			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_BASE" value="0" size="2"></td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="REFLEX_BASE" value="<% if @character.klass.ref_save %><%=h @character.level.base_save_bonus_good %><% else %><%=h @character.level.base_save_bonus_poor %><% end %>" size="2"></td>
 			<td style="background:black;color:white;">+</td>
 			<td class="tableSkill"><input disabled="disabled" type="text" id="REFLEX_TEMP" value="" size="2"></td>
 			
@@ -391,11 +391,11 @@
 			-webkit-bottom-left-radius: 10px; background:black;color:white;">Will<br /><span class="details">(Wisdom)</span></th>
 			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_TOTAL" value="0" size="2"></td>
 			<td style="background:black;color:white;">=</td>
-			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_ABILITY" value="0" size="2"></td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_ABILITY" value="<%= (@character.WIS/2).ceil-5 %>" size="2"></td>
 			<td style="background:black;color:white;">+</td>
 			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_MISC" value="0" size="2"></td>
 			<td style="background:black;color:white;">+</td>
-			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_BASE" value="0" size="2"></td>
+			<td style="background:black;color:white;"><input disabled="disabled" type="text" id="WILL_BASE" value="<% if @character.klass.will_save %><%=h @character.level.base_save_bonus_good %><% else %><%=h @character.level.base_save_bonus_poor %><% end %>" size="2"></td>
 			<td style="background:black;color:white;">+</td>
 			<td class="tableSkill"><input disabled="disabled" type="text" id="WILL_TEMP" value="" size="2"></td>
 		</tr>
@@ -404,7 +404,7 @@
 	<table class="character_table" >
 		<tr>
 			<th style="color: white; background:black; width: 165px">Base Attack Bonus</th>
-			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Base_Attack_Bonus" value="0" size="3"></td>
+			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Base_Attack_Bonus" value="<% if @character.klass.attack_bonus == 1 %><%= @character.level.base_attack_bonus_good %><% elsif @character.klass.attack_bonus == 2 %><%= @character.level.base_attack_bonus_average %><% elsif @character.klass.attack_bonus == 3 %><%= @character.level.base_attack_bonus_poor %><% end %>" size="3"></td>
 			<td></td>
 			<th style="color: white; background:black; width: 165px">Spell Resistance</th>
 			<td style="color: white; background:black;"><input disabled="disabled" type="text" id="Spell Resistance" value="0" size="3"></td>
@@ -438,9 +438,9 @@
 				-webkit-bottom-left-radius: 5px;">Grapple <br /> <span class="details">Modifier</span></th>
 			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Total" value="0" size="2"></td>
 			<td class="tableSkill">=</td>
-			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Base_Attack" value="0" size="2"></td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Base_Attack" value="<% if @character.klass.attack_bonus == 1 %><%= @character.level.base_attack_bonus_good %><% elsif @character.klass.attack_bonus == 2 %><%= @character.level.base_attack_bonus_average %><% elsif @character.klass.attack_bonus == 3 %><%= @character.level.base_attack_bonus_poor %><% end %>" size="2"></td>
 			<td class="tableSkill">+</td>
-			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_STR" value="0" size="2"></td>
+			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_STR" value="<%= (@character.STR/2).ceil %>" size="2"></td>
 			<td class="tableSkill">+</td>
 			<td class="tableSkill"><input disabled="disabled" type="text" id="Grapple_Size" value="0" size="2"></td>
 			<td class="tableSkill">+</td>

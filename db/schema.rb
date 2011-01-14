@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101220023336) do
+ActiveRecord::Schema.define(:version => 20110114041927) do
 
   create_table "alignments", :force => true do |t|
     t.string   "title",                     :null => false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20101220023336) do
     t.integer  "CHA"
     t.integer  "race_id",                       :limit => 255
     t.integer  "klass_id",                      :limit => 255
-    t.integer  "level"
+    t.integer  "level_id"
     t.integer  "alignment_id",                  :limit => 255
     t.integer  "deity_id",                      :limit => 255
     t.integer  "skill_appraise",                               :default => 0, :null => false
